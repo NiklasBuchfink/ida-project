@@ -1,5 +1,5 @@
  const AUTH_URL =
-"https://accounts.spotify.com/authorize?client_id=8b945ef10ea24755b83ac50cede405a0&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state"
+"https://accounts.spotify.com/authorize?client_id=8e94bde7ddb84a1f7a0e51bf3bc95be8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost:3000&scope=user-read-currently-playing%20user-top-read"
 
 export default function Login() {
   return (

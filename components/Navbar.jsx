@@ -10,6 +10,10 @@ export default function Navbar() {
       text: "Test",
       route: "/test"
     },
+    {
+      text: "Lea",
+      route: "/lea"
+    },
   ]
 
   return (
