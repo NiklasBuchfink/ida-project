@@ -1,8 +1,11 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Layout from '../components/Layout'
-import Login from '../components/Login'
+import { useSession } from "next-auth/react";
 
 export default function Home() {
+  const { status } = useSession();
+
   return (
     <div>
       <Head>
@@ -15,7 +18,21 @@ export default function Home() {
           Hello Spotify!
         </h1>
         <div className="m-4">
-          <Login />
+          {status === "authenticated"
+            ? (
+              <Link href="/app">
+              <div className="bg-red-500 text-white px-4 py-2 rounded-md w-fit">
+                See my results
+              </div>
+            </Link>
+            ) : (
+              <Link href="/login">
+                <div className="bg-green-500 text-white px-4 py-2 rounded-md w-fit">
+                  Login
+                </div>
+              </Link>
+            )
+          }
         </div>
       </Layout>
     </div>

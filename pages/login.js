@@ -9,7 +9,7 @@ function Login({ providers }) {
         <div key={provider.name}>
           <button
             className="bg-green-500 text-white p-5 rounded-md"
-            onClick={() => signIn(provider.id, { callbackUrl: "/" })}
+            onClick={() => signIn(provider.id, { callbackUrl: "/app" })}
           >
             Login with {provider.name}
           </button>
