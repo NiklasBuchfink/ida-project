@@ -4,11 +4,13 @@ import { useRouter } from 'next/router'
 export default function App() {
   const { data: session, status } = useSession();
   const router = useRouter();
+  console.log(session)
 
   const handleLogout = async () => {
     const data = await signOut({redirect: false, callbackUrl: "/"})
     router.push(data.url)
   }
+
 
   return (
     <div className="m-4 space-y-4">
