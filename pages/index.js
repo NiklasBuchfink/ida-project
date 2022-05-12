@@ -15,20 +15,20 @@ export default function Home() {
       </Head>
       <Layout>
         <h1 className="text-3xl m-4">
-          Hello Spotify!
+          A Taste of Music
         </h1>
         <div className="m-4">
           {status === "authenticated"
             ? (
               <Link href="/app">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-md w-fit">
+              <div className="bg-red-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer">
                 See my results
               </div>
             </Link>
             ) : (
               <Link href="/login">
-                <div className="bg-green-500 text-white px-4 py-2 rounded-md w-fit">
-                  Login
+                <div className="bg-green-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer">
+                  Discover
                 </div>
               </Link>
             )

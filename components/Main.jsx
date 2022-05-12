@@ -10,19 +10,21 @@ export default function Main() {
 
   useEffect(() => {
     if (spotifyApi.getAccessToken()) {
-      spotifyApi.getUserPlaylists().then(
+/*       spotifyApi.getUserPlaylists().then(
         (data) => {
           setPlaylists(data.body.items);
         },
         (err) => {
           console.log("Something went wrong!", err);
         }
-      );
+      ); */
 
       spotifyApi.getMyTopArtists().then(
         (data) => {
-          setTopArtists(data.body.items)
-        },
+          let topArtists = data.body.items;
+          console.log(topArtists);
+/*           setTopArtists(data.body.items);
+ */        },
         (err) => {
           console.log("Something went wrong!", err);
         }
@@ -30,9 +32,8 @@ export default function Main() {
     }
   }, [session, spotifyApi]);
 
-  console.log(session);
-  console.log(playlists);
-  console.log(topArtists)
+  console.log(session, playlists, topArtists);
+
 
   return (
     <div className="">
@@ -50,7 +51,7 @@ export default function Main() {
           {playlist.name}
         </p>;
       })}
-            <p>Top Artists</p>
+      <p>Top Artists</p>
       {topArtists.map((topArtist) => {
         <p key={topArtist.id} className="cursor-pointer">
           {topArtist.name}
