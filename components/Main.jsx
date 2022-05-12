@@ -43,24 +43,28 @@ export default function Main() {
     <div>
       <h1>Main element</h1>
       <p>{session?.user.name}</p>
-      {/* <Image
-        className="w-10 h-10"
-        src={session?.user.image}
-        alt="Profile pic"
-      ></Image> */}
-      <div className="flex gap-8">
+      {session?.user.image
+        ? <Image
+            className="w-10 h-10"
+            src={session?.user.image}
+            alt="Profile pic"
+          /> 
+        : null
+      }
+      
+      <div className="flex gap-8 mt-8">
         <div>
           <h2>Playlists</h2>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-2 mt-2">
             {playlists.map(playlist =>
-              <li className="cursor-p8ointer" key={playlist.id}>{playlist.name}</li>
+              <li className="cursor-pointer" key={playlist.id}>{playlist.name}</li>
             )}
           </ul>
         </div>
         
         <div>
           <h2>Top Artists</h2>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-2 mt-2">
             {topArtists.map(topArtist =>
               <li className="cursor-pointer" key={topArtist.id}>{topArtist.name}</li>
             )}
@@ -69,7 +73,7 @@ export default function Main() {
 
         <div>
           <h2>Top Tracks</h2>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-2 mt-2">
             {topTracks.map(topTrack =>
               <li className="cursor-pointer" key={topTrack.id}>{topTrack.name}</li>
             )}
