@@ -42,12 +42,13 @@ export default function Main() {
   return (
     <div>
       <h1>Main element</h1>
-      <p>{session?.user.name}</p>
+      <p className="mb-2">{session?.user.name}</p>
       {session?.user.image
         ? <Image
-            className="w-10 h-10"
             src={session?.user.image}
             alt="Profile pic"
+            width={96}
+            height={96}
           /> 
         : null
       }
