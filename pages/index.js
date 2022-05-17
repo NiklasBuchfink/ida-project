@@ -8,6 +8,7 @@ export default function Home() {
   const [playlistsList, setPlaylistsList] = useState([]);
   const [topArtistsList, setTopArtistsList] = useState([]);
   const [topTracksList, setTopTracksList] = useState([]);
+  const [topPlaylistList, setTopPlaylistList] = useState([]);
 
   const getMyPlaylists = async () => {
     const res = await fetch('/api/playlists');
@@ -25,8 +26,13 @@ export default function Home() {
     const res = await fetch('/api/toptracks');
     const { items } = await res.json();
     setTopTracksList(items);
-    console.log(items)
   };
+
+  const getMyTopPlaylists = async () => {
+    const res = await fetch('/api/search');
+    const { items } = await res.json();
+    setTopPlaylistList(items);
+  }
 
 
   if (session) {
@@ -44,8 +50,10 @@ export default function Home() {
           <button onClick={() => getMyPlaylists() }>Get all my playlists</button>
           <button onClick={() => getMyTopArtists() }>Get all my topartists</button>
           <button onClick={() => getMyTopTracks() }>Get all my toptracks</button>
+          <button onClick={() => getMyTopPlaylists() }>Get all my top playlists</button>
         </div>
         <div className="flex gap-4">
+
           <div className="space-y-4">
             {playlistsList.map((item) => (
               <div key={item.id}>
@@ -59,6 +67,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+
           <div className="space-y-4">
             {topArtistsList.map((item) => (
               <div key={item.id}>
@@ -72,19 +81,22 @@ export default function Home() {
               </div>
             ))}
           </div>
+
           <div className="space-y-4">
             {topTracksList.map((item) => (
               <div key={item.id}>
-                <p>{item.name} </p>
-                {/* {item.artists.map((name) => <span key={name.id}>{name}</span>)} */}
-                {/* <Image 
-                  src={item.images[0]?.url} 
-                  alt={item.name}
-                  width={96}
-                  height={96}
-                /> */}
+                <p className='font-bold'>{item.name}</p>
+                {item.artists.map((artist) => <span className='mr-2' key={artist.id}>{artist.name}</span>)}
               </div>
             ))}
+          </div>
+
+          <div className="space-y-4">
+            {/* {topPlaylistList.map((item) => (
+                <div key={item.id}>
+                  <p className='font-bold'>{item.name}</p>
+                </div>
+              ))} */}
           </div>
         </div>
       </div>
