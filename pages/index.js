@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from "next/image";
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { useState } from 'react';
+import MusicDisc from "../components/MusicDisc";
+
 
 export default function Home() {
   const { data: session } = useSession();
@@ -55,8 +57,10 @@ export default function Home() {
           <button onClick={() => getMyTopTracks() }>Get all my toptracks</button>
           <button onClick={() => getMyTopPlaylists() }>Get all my top playlists</button>
         </div>
+        <div className="flex justify-center">
+          <MusicDisc valence={0.2} energy={0.7} />
+        </div>
         <div className="flex gap-4">
-
           <div className="space-y-4">
             {playlistsList.map((item) => (
               <div key={item.id}>
