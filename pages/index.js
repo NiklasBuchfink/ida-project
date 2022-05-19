@@ -14,26 +14,29 @@ export default function Home() {
     const res = await fetch('/api/playlists');
     const { items } = await res.json();
     setPlaylistsList(items);
+    console.log(items)
   };
 
   const getMyTopArtists = async () => {
     const res = await fetch('/api/topartists');
     const { items } = await res.json();
     setTopArtistsList(items);
+    console.log(items)
   };
 
   const getMyTopTracks = async () => {
     const res = await fetch('/api/toptracks');
     const { items } = await res.json();
     setTopTracksList(items);
+    console.log(items)
   };
 
   const getMyTopPlaylists = async () => {
     const res = await fetch('/api/search');
     const { items } = await res.json();
-    setTopPlaylistList(items);
+    // setTopPlaylistList(items);
+    console.log(items)
   }
-
 
   if (session) {
     return (
