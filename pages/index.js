@@ -39,11 +39,16 @@ export default function Home() {
     const res = await fetch('/api/search')
     const { items } = await res.json()
     setTopPlaylistList(items); 
-    console.log(topPlaylistList);
-    setValence(topPlaylistList[0].features.valence)
-    setEnergy(topPlaylistList[0].features.energy)
-    console.log('valence: ' + valence, 'energy: ' + energy);
   }
+
+  useEffect(() => {
+    console.log(topPlaylistList);
+    if (topPlaylistList.length > 0) {
+      setValence(topPlaylistList[0].features.valence)
+      setEnergy(topPlaylistList[0].features.energy)
+      console.log('valence: ' + valence, 'energy: ' + energy);
+    }
+  })
 
   if (session) {
     return (
