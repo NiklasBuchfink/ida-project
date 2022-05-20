@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from "next/image";
 import { useSession, signIn, signOut } from 'next-auth/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MusicDisc from "../components/MusicDisc";
 
 
@@ -11,6 +11,8 @@ export default function Home() {
   const [topArtistsList, setTopArtistsList] = useState([]);
   const [topTracksList, setTopTracksList] = useState([]);
   const [topPlaylistList, setTopPlaylistList] = useState([]);
+  const [valence, setValence] = useState(null);
+  const [energy, setEnergy] = useState(null);
 
   const getMyPlaylists = async () => {
     const res = await fetch('/api/playlists');
@@ -34,10 +36,13 @@ export default function Home() {
   };
 
   const getMyTopPlaylists = async () => {
-    const res = await fetch('/api/search');
-    const { items } = await res.json();
-    // setTopPlaylistList(items);
-    console.log(items)
+    const res = await fetch('/api/search')
+    const { items } = await res.json()
+    setTopPlaylistList(items); 
+    console.log(topPlaylistList);
+    setValence(topPlaylistList[0].features.valence)
+    setEnergy(topPlaylistList[0].features.energy)
+    console.log('valence: ' + valence, 'energy: ' + energy);
   }
 
   if (session) {
@@ -58,7 +63,7 @@ export default function Home() {
           <button onClick={() => getMyTopPlaylists() }>Get all my top playlists</button>
         </div>
         <div className="flex justify-center">
-          <MusicDisc valence={0.2} energy={0.7} />
+          { (valence && energy) && <MusicDisc valence={valence} energy={energy} /> }
         </div>
         <div className="flex gap-4">
           <div className="space-y-4">
@@ -96,14 +101,6 @@ export default function Home() {
                 {item.artists.map((artist) => <span className='mr-2' key={artist.id}>{artist.name}</span>)}
               </div>
             ))}
-          </div>
-
-          <div className="space-y-4">
-            {/* {topPlaylistList.map((item) => (
-                <div key={item.id}>
-                  <p className='font-bold'>{item.name}</p>
-                </div>
-              ))} */}
           </div>
         </div>
       </div>
