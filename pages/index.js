@@ -58,13 +58,15 @@ export default function Home() {
           <meta name="description" content="A Taste of Music" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        Signed in as {session?.token?.email} <br />
-        <button  onClick={() => signOut()} className="bg-red-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer">Sign out</button>
+        <div className='flex justify-between'>
+          <p>Signed in as {session?.token?.email}</p>
+          <button  onClick={() => signOut()} className="bg-red-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer">Sign out</button>
+        </div>
         <hr />
         <div className="flex gap-4">
-          <button onClick={() => getMyPlaylists() }>Get all my playlists</button>
-          <button onClick={() => getMyTopArtists() }>Get all my topartists</button>
-          <button onClick={() => getMyTopTracks() }>Get all my toptracks</button>
+          <button className='text-gray-500' onClick={() => getMyPlaylists() }>Get all my playlists</button>
+          <button className='text-gray-500' onClick={()  => getMyTopArtists() }>Get all my topartists</button>
+          <button className='text-gray-500' onClick={() => getMyTopTracks() }>Get all my toptracks</button>
           <button onClick={() => getMyTopPlaylists() }>Get all my top playlists</button>
         </div>
         <div className="flex justify-center">
@@ -114,7 +116,7 @@ export default function Home() {
   return (
     <div className="m-4 space-y-4">
       Not signed in <br />
-      <button onClick={() => signIn()} className="bg-green-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer">Sign in</button>
+      <button onClick={() => signIn()} className="bg-green-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer">Discover</button>
     </div>
   );
 }

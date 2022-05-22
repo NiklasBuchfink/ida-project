@@ -1,6 +1,7 @@
 import React from "react";
 import Aura from "./Aura";
 import Vinyl from "./Vinyl";
+import GenreOverlay from "./GenreOverlay"
 
 const size = 600;
 
@@ -12,6 +13,9 @@ export default function Musicdisc({ valence, energy }) {
           <g transform={`translate(${size / 2},${size / 2})`}>
             <Vinyl radius={size / 2} />
             <Aura radius={size / 2} valence={valence} energy={energy} />
+{/*             <GenreOverlay radius={size / 2}/>
+ */}
+
             <circle
               fill="black"
               r={size / 100}

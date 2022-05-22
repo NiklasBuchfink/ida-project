@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Vinyl({ radius }) {
+export default function GenreOverlay({ radius }) {
   let strokewdth = 0.5;
-  let strokeopc = 0.3;
+  let strokeopc = 0;
   let strokecol = "#fff";
   let strokeoffsets = [1, 2, 3, 4];
 
@@ -20,7 +20,6 @@ export default function Vinyl({ radius }) {
         </radialGradient>
       </defs>
 
-      <circle  fill="black" r={radius} />
       
       <circle  fill="url(#vinylShine)" r={radius} />
       {strokeoffsets}
@@ -30,8 +29,8 @@ export default function Vinyl({ radius }) {
           stroke={strokecol}
           strokeWidth={strokewdth}
           strokeOpacity={strokeopc}
-          fill="transparent"
-          fillOpacity="0"
+          fill="white"
+          fillOpacity="0.05"
           r={radius / 3 + (radius * strokeoffset * 2) / 15}
         />
       ))}
