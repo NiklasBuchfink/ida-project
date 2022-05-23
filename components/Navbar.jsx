@@ -6,14 +6,6 @@ export default function Navbar() {
       text: "Home",
       route: "/"
     },
-    {
-      text: "Test",
-      route: "/test"
-    },
-    {
-      text: "Lea",
-      route: "/lea"
-    },
   ]
 
   return (
