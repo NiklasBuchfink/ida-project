@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { useState, useEffect } from 'react';
 import MusicDisc from "../components/MusicDisc";
+import GenreOverlay from '../components/GenreOverlay';
 
 
 export default function Home() {
@@ -71,7 +72,8 @@ export default function Home() {
         </div>
         <div className="flex justify-center">
           { (valence && energy) && <MusicDisc valence={valence} energy={energy} /> }
-        </div>
+{/*           <GenreOverlay valence={valence} energy={energy} />
+ */}        </div>
         <div className="flex gap-4">
           <div className="space-y-4">
             {playlistsList.map((item) => (
@@ -116,7 +118,9 @@ export default function Home() {
   return (
     <div className="m-4 space-y-4">
       Not signed in <br />
-      <button onClick={() => signIn()} className="bg-green-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer">Discover</button>
+      <button onClick={() => signIn("spotify")} className="bg-green-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer">Discover</button>
     </div>
   );
+  console.log(SVGRef)
+
 }
