@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Vinyl({ radius }) {
+export default function Vinyl( { radius } ) {
   let strokewdth = 0.5;
   let strokeopc = 0.3;
   let strokecol = "#fff";
@@ -13,9 +13,9 @@ export default function Vinyl({ radius }) {
           id="vinylShine"
           gradientTransform="translate(-0.4 -0.4) scale(1, 1)"
         >
-          <stop offset="0%" stopColor="rgba(255, 255, 255, 0.6)" />
-          <stop offset="25%" stopColor="rgba(238, 238, 238, 0.45)" />
-          <stop offset="50%" stopColor="rgba(221, 221, 221, 0.3)" />
+          <stop offset="0%" stopColor="rgba(255, 255, 255, 0.3)" />
+          <stop offset="25%" stopColor="rgba(238, 238, 238, 0.25)" />
+          <stop offset="50%" stopColor="rgba(221, 221, 221, 0.15)" />
           <stop offset="100%" stopColor="rgba(187, 187, 187, 0)" />
         </radialGradient>
       </defs>
