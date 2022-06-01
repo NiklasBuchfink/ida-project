@@ -88,11 +88,18 @@ const handler = async (req, res) => {
     })
 
     let albumGenre = [];
-    for (let i = 0; Math.floor(albumIds.length / 20); i++) {
+    while (albumIds.length > 0) {
+      if (albumIds.length <= 20) {
+        let { data } = await getSpotify(accessToken, "https://api.spotify.com/v1/albums", { ids: albumIds.splice(0,albumIds.length).join(',') })
+        data.albums.map( (album)=> {
+          albumGenre.push(album.genres)
+        })
+        break;
+      }
       let { data } = await getSpotify(accessToken, "https://api.spotify.com/v1/albums", { ids: albumIds.splice(0,20).join(',') })
       data.albums.map( (album)=> {
         albumGenre.push(album.genres)
-      })      
+      })
     }
 
     let artistGenre = [];
