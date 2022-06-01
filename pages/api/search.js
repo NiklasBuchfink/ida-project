@@ -49,8 +49,9 @@ const handler = async (req, res) => {
     }
 
     let trackIds = [];
-    playlist.tracks.map( (track) => {
+    playlist.tracks.map( (track, index) => {
         trackIds.push(track.track.id);
+        track.track.ranking = index;
     });
         
     let { data } = await getSpotify(accessToken, "https://api.spotify.com/v1/audio-features/", { ids: trackIds.join(',') })
