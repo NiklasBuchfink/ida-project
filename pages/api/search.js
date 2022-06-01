@@ -1,5 +1,6 @@
 import { getSpotify } from '../../lib/spotify';
 import { getSession } from 'next-auth/react';
+import { topLevelGenre, mostPopularGenre, subLevelGenre } from '/lib/subgenre.js';
 
 const handler = async (req, res) => {
   const {
@@ -125,26 +126,131 @@ const handler = async (req, res) => {
         allGenres.push('unclassified genre')
       }
 
+      // get mainGenre
+      let mainGenre = 'unclassified genre';
+      let mainObj = {};
+      allGenres.map ((trackGenre) => {
+        let topLevel = topLevelGenre(trackGenre)
+        if (topLevel === 'unclassified genre') {
+          if (trackGenre.includes('pop')) {
+            topLevel = 'pop'
+          } else if (trackGenre.includes('house')) {
+            topLevel = 'house'
+          } else if (trackGenre.includes('r&b')) {
+            topLevel = 'r&b'
+          } else if (trackGenre.includes('hip hop')) {
+            topLevel = 'hip hop'
+          } else if (trackGenre.includes(' z ')) {
+            topLevel = 'indie'
+          }
+        }
+        if (mainObj.hasOwnProperty(topLevel)) {
+          mainObj[topLevel]++
+        } else {
+          mainObj[topLevel] = 1
+        }
+      })
+
+      let mainArr = sortObject(mainObj)
+      if (mainArr.length > 1) {
+        // same value -> popularity
+        if (mainArr[0].value === mainArr[1].value) {
+          let genreArr = []
+          mainArr.map( (trackGenre) => {
+            genreArr.push(trackGenre.genre)
+          })
+          mainGenre = mostPopularGenre(genreArr)
+        } else {
+          mainArr.map( (trackGenre) => {
+            if (trackGenre.genre !== 'unclassified genre') {
+              mainGenre = trackGenre.genre
+            }
+          })
+          mainGenre = mainArr[0].genre
+        }
+      } else {
+        mainGenre = mainArr[0].genre
+      }
+      
+      
+      // get subGenre
+      let subGenre = 'unclassified genre';
+      let subObj = {};
+      allGenres.map ((trackGenre) => {
+        let topLevel = subLevelGenre(trackGenre)
+        if (topLevel === 'unclassified genre') {
+          topLevel = trackGenre
+          // if (trackGenre.includes('pop')) {
+          //   topLevel = 'pop'
+          // } else if (trackGenre.includes('house')) {
+          //   topLevel = 'house'
+          // } else if (trackGenre.includes('r&b')) {
+          //   topLevel = 'r&b'
+          // } else if (trackGenre.includes('hip hop')) {
+          //   topLevel = 'hip hop'
+          // } else if (trackGenre.includes(' z ')) {
+          //   topLevel = 'indie'
+          // }
+        }
+        if (subObj.hasOwnProperty(topLevel)) {
+          subObj[topLevel]++
+        } else {
+          subObj[topLevel] = 1
+        }
+      })
+
+      let subArr = sortObject(subObj)
+      if (subArr.length > 1) {
+        // same value -> popularity
+        if (subArr[0].value === subArr[1].value) {
+          let genreArr = []
+          subArr.map( (trackGenre) => {
+            genreArr.push(trackGenre.genre)
+          })
+          subGenre = mostPopularGenre(genreArr)
+        } else {
+          subArr.map( (trackGenre) => {
+            if (trackGenre.genre !== 'unclassified genre') {
+              subGenre = trackGenre.genre
+            }
+          })
+          subGenre = subArr[0].genre
+        }
+      } else {
+        subGenre = subArr[0].genre
+      }
+
       track.track.genre = {
-        main: null,
-        sub: null,
+        main: mainGenre,
+        sub: subGenre,
         all: allGenres
       }
     })
     
     let playlistGenre = {
       main: {},
-      sub: {}
+      sub: {},
+      all: {}
     }
 
     playlist.tracks.map( (track) => {
       track.track.genre.all.map( (trackGenre) => {
-        if (playlistGenre.sub.hasOwnProperty(trackGenre)) {
-          playlistGenre.sub[trackGenre]++
+        if (playlistGenre.all.hasOwnProperty(trackGenre)) {
+          playlistGenre.all[trackGenre]++
         } else {
-          playlistGenre.sub[trackGenre] = 1
+          playlistGenre.all[trackGenre] = 1
         }
       })
+      if (playlistGenre.sub.hasOwnProperty(track.track.genre.sub)) {
+        playlistGenre.sub[track.track.genre.sub]++
+      } else {
+        playlistGenre.sub[track.track.genre.sub] = 1
+      }
+      if (playlistGenre.main.hasOwnProperty(track.track.genre.main)) {
+        playlistGenre.main[track.track.genre.main]++
+      } else {
+        playlistGenre.main[track.track.genre.main] = 1
+      }
     })
 
     function sortObject(obj) {
@@ -162,7 +268,9 @@ const handler = async (req, res) => {
       return arr;
     }
 
+    playlistGenre.all = sortObject(playlistGenre.all)
     playlistGenre.sub = sortObject(playlistGenre.sub)
+    playlistGenre.main = sortObject(playlistGenre.main)
     playlist.genre = playlistGenre
 
   }))
