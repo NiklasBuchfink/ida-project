@@ -15,7 +15,7 @@
     "next-auth": "^4.3.4",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "subgenre.js": "^1.0.3"
+    "react-spring": "^9.4.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
