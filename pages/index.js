@@ -12,7 +12,6 @@ export default function Home() {
   const [data, setData] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  
   const didMount = useRef(false);
 
   const getMyTopPlaylists = async () => {
@@ -36,6 +35,21 @@ export default function Home() {
   function toggleModal() {
     setIsOpen(!isOpen);
   }
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor: 'rgba(cc,cc,cc,0.5)',
+    },
+    overlay: { 
+      backgroundColor: 'rgba(ff,ff,ff,0.1)'
+    }
+  };
 
   if (session) {
     return (
@@ -79,12 +93,23 @@ export default function Home() {
             isOpen={isOpen}
             onRequestClose={toggleModal}
             contentLabel="Legend dialog"
+            style={customStyles}
+            // overlayClassName=""
+            closeTimeoutMS={200}
           >
-            <div>You_Music_Recap</div>
-            <button
-              className="absolute bottom-6 cursor-pointer" 
-              onClick={toggleModal}>Close
-            </button>
+            <div className="text-black">
+              <div className="text-2xl font-bold">You_Music_Recap</div>
+              <div className="mt-2 mb-8">
+                <p>Danceability: 72%</p>
+                <p>Energy: 70%</p>
+                <p>Valence: 60%</p>
+                <p>Tempo: 123 bpm</p>
+              </div>
+              <button
+                className="absolute bottom-6 cursor-pointer font-bold" 
+                onClick={toggleModal}>Close
+              </button>
+            </div>
           </Modal>
         </div>
       </>
