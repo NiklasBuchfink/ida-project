@@ -3,15 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useState, useEffect, useRef } from "react";
-import MusicDisc from "../components/MusicDisc";
-
 import Chart from "../components/Chart";
 
 export default function Home() {
   const { data: session } = useSession();
-  const [playlistsList, setPlaylistsList] = useState([]);
-  const [topArtistsList, setTopArtistsList] = useState([]);
-  const [topTracksList, setTopTracksList] = useState([]);
   const [topPlaylistList, setTopPlaylistList] = useState([]);
   const [data, setData] = useState(null);
 
@@ -60,7 +55,8 @@ export default function Home() {
               <Link href="/about">about</Link>
             </div>
           </div>
-          <div className="flex absolute w-full h-full justify-center items-center p-3">
+
+          <div className="flex absolute w-full h-full justify-center items-center p-6 pb-10">
             {data && <Chart size={1000} data={data} />}
           </div>
         </div>
@@ -69,35 +65,27 @@ export default function Home() {
   }
   return (
     <>
-      <p className="absolute uppercase font-bold text-2xl m-3">
-        Recap_My_Music
-      </p>
-      <div className="absolute uppercase right-0 font-bold text-md mt-4 mr-3">
+      <div className="absolute uppercase right-0 font-bold text-base mt-4 mr-3">
         <Link href="/about">about</Link>
       </div>
-      <div className="flex items-center justify-center h-screen max-w-7xl m-auto">
-        <div className="relative m-6 bg-white bg-opacity-10 text-center pt-6 w-full aspect-square">
-          Not signed in <br />
-          <p className="text-md font-bold"></p>
-          <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 space-y-3">
-            <p>Discover your taste in music visualized!</p>
-            <p>
-              Please note: In order to create the visualization <br />
-              we need your permission to access your Spotify data.
+
+
+      <div className="flex flex-col items-center justify-center h-screen m-auto space-y-3 overflow-hidden">
+
+        
+            <p className="title uppercase font-bold text-2xl">Recap_My_Music</p>
+            <p className="max-w-[500px] p-3 text-center">
+              Log in with your Spotify account to make your auditory listening
+              habit based on individual shapes and colors visually tangible,
+              shareable and comparable.
             </p>
             <button
+              className="text-white border-white border-2 border-dotted font-bold text-base px-12 py-2 w-fit cursor-pointer rounded-full helvetica "
               onClick={() => signIn("spotify")}
-              className=" bg-black text-white font-bold px-6 py-4 w-fit cursor-pointer"
             >
               LOG IN
             </button>
           </div>
-          <span className="absolute bottom-3 font-bold left-3">YOUR</span>
-          <span className="absolute bottom-3 font-bold right-3">2021</span>
-          <span className="absolute top-3 font-bold left-3">YOUR</span>
-          <span className="absolute top-3 font-bold right-3">GENRE</span>
-        </div>
-      </div>
     </>
   );
 }

@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Satoshi', 'sans-serif']
+      sans: ['monospace']
     },
     extend: {},
   },

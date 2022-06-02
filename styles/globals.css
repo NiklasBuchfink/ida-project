@@ -17,3 +17,38 @@
     @apply text-2xl font-medium mt-2;
   }
 }
+
+
+.title {
+	font-family: "helvetica", sans-serif;
+	transition: letter-spacing 5s;
+  color: white;
+	animation: stretch 6s infinite ease-in-out alternate;
+} 
+  @keyframes stretch {
+	from {
+	  letter-spacing: 2rem;
+	}
+	to {
+	  letter-spacing: 3rem;
+	}
+}
+
+.title.hover{
+  color: green
+}
+.helvetica {
+  font-family: "helvetica", sans-serif;
+}
+
+
+@media screen and (max-width: 650px) {
+  @keyframes stretch {
+    from {
+      letter-spacing: 1rem;
+    }
+    to {
+      letter-spacing: 2rem;
+    }
+  }
+}

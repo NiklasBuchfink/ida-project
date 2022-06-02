@@ -11,8 +11,13 @@ import {
 } from "victory";
 
 export default function Chart({ size, data }) {
-  let valence = data.features.valence;
-  let energy = data.features.energy;
+
+  let happiness = data.features.energy * data.features.valence;
+  let sadness =  (1 - data.features.energy) * (1 - data.features.valence);
+  let anger = data.features.energy * (1 - data.features.valence);
+  let serene = (1 - data.features.energy) * data.features.valence;
+
+  console.log( sadness, happiness, anger, serene)
   let mainGenreData = [];
   let trackData = [];
   let sortedTrackData = [];
@@ -46,6 +51,7 @@ export default function Chart({ size, data }) {
     }
   }
 
+
   /*   let myArray2 = [1, 2, 3, 4];
   myArray2.map((element, index) => {
     myArray2[index] = element * element;
@@ -61,20 +67,37 @@ export default function Chart({ size, data }) {
 
   // console.log(sortedTrackData);
 
+  // dance
+  // valence
+  // energy
+  // tempo
+
+
   return (
     <div className={`m-4 w-auto h-full max-w-[${size}] max-h-[${size}]`}>
       <VictoryContainer width={size} height={size}>
-        <radialGradient id="auraGradient">
+        <radialGradient id="auraGradientHappySad">
           <stop
             offset={`0%`}
-            stopColor={`hsla(${200 - valence * 140}, 100%, 60%, 1.0)`}
+            stopColor={`hsla(55, 100%, ${80-(happiness * 50)}%, 1.0)`}
           />
           <stop
             offset={`100%`}
-            stopColor={`hsla(${200 + energy * 160}, 100%, 60%, 1.0)`}
+            stopColor={`hsla(220, 100%, ${80-(sadness * 50)}%, 1.0)`}
           />
         </radialGradient>
-        <circle r={90} cx={size / 2} cy={size / 2} fill="url(#auraGradient)" />
+        <radialGradient id="auraGradientAngerSerene">
+          <stop
+            offset={`0%`}
+            stopColor={`hsla(140, 100%, ${80-(serene * 50)}%, 1.0)`}
+          />
+          <stop
+            offset={`100%`}
+            stopColor={`hsla(0, 100%, ${80-(anger * 50)}%, 1.0)`}
+          />
+        </radialGradient>
+        <circle r={size/2-60} cx={size / 2} cy={size / 2} fillOpacity={0.5} fill="url(#auraGradientHappySad)" />
+        <circle r={size/2-60} cx={size / 2} cy={size / 2} fillOpacity={0.5} fill="url(#auraGradientAngerSerene)" />
 
         <VictoryChart
           standalone={false}
@@ -92,7 +115,7 @@ export default function Chart({ size, data }) {
             data={sortedTrackData}
             style={{
               data: {
-                fill: ({ index }) => `hsla(0,0%,100%,${((sortedTrackData[index].y + 1) /100)})`,
+                fill: ({ index }) => `hsla(0,0%,100%,${( (sortedTrackData[index].y + 21) / 200)})`,
                 width: (360 / sortedTrackData.length) * 4 - 2,
               },
             }}
@@ -111,7 +134,7 @@ export default function Chart({ size, data }) {
           animate={{ duration: 2000, easing: "cubicInOut" }}
           standalone={false}
           sortOrder={"descending"}
-          innerRadius={size / 2 - 60}
+          innerRadius={size / 2 - 54}
           width={size}
           height={size}
           startAngle={360 / sortedTrackData.length / 2}
