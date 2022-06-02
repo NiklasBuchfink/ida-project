@@ -107,6 +107,7 @@ export default function Chart({ size, data }) {
 
         <VictoryPie
           className="GenrePie"
+          animate={{ duration: 2000, easing: "cubicInOut" }}
           standalone={false}
           sortOrder={"descending"}
           innerRadius={size / 2 - 60}

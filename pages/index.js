@@ -62,7 +62,7 @@ export default function Home() {
         </Head>
 
         <div className="relative w-full h-screen ">
-          <div className="absolute w-full p-4">
+          <div className="absolute w-full p-4 z-[199]">
             {/* <p>Signed in as {session?.token?.email}</p> */}
             <button
               className="absolute uppercase font-bold text-2xl cursor-pointer"
@@ -93,8 +93,15 @@ export default function Home() {
           </button>
             
           </div> */}
-          <div className="flex absolute w-full h-full justify-center items-center p-3">
+          <div className="flex absolute w-full h-full justify-center items-center p-6 pb-10">
             {data && <Chart size={1000} data={data} />}
+
+            <button
+              className="absolute bottom-6 cursor-pointer"
+              /* onClick={() => getMyTopPlaylists()} */
+            >
+              ???_LEGEND
+            </button>
           </div>
           {/* <div className="flex gap-4">
             <div className="space-y-4">
