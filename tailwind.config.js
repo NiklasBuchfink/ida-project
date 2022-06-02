@@ -7,7 +7,17 @@ module.exports = {
     fontFamily: {
       sans: ['monospace']
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        slowspin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        }
+      },
+      animation: {
+        slowspin: 'slowspin 3s ease-in-out infinite',
+      }
+    },
   },
   plugins: [],
 }
