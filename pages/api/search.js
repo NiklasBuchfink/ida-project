@@ -119,11 +119,10 @@ const handler = async (req, res) => {
 
     playlist.tracks.map( (track, index) => {
       let allGenres = [];
-/*       console.log(albumGenre)
       albumGenre[index].map( (genre) => {
         allGenres.push(genre);
       })
- */
+
       for (let i = 0; i < trackArtistsLength[index]; i++) {
         artistGenre[0].map( (genre) => {
           allGenres.push(genre)

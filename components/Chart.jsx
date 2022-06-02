@@ -1,3 +1,5 @@
+import { rgb } from "d3";
+import { getSortedRoutes } from "next/dist/shared/lib/router/utils";
 import React from "react";
 import * as V from "victory";
 import {
@@ -57,7 +59,7 @@ export default function Chart({ size, data }) {
       }
     }) */
 
-  //console.log(sortedTrackData);
+  // console.log(sortedTrackData);
 
   return (
     <div className={`m-4 w-auto h-full max-w-[${size}] max-h-[${size}]`}>
@@ -90,12 +92,11 @@ export default function Chart({ size, data }) {
             data={sortedTrackData}
             style={{
               data: {
-                fill: `hsla(0,0%,100%,0.4)`,
+                fill: ({ index }) => `hsla(0,0%,100%,${((sortedTrackData[index].y + 1) /100)})`,
                 width: (360 / sortedTrackData.length) * 4 - 2,
               },
             }}
           />
-
           <VictoryPolarAxis
             style={{
               axis: { stroke: "none", strokeWidth: 1 },

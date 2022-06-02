@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import MusicDisc from "../components/MusicDisc";
 
 import Chart from "../components/Chart";
@@ -15,26 +15,7 @@ export default function Home() {
   const [topPlaylistList, setTopPlaylistList] = useState([]);
   const [data, setData] = useState(null);
 
-  const getMyPlaylists = async () => {
-    const res = await fetch("/api/playlists");
-    const { items } = await res.json();
-    setPlaylistsList(items);
-    console.log(items);
-  };
-
-  const getMyTopArtists = async () => {
-    const res = await fetch("/api/topartists");
-    const { items } = await res.json();
-    setTopArtistsList(items);
-    console.log(items);
-  };
-
-  const getMyTopTracks = async () => {
-    const res = await fetch("/api/toptracks");
-    const { items } = await res.json();
-    setTopTracksList(items);
-    console.log(items);
-  };
+  const didMount = useRef(false);
 
   const getMyTopPlaylists = async () => {
     const res = await fetch("/api/search");
@@ -43,11 +24,16 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.log(topPlaylistList);
-    if (topPlaylistList.length > 0) {
-      setData(topPlaylistList[0]);
+    if (didMount.current) {
+      console.log(topPlaylistList);
+      if (topPlaylistList.length > 0) {
+        setData(topPlaylistList[0]);
+      }
+    } else {
+      getMyTopPlaylists()
+      didMount.current = true;
     }
-  });
+  }, [topPlaylistList]);
 
   if (session) {
     return (
@@ -73,78 +59,10 @@ export default function Home() {
             <div className="absolute uppercase right-0 font-bold text-md mt-1 mr-3">
               <Link href="/about">about</Link>
             </div>
-            <button
-              className="absolute top-16"
-              onClick={() => getMyTopPlaylists()}
-            >
-              Get all my top playlists
-            </button>
           </div>
-          {/* <div className="flex gap-4">
-            
-             <button className="text-gray-500" onClick={() => getMyPlaylists()}>
-            Get all my playlists
-          </button>
-          <button className="text-gray-500" onClick={() => getMyTopArtists()}>
-            Get all my topartists
-          </button>
-          <button className="text-gray-500" onClick={() => getMyTopTracks()}>
-            Get all my toptracks
-          </button>
-            
-          </div> */}
-          <div className="flex absolute w-full h-full justify-center items-center p-6 pb-10">
+          <div className="flex absolute w-full h-full justify-center items-center p-3">
             {data && <Chart size={1000} data={data} />}
-
-            <button
-              className="absolute bottom-6 cursor-pointer"
-              /* onClick={() => getMyTopPlaylists()} */
-            >
-              ???_LEGEND
-            </button>
           </div>
-          {/* <div className="flex gap-4">
-            <div className="space-y-4">
-              {playlistsList.map((item) => (
-                <div key={item.id}>
-                  <h1>{item.name}</h1>
-                  <Image
-                    src={item.images[0]?.url}
-                    alt={item.name}
-                    width={96}
-                    height={96}
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-4">
-              {topArtistsList.map((item) => (
-                <div key={item.id}>
-                  <h1>{item.name}</h1>
-                  <Image
-                    src={item.images[0]?.url}
-                    alt={item.name}
-                    width={96}
-                    height={96}
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-4">
-              {topTracksList.map((item) => (
-                <div key={item.id}>
-                  <p className="font-bold">{item.name}</p>
-                  {item.artists.map((artist) => (
-                    <span className="mr-2" key={artist.id}>
-                      {artist.name}
-                    </span>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
       </>
     );
