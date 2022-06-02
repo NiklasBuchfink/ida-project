@@ -86,7 +86,7 @@ export default function Chart({ size, data }) {
         >
           <VictoryBar
             className="RankingRadial"
-            //animate={{ duration: 2000, easing: "cubicInOut" }}
+            animate={{ duration: 2000, easing: "cubicInOut" }}
             data={sortedTrackData}
             style={{
               data: {
