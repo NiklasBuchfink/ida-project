@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useState, useEffect, useRef } from "react";
+import Modal from "react-modal";
 import ChartLoader from "../components/ChartLoader"
 import Chart from "../components/Chart";
 
@@ -9,7 +10,9 @@ export default function Home() {
   const { data: session } = useSession();
   const [topPlaylistList, setTopPlaylistList] = useState([]);
   const [data, setData] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
+  
   const didMount = useRef(false);
 
   const getMyTopPlaylists = async () => {
@@ -19,7 +22,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (didMount.current) {
+    if (didMount.current && session) {
       console.log(topPlaylistList);
       if (topPlaylistList.length > 0) {
         setData(topPlaylistList[0]);
@@ -29,6 +32,10 @@ export default function Home() {
       didMount.current = true;
     }
   }, [topPlaylistList]);
+  
+  function toggleModal() {
+    setIsOpen(!isOpen);
+  }
 
   if (session) {
     return (
@@ -60,7 +67,25 @@ export default function Home() {
               ? <Chart size={1000} data={data} /> 
               : <ChartLoader size={1000} />
             }
+            <button
+              className="absolute bottom-6 cursor-pointer"
+              onClick={toggleModal}
+            >
+              ???_LEGEND
+            </button>
           </div>
+
+          <Modal
+            isOpen={isOpen}
+            onRequestClose={toggleModal}
+            contentLabel="Legend dialog"
+          >
+            <div>You_Music_Recap</div>
+            <button
+              className="absolute bottom-6 cursor-pointer" 
+              onClick={toggleModal}>Close
+            </button>
+          </Modal>
         </div>
       </>
     );

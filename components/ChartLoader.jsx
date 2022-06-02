@@ -27,8 +27,8 @@ export default function ChartLoader({ size }) {
 ]
 
   return (
-    <div className={`m-4 w-auto h-full max-w-[${size}] max-h-[${size}] overflow-hidden`}>
-      <div className={`w-auto h-full max-w-[${size}] max-h-[${size}] animate-pulse animate-slowspin`}>
+    <div className={`m-4 w-auto h-full max-w-[${size}] max-h-[${size}] animate-pulse overflow-hidden`}>
+      <div className={`w-auto h-full max-w-[${size}] max-h-[${size}] animate-slowspin`}>
         <VictoryContainer width={size} height={size}>
           <radialGradient id="auraGradient">
             <stop

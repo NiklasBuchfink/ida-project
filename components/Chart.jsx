@@ -75,7 +75,7 @@ export default function Chart({ size, data }) {
 
   return (
     <div className={`m-4 w-auto h-full max-w-[${size}] max-h-[${size}]`}>
-      <VictoryContainer width={size} height={size}>
+      <VictoryContainer width={size} height={size} >
         <radialGradient id="auraGradientHappySad">
           <stop
             offset={`0%`}
