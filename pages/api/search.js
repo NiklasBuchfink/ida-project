@@ -33,8 +33,8 @@ const handler = async (req, res) => {
   await Promise.all(playlistArray.map(async (playlist) => {
     let { data } = await getSpotify(accessToken, `https://api.spotify.com/v1/playlists/${playlist.id}/tracks`, {
         playlist_id: playlist.id,
-        fields: "items(track(id, name, artists, album(id), preview_url))",
-        limit: 50
+        fields: "items(track(id, name, artists(id, name), album(id), preview_url))",
+        limit: 100
     })
     playlist.tracks = data.items;
   }));
@@ -163,20 +163,20 @@ const handler = async (req, res) => {
       let mainArr = sortObject(mainObj)
       if (mainArr.length > 1) {
         // same value -> popularity
-        if (mainArr[0].value === mainArr[1].value) {
-          let genreArr = []
-          mainArr.map( (trackGenre) => {
-            genreArr.push(trackGenre.genre)
-          })
-          mainGenre = mostPopularGenre(genreArr)
-        } else {
+        // if (mainArr[0].value === mainArr[1].value) {
+        //   let genreArr = []
+        //   mainArr.map( (trackGenre) => {
+        //     genreArr.push(trackGenre.genre)
+        //   })
+        //   mainGenre = mostPopularGenre(genreArr)
+        // } else {
           mainArr.map( (trackGenre) => {
             if (trackGenre.genre !== 'unclassified genre') {
               mainGenre = trackGenre.genre
             }
           })
           mainGenre = mainArr[0].genre
-        }
+        // }
       } else {
         mainGenre = mainArr[0].genre
       }
@@ -189,17 +189,6 @@ const handler = async (req, res) => {
         let topLevel = subLevelGenre(trackGenre)
         if (topLevel === 'unclassified genre') {
           topLevel = trackGenre
-          // if (trackGenre.includes('pop')) {
-          //   topLevel = 'pop'
-          // } else if (trackGenre.includes('house')) {
-          //   topLevel = 'house'
-          // } else if (trackGenre.includes('r&b')) {
-          //   topLevel = 'r&b'
-          // } else if (trackGenre.includes('hip hop')) {
-          //   topLevel = 'hip hop'
-          // } else if (trackGenre.includes(' z ')) {
-          //   topLevel = 'indie'
-          // }
         }
         if (subObj.hasOwnProperty(topLevel)) {
           subObj[topLevel]++
@@ -211,20 +200,20 @@ const handler = async (req, res) => {
       let subArr = sortObject(subObj)
       if (subArr.length > 1) {
         // same value -> popularity
-        if (subArr[0].value === subArr[1].value) {
-          let genreArr = []
-          subArr.map( (trackGenre) => {
-            genreArr.push(trackGenre.genre)
-          })
-          subGenre = mostPopularGenre(genreArr)
-        } else {
+        // if (subArr[0].value === subArr[1].value) {
+        //   let genreArr = []
+        //   subArr.map( (trackGenre) => {
+        //     genreArr.push(trackGenre.genre)
+        //   })
+        //   subGenre = mostPopularGenre(genreArr)
+        // } else {
           subArr.map( (trackGenre) => {
             if (trackGenre.genre !== 'unclassified genre') {
               subGenre = trackGenre.genre
             }
           })
           subGenre = subArr[0].genre
-        }
+        // }
       } else {
         subGenre = subArr[0].genre
       }
