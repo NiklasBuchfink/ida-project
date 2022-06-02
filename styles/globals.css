@@ -7,7 +7,7 @@
 
 @layer base {
   html {
-    @apply bg-stone-900 text-neutral-200;
+    @apply bg-black text-neutral-200;
   }
   h1 {
     @apply text-3xl font-medium;

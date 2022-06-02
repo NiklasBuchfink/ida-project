@@ -4,8 +4,6 @@ export default function Aura({ radius, valence, energy }) {
   let beginOffset = 0;
   let endOffset = 1;
 
-
-
   return (
     <>
       <defs>

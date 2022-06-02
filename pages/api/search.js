@@ -34,7 +34,7 @@ const handler = async (req, res) => {
     let { data } = await getSpotify(accessToken, `https://api.spotify.com/v1/playlists/${playlist.id}/tracks`, {
         playlist_id: playlist.id,
         fields: "items(track(id, name, artists, album, preview_url))",
-        limit: 100
+        limit: 50
     })
     playlist.tracks = data.items;
   }));
@@ -119,10 +119,11 @@ const handler = async (req, res) => {
 
     playlist.tracks.map( (track, index) => {
       let allGenres = [];
+/*       console.log(albumGenre)
       albumGenre[index].map( (genre) => {
         allGenres.push(genre);
       })
-
+ */
       for (let i = 0; i < trackArtistsLength[index]; i++) {
         artistGenre[0].map( (genre) => {
           allGenres.push(genre)

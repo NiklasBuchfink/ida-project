@@ -11,7 +11,7 @@ const trackData = data.tracks
   console.log(trackData[index].track.features.energy)
 } */
 
-console.log(trackData.id)
+console.log(data.tracks[0].track.id)
   const D3ref = useD3(
     (svg) => {
         
@@ -20,7 +20,7 @@ console.log(trackData.id)
 
       const x = d3.scaleBand()
       .range([0, 2 * Math.PI])
-      .domain(trackData.map(d => d.i))
+      .domain(trackData.map( (d) => d.track.id) )
       .align(0)
       
 
@@ -36,9 +36,9 @@ console.log(trackData.id)
         .join("path")
         .attr("d", d3.arc()
           .innerRadius(innerRadius)
-          .outerRadius(d => y(d.track.features.valence))
-          .startAngle(d => x(d.id))
-          .endAngle(d => x(d.id) + x.bandwidth() / trackData.length)
+          .outerRadius(d => y(d.track.features.danceability))
+          .startAngle(d => x(d.track.id))
+          .endAngle(d => x(d.track.id) + x.bandwidth() / trackData.length)
           .padAngle(0.01)
           .padRadius(innerRadius))
     },
