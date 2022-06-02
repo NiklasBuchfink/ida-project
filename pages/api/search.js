@@ -9,7 +9,7 @@ const handler = async (req, res) => {
 
   let playlistArray = []
   // 2009
-  for (let i = new Date().getFullYear()-1; i > 2020 ; i--) {
+  for (let i = new Date().getFullYear()-1; i > 2009 ; i--) {
     let { data } = await getSpotify(accessToken, "https://api.spotify.com/v1/search", {
         q: 'Top Songs ' + i,
         type: "playlist",
@@ -33,7 +33,7 @@ const handler = async (req, res) => {
   await Promise.all(playlistArray.map(async (playlist) => {
     let { data } = await getSpotify(accessToken, `https://api.spotify.com/v1/playlists/${playlist.id}/tracks`, {
         playlist_id: playlist.id,
-        fields: "items(track(id, name, artists, album, preview_url))",
+        fields: "items(track(id, name, artists, album(id), preview_url))",
         limit: 50
     })
     playlist.tracks = data.items;
