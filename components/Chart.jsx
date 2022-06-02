@@ -74,8 +74,8 @@ export default function Chart({ size, data }) {
 
 
   return (
-    <div className={`m-4 w-auto h-full max-w-[${size}] max-h-[${size}]`}>
-      <VictoryContainer width={size} height={size} >
+    <div className={`m-4 w-auto h-full max-w-[${size}px] max-h-[${size}px]`}>
+      <VictoryContainer width={size} height={size}>
         <radialGradient id="auraGradientHappySad">
           <stop
             offset={`0%`}
@@ -96,8 +96,8 @@ export default function Chart({ size, data }) {
             stopColor={`hsla(0, 100%, ${80-(anger * 50)}%, 1.0)`}
           />
         </radialGradient>
-        <circle r={size/2-60} cx={size / 2} cy={size / 2} fillOpacity={0.5} fill="url(#auraGradientHappySad)" />
-        <circle r={size/2-60} cx={size / 2} cy={size / 2} fillOpacity={0.5} fill="url(#auraGradientAngerSerene)" />
+        <circle r={size/2-70} cx={size / 2} cy={size / 2} fillOpacity={0.5} fill="url(#auraGradientHappySad)" />
+        <circle r={size/2-70} cx={size / 2} cy={size / 2} fillOpacity={0.5} fill="url(#auraGradientAngerSerene)" />
 
         <VictoryChart
           standalone={false}
@@ -106,8 +106,8 @@ export default function Chart({ size, data }) {
           height={size}
           startAngle={90}
           endAngle={450}
-          innerRadius={100}
-          maxDomain={{ y: sortedTrackData.length + 5 }}
+          innerRadius={90}
+          maxDomain={{ y: sortedTrackData.length + 10 }}
         >
           <VictoryBar
             className="RankingRadial"

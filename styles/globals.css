@@ -12,37 +12,42 @@
   h1 {
     @apply text-3xl font-medium;
   }
-
   h2 {
     @apply text-2xl font-medium mt-2;
+  }
+  a {
+    @apply uppercase font-bold text-base;
   }
 }
 
 
 .title {
-	font-family: "helvetica", sans-serif;
-	transition: letter-spacing 5s;
+  font-family: "helvetica", sans-serif;
+  transition: letter-spacing 5s;
   color: white;
-	animation: stretch 6s infinite ease-in-out alternate;
-} 
-  @keyframes stretch {
-	from {
-	  letter-spacing: 2rem;
-	}
-	to {
-	  letter-spacing: 3rem;
-	}
+  animation: stretch 6s infinite ease-in-out alternate;
+}
+@keyframes stretch {
+  from {
+    letter-spacing: 2rem;
+  }
+  to {
+    letter-spacing: 3rem;
+  }
 }
 
-.title.hover{
-  color: green
+.title.hover {
+  color: rgb(192, 255, 3);
 }
 .helvetica {
   font-family: "helvetica", sans-serif;
 }
 
-
 @media screen and (max-width: 650px) {
+  .title {
+    animation: stretch 6s infinite ease-in-out alternate;
+  }
+
   @keyframes stretch {
     from {
       letter-spacing: 1rem;

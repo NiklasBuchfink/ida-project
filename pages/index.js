@@ -53,12 +53,12 @@ export default function Home() {
           <div className="absolute w-full p-4 z-[199]">
             {/* <p>Signed in as {session?.token?.email}</p> */}
             <button
-              className="absolute uppercase font-bold text-2xl cursor-pointer"
+              className=" helvetica absolute uppercase font-bold text-md cursor-pointer"
               onClick={() => signOut()}
             >
               Recap_My_Music
             </button>
-            <div className="absolute uppercase right-0 font-bold text-md mt-1 mr-3">
+            <div className=" helvetica absolute uppercase right-0 font-bold text-md mt-1 mr-3">
               <Link href="/about">about</Link>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function Home() {
   }
   return (
     <>
-      <div className="absolute uppercase right-0 font-bold text-base mt-4 mr-3">
+      <div className="absolute helvetica uppercase right-0 font-bold text-base mt-4 mr-3">
         <Link href="/about">about</Link>
       </div>
 
@@ -104,11 +104,15 @@ export default function Home() {
           shareable and comparable.
         </p>
         <button
-          className="text-white border-white border-2 border-dotted font-bold text-base px-12 py-2 w-fit cursor-pointer rounded-full helvetica "
+          className="text-white border-white border-2 border-dotted font-bold text-base px-12 py-2 w-fit cursor-pointer rounded-full helvetica hover:bg-gray-900 "
           onClick={() => signIn("spotify")}
         >
-          LOG IN
+          LOG IN WITH SPOTIFY
         </button>
+
+        <p className="max-w-[500px] p-3 text-center">
+          or use data <a className="underline" href="#">from the creators</a>.
+        </p>
       </div>
     </>
   );
