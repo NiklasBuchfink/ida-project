@@ -1,6 +1,5 @@
 import React from "react";
 import * as V from "victory";
-import { useState } from "react";
 import {
   VictoryContainer,
   VictoryPie,
@@ -12,7 +11,6 @@ import {
 export default function Chart({ size, data }) {
   let valence = data.features.valence;
   let energy = data.features.energy;
-  let valenceData = [];
   let mainGenreData = [];
   let trackData = [];
   let sortedTrackData = [];
@@ -25,49 +23,41 @@ export default function Chart({ size, data }) {
   }
 
   for (let i = 0; i < data.tracks.length; i++) {
-    valenceData.push({
-      x: (360 / data.tracks.length) * i,
-      y: data.tracks[i].track.features.valence,
-      y: i + 1,
-    });
-  }
-
-  for (let i = 0; i < data.tracks.length; i++) {
     trackData.push({
       genre: data.tracks[i].track.genre.main,
       ranking: data.tracks[i].track.ranking,
     });
   }
 
-
+  // das kann verbessert sicher werden (evtl. mit map() oder forEach())
   let index = 0;
   for (let i = 0; i < mainGenreData.length; i++) {
     for (let j = 0; j < trackData.length; j++) {
       let found = trackData[j].genre.includes(mainGenreData[i].x);
       if (found) {
         sortedTrackData.push({
-          x: 360 - (index * 360 / trackData.length),
+          x: 360 - (index * 360) / trackData.length,
           y: trackData.length - data.tracks[j].track.ranking,
         });
-        index++
+        index++;
       }
     }
   }
-  console.log(sortedTrackData);
 
-/*   let myArray2 = [1, 2, 3, 4];
+  /*   let myArray2 = [1, 2, 3, 4];
   myArray2.map((element, index) => {
     myArray2[index] = element * element;
     let found = trackData.includes(mainGenreData[i].x);  
   })
-
 
   mainGenreData.map((mainGenreData.x) => {
     let topLevel = topLevelGenre(trackGenre)
       if (trackGenre.includes('pop')) {
         topLevel = 'pop'
       }
-  }) */
+    }) */
+
+  //console.log(sortedTrackData);
 
   return (
     <div className={`m-4 w-auto h-full max-w-[${size}] max-h-[${size}]`}>
@@ -98,11 +88,10 @@ export default function Chart({ size, data }) {
             className="RankingRadial"
             //animate={{ duration: 2000, easing: "cubicInOut" }}
             data={sortedTrackData}
-
             style={{
               data: {
                 fill: `hsla(0,0%,100%,0.4)`,
-                width: 360 / sortedTrackData.length * 4 - 2,
+                width: (360 / sortedTrackData.length) * 4 - 2,
               },
             }}
           />
@@ -123,8 +112,8 @@ export default function Chart({ size, data }) {
           innerRadius={size / 2 - 60}
           width={size}
           height={size}
-          startAngle={360/sortedTrackData.length/2}
-          endAngle={360 + 360/sortedTrackData.length/2}
+          startAngle={360 / sortedTrackData.length / 2}
+          endAngle={360 + 360 / sortedTrackData.length / 2}
           padAngle={1}
           labelPlacement={"perpendicular"}
           //labelRadius={size/2}
