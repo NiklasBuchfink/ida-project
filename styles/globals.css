@@ -16,7 +16,7 @@
     @apply text-2xl font-medium mt-2;
   }
   a {
-    @apply uppercase font-bold text-base;
+    @apply text-base;
   }
 }
 
@@ -25,6 +25,7 @@
   font-family: "helvetica", sans-serif;
   transition: letter-spacing 5s;
   color: white;
+  transform: translateX(1.25rem);
   animation: stretch 6s infinite ease-in-out alternate;
 }
 @keyframes stretch {
@@ -45,15 +46,18 @@
 
 @media screen and (max-width: 650px) {
   .title {
-    animation: stretch 6s infinite ease-in-out alternate;
+    letter-spacing: 0.4rem;
+    animation: stretchmobile 6s infinite ease-in-out alternate;
+    transform: translateX(0.6rem);
+
   }
 
-  @keyframes stretch {
+  @keyframes stretchmobile {
     from {
-      letter-spacing: 1rem;
+      letter-spacing: 0.4rem;
     }
     to {
-      letter-spacing: 2rem;
+      letter-spacing: 0.8rem;
     }
   }
 }

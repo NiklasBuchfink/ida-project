@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useState, useEffect, useRef } from "react";
 import Modal from "react-modal";
-import ChartLoader from "../components/ChartLoader"
+import ChartLoader from "../components/ChartLoader";
 import Chart from "../components/Chart";
 
 export default function Home() {
@@ -27,28 +27,28 @@ export default function Home() {
         setData(topPlaylistList[0]);
       }
     } else {
-      getMyTopPlaylists()
+      getMyTopPlaylists();
       didMount.current = true;
     }
   }, [topPlaylistList]);
-  
+
   function toggleModal() {
     setIsOpen(!isOpen);
   }
 
   const customStyles = {
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      backgroundColor: 'rgba(cc,cc,cc,0.5)',
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "rgba(cc,cc,cc,0.5)",
     },
-    overlay: { 
-      backgroundColor: 'rgba(ff,ff,ff,0.1)'
-    }
+    overlay: {
+      backgroundColor: "rgba(ff,ff,ff,0.1)",
+    },
   };
 
   if (session) {
@@ -63,24 +63,26 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <div className="relative w-full h-screen ">
-          <div className="absolute w-full p-4 z-[199]">
-            {/* <p>Signed in as {session?.token?.email}</p> */}
-            <button
-              className=" helvetica absolute uppercase font-bold text-md cursor-pointer"
-              onClick={() => signOut()}
-            >
-              Recap_My_Music
-            </button>
-            <div className=" helvetica absolute uppercase right-0 font-bold text-md mt-1 mr-3">
-              <Link href="/about">about</Link>
-            </div>
+        <div className="relative h-screen w-full ">
+          {/* <p>Signed in as {session?.token?.email}</p> */}
+          <button
+            className=" helvetica absolute left-0 z-[199] mt-4 ml-3 cursor-pointer text-base font-bold uppercase"
+            onClick={() => signOut()}
+          >
+            Recap_My_Music
+          </button>
+          <div className="absolute right-0 z-[199] mt-4 mr-3">
+            <Link href="/about">
+              <a className="helvetica text-base font-bold uppercase">about</a>
+            </Link>
           </div>
-          <div className="flex absolute w-full h-full justify-center items-center p-6 pb-10">
-            {data 
-              ? <Chart size={1000} data={data} /> 
-              : <ChartLoader size={1000} />
-            }
+
+          <div className="absolute flex h-full w-full items-center justify-center p-6 pb-10">
+            {data ? (
+              <Chart size={1000} data={data} />
+            ) : (
+              <ChartLoader size={1000} />
+            )}
             <button
               className="absolute bottom-6 cursor-pointer"
               onClick={toggleModal}
@@ -106,8 +108,10 @@ export default function Home() {
                 <p>Tempo: 123 bpm</p>
               </div>
               <button
-                className="absolute bottom-6 cursor-pointer font-bold" 
-                onClick={toggleModal}>Close
+                className="absolute bottom-6 cursor-pointer font-bold"
+                onClick={toggleModal}
+              >
+                Close
               </button>
             </div>
           </Modal>
@@ -117,26 +121,32 @@ export default function Home() {
   }
   return (
     <>
-      <div className="absolute helvetica uppercase right-0 font-bold text-base mt-4 mr-3">
-        <Link href="/about">about</Link>
+      <div className="absolute right-0 mt-4 mr-3">
+        <Link href="/about">
+          <a className="helvetica text-base font-bold uppercase ">about</a>
+        </Link>
       </div>
 
-      <div className="flex flex-col items-center justify-center h-screen m-auto space-y-3 overflow-hidden">
-        <p className="title uppercase font-bold text-2xl">Recap_My_Music</p>
+      <div className="m-auto flex h-screen flex-col items-center justify-center space-y-3 overflow-hidden">
+        <p className="title text-2xl font-bold uppercase">Recap_My_Music</p>
         <p className="max-w-[500px] p-3 text-center">
-          Log in with your Spotify account to make your auditory listening
-          habit based on individual shapes and colors visually tangible,
-          shareable and comparable.
+          Log in with your Spotify account to make your auditory listening habit
+          based on individual shapes and colors visually tangible, shareable and
+          comparable.
         </p>
         <button
-          className="text-white border-white border-2 border-dotted font-bold text-base px-12 py-2 w-fit cursor-pointer rounded-full helvetica hover:bg-gray-900 "
+          className="helvetica w-fit cursor-pointer rounded-full border-2 border-dotted border-white px-12 py-2 text-base font-bold text-white hover:border-gray-300 active:bg-gray-500 "
           onClick={() => signIn("spotify")}
         >
           LOG IN WITH SPOTIFY
         </button>
 
         <p className="max-w-[500px] p-3 text-center">
-          or use data <a className="underline" href="#">from the creators</a>.
+          or use data{" "}
+          <a className="helvetica font-bold uppercase underline" href="#">
+            from the creators
+          </a>
+          .
         </p>
       </div>
     </>
