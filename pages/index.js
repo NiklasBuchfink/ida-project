@@ -149,7 +149,7 @@ export default function Home() {
         </button>
 
         <p className="max-w-[500px] p-3 text-center">
-          or use a data sample <Link href="/sample"><a className="underline" href="/sample">from the creators</a></Link>.
+          or use a data sample <div className="underline"><Link href="/sample">from the creators</Link></div>.
         </p>
       </div>
     </>
