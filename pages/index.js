@@ -40,6 +40,33 @@ export default function Home() {
     }
   }
 
+  function svgExport() {
+    // //get svg element.
+    let svg = document.getElementsByTagName("svg")[0];
+
+    // //get svg source.
+    let serializer = new XMLSerializer();
+    let source = serializer.serializeToString(svg);
+
+    let svgBlob = new Blob([source], {type:"image/svg+xml;charset=utf-8"});
+    let svgUrl = URL.createObjectURL(svgBlob);
+    let downloadLink = document.createElement("a");
+    downloadLink.href = svgUrl;
+    downloadLink.download = "recap_my_music.svg";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  }
+
+  function download(url) {
+    const a = document.createElement('a')
+    a.href = url
+    a.download = url.split('/').pop()
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+  }
+
   const customStyles = {
     content: {
       top: "50%",
@@ -88,10 +115,16 @@ export default function Home() {
               <ChartLoader size={1000} />
             )}
             <button
-              className="absolute bottom-6 cursor-pointer"
+              className="absolute right-6 cursor-pointer"
               onClick={toggleModal}
             >
-              ???_LEGEND
+              MORE_INFO
+            </button>
+            <button
+              className="absolute left-6 cursor-pointer"
+              onClick={svgExport}
+            >
+              EXPORT
             </button>
           </div>
 
