@@ -7,22 +7,22 @@ import ChartLoader from "../components/ChartLoader";
 import Chart from "../components/Chart";
 
 export default function Home() {
-  const { data: session } = useSession();
-  const [topPlaylistList, setTopPlaylistList] = useState([]);
-  const [data, setData] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const { data: session } = useSession()
+  const [topPlaylistList, setTopPlaylistList] = useState([])
+  const [data, setData] = useState(null)
+  const [isOpen, setIsOpen] = useState(false)
 
-  const didMount = useRef(false);
+  const didMount = useRef(false)
 
   const getMyTopPlaylists = async () => {
     const res = await fetch("/api/search");
     const { items } = await res.json();
     setTopPlaylistList(items);
-  };
+  }
 
   useEffect(() => {
     if (didMount.current && session) {
-      console.log(topPlaylistList);
+      console.log(topPlaylistList)
       if (topPlaylistList.length > 0) {
         setData(topPlaylistList[0]);
       }
@@ -30,10 +30,12 @@ export default function Home() {
       getMyTopPlaylists();
       didMount.current = true;
     }
-  }, [topPlaylistList]);
-
+  }, [topPlaylistList])
+  
   function toggleModal() {
-    setIsOpen(!isOpen);
+    if (data) {
+      setIsOpen(!isOpen)
+    }
   }
 
   const customStyles = {
@@ -96,7 +98,6 @@ export default function Home() {
             onRequestClose={toggleModal}
             contentLabel="Legend dialog"
             style={customStyles}
-            // overlayClassName=""
             closeTimeoutMS={200}
           >
             <div className="text-black">
@@ -121,10 +122,16 @@ export default function Home() {
   }
   return (
     <>
-      <div className="absolute right-0 mt-4 mr-3">
-        <Link href="/about">
-          <a className="helvetica text-base font-bold uppercase ">about</a>
-        </Link>
+      <Head>
+        <title>Recap_My_Music</title>
+        <meta
+          name="description"
+          content="Recap your music taste by logging in to your Spotify Account."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="absolute helvetica uppercase right-0 font-bold text-base mt-4 mr-3">
+        <Link href="/about">about</Link>
       </div>
 
       <div className="m-auto flex h-screen flex-col items-center justify-center space-y-3 overflow-hidden">
@@ -142,11 +149,7 @@ export default function Home() {
         </button>
 
         <p className="max-w-[500px] p-3 text-center">
-          or use data{" "}
-          <a className="helvetica font-bold uppercase underline" href="#">
-            from the creators
-          </a>
-          .
+          or use a data sample <Link href="/sample"><a className="underline" href="/sample">from the creators</a></Link>.
         </p>
       </div>
     </>
