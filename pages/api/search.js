@@ -143,13 +143,13 @@ const handler = async (req, res) => {
           if (trackGenre.includes('pop')) {
             topLevel = 'pop'
           } else if (trackGenre.includes('house')) {
-            topLevel = 'house'
+            topLevel = 'dance/electronic'
           } else if (trackGenre.includes('r&b')) {
             topLevel = 'r&b'
           } else if (trackGenre.includes('hip hop')) {
             topLevel = 'hip hop'
           } else if (trackGenre.includes(' z ')) {
-            topLevel = 'indie'
+            topLevel = 'folk/acoustic'
           }
         }
         if (mainObj.hasOwnProperty(topLevel)) {

@@ -21,14 +21,16 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if (didMount.current && session) {
-      console.log(topPlaylistList)
-      if (topPlaylistList.length > 0) {
-        setData(topPlaylistList[0]);
+    if (session) {
+      if (didMount.current) {
+        console.log(topPlaylistList)
+        if (topPlaylistList.length > 0) {
+          setData(topPlaylistList[0]);
+        }
+      } else {
+        getMyTopPlaylists();
+        didMount.current = true;
       }
-    } else {
-      getMyTopPlaylists();
-      didMount.current = true;
     }
   }, [topPlaylistList])
   
@@ -149,7 +151,7 @@ export default function Home() {
         </button>
 
         <p className="max-w-[500px] p-3 text-center">
-          or use a data sample <div className="underline"><Link href="/sample">from the creators</Link></div>.
+          or use a data sample <span className="underline"><Link href="/sample">from the creators</Link></span>.
         </p>
       </div>
     </>
