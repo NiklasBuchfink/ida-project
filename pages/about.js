@@ -1,19 +1,28 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function about() {
   return (
     <>
+    <Head>
+          <title>ABOUT</title>
+          <meta
+            name="description"
+            content="About how RECAP_YOUR_MUSIC works and who we are."
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
       <div className="absolute right-0 mt-4 mr-6">
         <Link href="/">
           <a className="helvetica text-base font-bold uppercase">BACK</a>
         </Link>
       </div>
 
-      <div className="m-auto flex h-screen max-w-[550px] flex-col items-center space-y-6 px-4 text-left leading-relaxed sm:justify-center sm:text-center">
+      <div className="m-auto flex h-screen max-w-[550px] flex-col items-center space-y-6 px-4 text-left leading-[1.4] sm:justify-center sm:text-center">
         <div className="mt-24 sm:mt-0">
           <p className="helvetica text-base font-bold uppercase">ABOUT</p>
-          <p className="text-left">
+          <p className="text-justify">
             Music is an essential part of our lives. It shapes our culture and
             our identity. The everyday playlists and every concert tracklist is
             associated with special memories. RECAP_MY_MUSIC visualizes your
@@ -26,12 +35,12 @@ export default function about() {
         </div>
         <div className="">
           <p className="helvetica text-base font-bold uppercase">SPOTIFY API</p>
-          <p className="text-left">
+          <p className="text-justify">
             Spotify allows developers to create web applications that make use
             of their gigantic music library and can load data from registered
             users. RECAP_MY_MUSIC searches for every{" "}
             <a
-              className=" underline "
+              className="underline "
               href="https://en.wikipedia.org/wiki/Spotify_Wrapped"
               target="_blank"
               rel="noreferrer"

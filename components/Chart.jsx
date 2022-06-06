@@ -49,7 +49,7 @@ export default function Chart({ size, data }) {
       if (found) {
         sortedTrackData.push({
           x: 360 - (index * 360) / trackData.length,
-          y: trackData.length - data.tracks[j].track.ranking,
+          y: trackData.length - data.tracks[j].track.ranking + 5,
           ranking: data.tracks[j].track.ranking + 1,
           name: data.tracks[j].track.name,
           artist: artistArr.join(', '),
@@ -106,7 +106,7 @@ export default function Chart({ size, data }) {
           //labelRadius={size/2}
           style={{
             data: { fill: "white" },
-            labels: { fill: "grey", padding: 20, fontSize: 16 },
+            labels: { fill: "white", padding: 10, fontSize: 16,  textTransform: "uppercase"},
           }}
         />
 
@@ -118,7 +118,8 @@ export default function Chart({ size, data }) {
           startAngle={90}
           endAngle={450}
           innerRadius={90}
-          maxDomain={{ y: sortedTrackData.length + 10 }}
+          minDomain={{ y: 0 }}
+          maxDomain={{ y: sortedTrackData.length + 15 }}
         >
           <VictoryPolarAxis
             style={{
@@ -133,17 +134,14 @@ export default function Chart({ size, data }) {
             data={sortedTrackData}
             labelPlacement={"vertical"}
             labelRadius={100}
-            labels={({ datum }) => [`${datum.name}`, `${datum.artist}`, `# ${datum.ranking}`] }
+            labels={({ datum }) => [`${datum.name}`, `${datum.artist}`, `Your Top ${datum.ranking}`]}
+            lineHeight={[2, 2, 2]}
             labelComponent={<CustomLabel  />}
             style={{
-              labels: { 
-                fill: "white", 
-                lineHeight: 1.4
-              },
               data: {
                 fill: ({ index }) =>
                 `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`,
-                width: (360 / sortedTrackData.length) * 4 - 2,
+                width: (360 / sortedTrackData.length) * 4 - 2, // alt. without spacing: 0.3
               },
             }}
             events={[{
