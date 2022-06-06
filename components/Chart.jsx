@@ -147,7 +147,22 @@ export default function Chart({ size, data }) {
             events={[{
               target: "data",
               eventHandlers: {
-
+                onMouseOver: () => {
+                  return [{
+                    mutation: (props) => {
+                      return {
+                        style: Object.assign({}, props.style, {fill: "white"})
+                      };
+                    }
+                  }];
+                },
+                onMouseOut: () => {
+                  return [{
+                    mutation: () => {
+                      return null;
+                    }
+                  }];
+                }
               }
             }]}
           />
