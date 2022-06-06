@@ -8,7 +8,9 @@ import {
   VictoryChart,
   VictoryPolarAxis,
   VictoryBar,
+  VictoryTooltip
 } from "victory";
+import CustomLabel from "./CustomLabel";
 
 export default function Chart({ size, data }) {
   let valence = data.features.valence;
@@ -26,6 +28,8 @@ export default function Chart({ size, data }) {
     mainGenreData.push({
       x: data.genre.main[i].genre,
       y: data.genre.main[i].value,
+      track: data,
+      artist: data
     });
   }
 
@@ -93,6 +97,9 @@ export default function Chart({ size, data }) {
             className="RankingRadial"
             animate={{ duration: 2000, easing: "cubicInOut" }}
             data={sortedTrackData}
+            labelRadius={120}
+            labels={({ datum }) => `Track: ${datum.x}, Artist: ${datum.y} Ranking: ${101-datum.y}`}
+            labelComponent={<CustomLabel/>}
             style={{
               data: {
                 fill: ({ index }) =>
@@ -100,6 +107,12 @@ export default function Chart({ size, data }) {
                 width: (360 / sortedTrackData.length) * 4 - 2,
               },
             }}
+            events={[{
+              target: "data",
+              eventHandlers: {
+
+              }
+            }]}
           />
           <VictoryPolarAxis
             style={{
