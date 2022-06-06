@@ -11,12 +11,13 @@ import {
 } from "victory";
 
 export default function Chart({ size, data }) {
-  let happiness = data.features.energy * data.features.valence;
-  let sadness = (1 - data.features.energy) * (1 - data.features.valence);
-  let anger = data.features.energy * (1 - data.features.valence);
-  let serene = (1 - data.features.energy) * data.features.valence;
-
-  console.log(sadness, happiness, anger, serene);
+  let valence = data.features.valence;
+  let energy = data.features.energy;
+  
+  //let valence = 0.7;
+  //let energy = 0.4;
+  //console.log(valence, energy)
+  //console.log(sadness, happiness, anger, serene);
   let mainGenreData = [];
   let trackData = [];
   let sortedTrackData = [];
@@ -35,7 +36,6 @@ export default function Chart({ size, data }) {
     });
   }
 
-  // das kann verbessert sicher werden (evtl. mit map() oder forEach())
   let index = 0;
   for (let i = 0; i < mainGenreData.length; i++) {
     for (let j = 0; j < trackData.length; j++) {
@@ -51,48 +51,32 @@ export default function Chart({ size, data }) {
   }
 
   // Features list
-  // dance
   // valence
   // energy
+  // dance
   // tempo
 
   return (
     <div className={`m-4 h-full w-auto max-w-[${size}px] max-h-[${size}px]`}>
       <VictoryContainer width={size} height={size}>
         <rect width="100%" height="100%" fill="black" />
-        <radialGradient id="auraGradientHappySad">
+        <radialGradient id="auraGradient">
           <stop
-            offset={`0%`}
-            stopColor={`hsla(55, 100%, ${80 - happiness * 200}%, 1.0)`}
+            offset={`${energy*20}%`}
+            stopColor={`hsla(${80 + energy * 410}, 100%, 60%, 1)`}
           />
           <stop
-            offset={`100%`}
-            stopColor={`hsla(220, 100%, ${80 - sadness * 200}%, 1.0)`}
-          />
-        </radialGradient>
-        <radialGradient id="auraGradientAngerSerene">
-          <stop
-            offset={`0%`}
-            stopColor={`hsla(140, 100%, ${80 - serene * 200}%, 1.0)`}
-          />
-          <stop
-            offset={`100%`}
-            stopColor={`hsla(0, 100%, ${80 - anger * 200}%, 1.0)`}
+            offset={`${100-(valence*20)}%`}
+            stopColor={`hsla(${400 - (valence * 500)}, 100%, 60%, 1)`}
           />
         </radialGradient>
+
         <circle
           r={size / 2 - 70}
           cx={size / 2}
           cy={size / 2}
           fillOpacity={0.5}
-          fill="url(#auraGradientHappySad)"
-        />
-        <circle
-          r={size / 2 - 70}
-          cx={size / 2}
-          cy={size / 2}
-          fillOpacity={0.5}
-          fill="url(#auraGradientAngerSerene)"
+          fill="url(#auraGradient)"
         />
 
         <VictoryChart
