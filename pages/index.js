@@ -7,37 +7,37 @@ import ChartLoader from "../components/ChartLoader";
 import Chart from "../components/Chart";
 
 export default function Home() {
-  const { data: session } = useSession()
-  const [topPlaylistList, setTopPlaylistList] = useState([])
-  const [data, setData] = useState(null)
-  const [isOpen, setIsOpen] = useState(false)
+  const { data: session } = useSession();
+  const [topPlaylistList, setTopPlaylistList] = useState([]);
+  const [data, setData] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const didMount = useRef(false)
+  const didMount = useRef(false);
 
   const getMyTopPlaylists = async () => {
     const res = await fetch("/api/search");
     const { items } = await res.json();
     setTopPlaylistList(items);
-  }
+  };
 
   useEffect(() => {
     if (didMount.current) {
-      console.log(topPlaylistList)
+      console.log(topPlaylistList);
       if (topPlaylistList.length > 0) {
         setData(topPlaylistList[0]);
       }
     } else if (session) {
-      console.log("request")
+      console.log("request");
       getMyTopPlaylists();
       didMount.current = true;
     } else {
       didMount.current = false;
     }
-  }, [topPlaylistList, session])
-  
+  }, [topPlaylistList, session]);
+
   function toggleModal() {
     if (data) {
-      setIsOpen(!isOpen)
+      setIsOpen(!isOpen);
     }
   }
 
@@ -49,7 +49,7 @@ export default function Home() {
     let serializer = new XMLSerializer();
     let source = serializer.serializeToString(svg);
 
-    let svgBlob = new Blob([source], {type:"image/svg+xml;charset=utf-8"});
+    let svgBlob = new Blob([source], { type: "image/svg+xml;charset=utf-8" });
     let svgUrl = URL.createObjectURL(svgBlob);
     let downloadLink = document.createElement("a");
     downloadLink.href = svgUrl;
@@ -60,12 +60,12 @@ export default function Home() {
   }
 
   function download(url) {
-    const a = document.createElement('a')
-    a.href = url
-    a.download = url.split('/').pop()
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = url.split("/").pop();
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }
 
   const customStyles = {
@@ -87,7 +87,7 @@ export default function Home() {
     return (
       <>
         <Head>
-          <title>Recap_My_Music</title>
+          <title>RECAP_MY_MUSIC</title>
           <meta
             name="description"
             content="Recap your music taste by logging in to your Spotify Account."
@@ -98,14 +98,16 @@ export default function Home() {
         <div className="relative h-screen w-full ">
           {/* <p>Signed in as {session?.token?.email}</p> */}
           <button
-            className=" helvetica absolute left-0 z-[199] mt-4 ml-6 cursor-pointer text-base font-bold uppercase"
+            className="helvetica absolute left-0 z-[199] mt-4 ml-6 cursor-pointer text-base font-bold tracking-wider"
             onClick={() => signOut()}
           >
-            Recap_My_Music
+            RECAP_MY_MUSIC
           </button>
           <div className="absolute right-0 z-[199] mt-4 mr-6">
             <Link href="/about">
-              <a className="helvetica text-base font-bold uppercase">about</a>
+              <a className="helvetica text-base font-bold uppercase tracking-wider">
+                about
+              </a>
             </Link>
           </div>
 
@@ -116,13 +118,13 @@ export default function Home() {
               <ChartLoader size={1000} />
             )}
             <button
-              className="absolute right-6 cursor-pointer"
+              className="absolute right-6 cursor-pointer text-base tracking-wide"
               onClick={toggleModal}
             >
               MORE_INFO
             </button>
             <button
-              className="absolute left-6 cursor-pointer"
+              className="absolute left-6 cursor-pointer text-base tracking-wide"
               onClick={svgExport}
             >
               EXPORT
@@ -159,23 +161,22 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Recap_My_Music</title>
+        <title>RECAP_MY_MUSIC</title>
         <meta
           name="description"
           content="Recap your music taste by logging in to your Spotify Account."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="absolute helvetica uppercase right-0 font-bold text-base mt-4 mr-6">
+      <div className="helvetica absolute right-0 mt-4 mr-6 text-base font-bold uppercase tracking-wider ">
         <Link href="/about">about</Link>
       </div>
 
       <div className="m-auto flex h-screen flex-col items-center justify-center space-y-3 overflow-hidden">
-        <p className="title text-2xl font-bold uppercase">Recap_My_Music</p>
+        <p className="title text-2xl font-bold">RECAP_MY_MUSIC</p>
         <p className="max-w-[500px] p-3 text-center">
-          Log in with your Spotify account to make your auditory listening habit
-          based on individual shapes and colors visually tangible, shareable and
-          comparable.
+          Log in with your personal Spotify account to make your listening habits
+          visually tangible, comparable and shareable.
         </p>
         <button
           className="helvetica w-fit cursor-pointer rounded-full border-2 border-dotted border-white px-12 py-2 text-base font-bold text-white hover:border-gray-300 active:bg-gray-500 "
@@ -185,7 +186,11 @@ export default function Home() {
         </button>
 
         <p className="max-w-[500px] p-3 text-center">
-          or use a data sample <span className="underline"><Link href="/sample">from the creators</Link></span>.
+          or use a data sample{" "}
+          <span className="underline">
+            <Link href="/sample">from the creators</Link>
+          </span>
+          .
         </p>
       </div>
     </>

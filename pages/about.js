@@ -9,7 +9,7 @@ export default function about() {
           <title>ABOUT</title>
           <meta
             name="description"
-            content="About how RECAP_YOUR_MUSIC works and who we are."
+            content="About how RECAP_MY_MUSIC works and who we are."
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -104,6 +104,24 @@ export default function about() {
               Victory library
             </a>{" "}
             for the data visualization
+            <br />
+            Github (
+            <a
+              className=" underline "
+              href="https://github.com/NiklasBuchfink/ida-project"
+              target="_blank"
+              rel="noreferrer"
+            >
+              source
+            </a>) and {" "}<a
+              className=" underline "
+              href="https://www.netlify.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Netlify
+            </a>{" "} for deployment
+            
           </p>
         </div>
         <div className="w-full">

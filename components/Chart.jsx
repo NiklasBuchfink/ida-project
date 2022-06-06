@@ -8,14 +8,14 @@ import {
   VictoryChart,
   VictoryPolarAxis,
   VictoryBar,
-  VictoryTooltip
+  VictoryTooltip,
 } from "victory";
 import CustomLabel from "./CustomLabel";
 
 export default function Chart({ size, data }) {
   let valence = data.features.valence;
   let energy = data.features.energy;
-  
+
   //let valence = 0.7;
   //let energy = 0.4;
   //console.log(valence, energy)
@@ -27,7 +27,7 @@ export default function Chart({ size, data }) {
   for (let i = 0; i < data.genre.main.length; i++) {
     mainGenreData.push({
       x: data.genre.main[i].genre,
-      y: data.genre.main[i].value
+      y: data.genre.main[i].value,
     });
   }
 
@@ -42,9 +42,9 @@ export default function Chart({ size, data }) {
   for (let i = 0; i < mainGenreData.length; i++) {
     for (let j = 0; j < trackData.length; j++) {
       let artistArr = [];
-      data.tracks[j].track.artists.map( (artist) => {
-        artistArr.push(artist.name)
-      })
+      data.tracks[j].track.artists.map((artist) => {
+        artistArr.push(artist.name);
+      });
       let found = trackData[j].genre.includes(mainGenreData[i].x);
       if (found) {
         sortedTrackData.push({
@@ -52,7 +52,7 @@ export default function Chart({ size, data }) {
           y: trackData.length - data.tracks[j].track.ranking + 5,
           ranking: data.tracks[j].track.ranking + 1,
           name: data.tracks[j].track.name,
-          artist: artistArr.join(', '),
+          artist: artistArr.join(", "),
         });
         index++;
       }
@@ -73,12 +73,12 @@ export default function Chart({ size, data }) {
         <rect width="100%" height="100%" fill="black" />
         <radialGradient id="auraGradient">
           <stop
-            offset={`${energy*20}%`}
+            offset={`${energy * 20}%`}
             stopColor={`hsla(${80 + energy * 410}, 100%, 60%, 1)`}
           />
           <stop
-            offset={`${100-(valence*20)}%`}
-            stopColor={`hsla(${400 - (valence * 500)}, 100%, 60%, 1)`}
+            offset={`${100 - valence * 20}%`}
+            stopColor={`hsla(${400 - valence * 500}, 100%, 60%, 1)`}
           />
         </radialGradient>
 
@@ -106,7 +106,14 @@ export default function Chart({ size, data }) {
           //labelRadius={size/2}
           style={{
             data: { fill: "white" },
-            labels: { fill: "white", padding: 10, fontSize: 16,  textTransform: "uppercase"},
+            labels: {
+              fontFamily: "monospace",
+              letterSpacing: 0.1,
+              fill: "white",
+              padding: 6,
+              fontSize: 16,
+              textTransform: "uppercase",
+            },
           }}
         />
 
@@ -125,7 +132,7 @@ export default function Chart({ size, data }) {
             style={{
               axis: { stroke: "none", strokeWidth: 1 },
               grid: { stroke: "none" },
-              tickLabels: { fontSize: 15, padding: 30, fill: "none" },
+              tickLabels: { fontSize: 0, fill: "none" },
             }}
           />
           <VictoryBar
@@ -134,45 +141,59 @@ export default function Chart({ size, data }) {
             data={sortedTrackData}
             labelPlacement={"vertical"}
             labelRadius={100}
-            labels={({ datum }) => [`${datum.name}`, `${datum.artist}`, `Your Top ${datum.ranking}`]}
+            labels={({ datum }) => [
+              `${datum.name}`,
+              `${datum.artist}`,
+              `Your Top ${datum.ranking}`,
+            ]}
             lineHeight={[2, 2, 2]}
-            labelComponent={<CustomLabel  />}
+            labelComponent={<CustomLabel />}
             style={{
               data: {
                 fill: ({ index }) =>
-                `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`,
+                  `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`,
                 width: (360 / sortedTrackData.length) * 4 - 2, // alt. without spacing: 0.3
               },
             }}
-            events={[{
-              target: "data",
-              eventHandlers: {
-                onMouseOver: () => {
-                  return [{
-                    target: "data",
-                    mutation: (props) => {
-                      return {
-                        style: Object.assign({}, props.style, {fill: "white"})
-                      };
-                    }
-                  }, {
-                    target: "labels",
-                    mutation: () => ({ active: true })
-                  }];
+            events={[
+              {
+                target: "data",
+                eventHandlers: {
+                  onMouseOver: () => {
+                    return [
+                      {
+                        target: "data",
+                        mutation: (props) => {
+                          return {
+                            style: Object.assign({}, props.style, {
+                              fill: "white",
+                            }),
+                          };
+                        },
+                      },
+                      {
+                        target: "labels",
+                        mutation: () => ({ active: true }),
+                      },
+                    ];
+                  },
+                  onMouseOut: () => {
+                    return [
+                      {
+                        target: "data",
+                        mutation: () => {
+                          return null;
+                        },
+                      },
+                      {
+                        target: "labels",
+                        mutation: () => ({ active: false }),
+                      },
+                    ];
+                  },
                 },
-                onMouseOut: () => {
-                  return [{
-                    target: "data",
-                    mutation: () => {
-                      return null;
-                    }
-                  }, {
-                    target: "labels",
-                    mutation: () => ({ active: false })
-                  }];
-                }
-              }
-            }]}
+              },
+            ]}
           />
         </VictoryChart>
       </VictoryContainer>
