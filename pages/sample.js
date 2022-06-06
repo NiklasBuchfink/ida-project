@@ -7,15 +7,13 @@ import ChartLoader from "../components/ChartLoader";
 import { creatorData } from "../lib/data/niklasData"
 
 export default function Creators({ localData }) {
-  const [data, setData] = useState(localData[0]);
+  const [year, setYear] = useState(0)
   const [isOpen, setIsOpen] = useState(false);
 
-  const files = ["lea", "max", "niklas"];
+  // const files = ["lea", "max", "niklas"];
 
   function toggleModal() {
-    if (data) {
-      setIsOpen(!isOpen);
-    }
+    setIsOpen(!isOpen);
   }
 
   const customStyles = {
@@ -49,16 +47,35 @@ export default function Creators({ localData }) {
             </div>
           </div>
           <div className="flex absolute w-full h-full justify-center items-center p-6 pb-10">
-            {data 
-              ? <Chart size={1000} data={data} /> 
-              : <ChartLoader size={1000} />
+            {localData.length > 0 ? (
+                <>
+                  <Chart size={1000} data={localData[year]} />
+                  <div className="absolute top-6 flex gap-4 w-24">
+                    <button
+                      style={{visibility: (year !== 0) ? 'visible' : 'hidden' }}
+                      onClick={()=>setYear(prevState=> prevState - 1)}
+                    > 
+                      &#60; 
+                    </button> 
+                    <div>
+                      {localData[year].year}
+                    </div>
+                    <button
+                      style={{visibility: (year !== localData.length - 1) ? 'visible' : 'hidden' }}
+                      onClick={()=>setYear(prevState=> prevState + 1)}
+                    >
+                      &#62;
+                    </button>
+                  </div>
+                  <button
+                    className="absolute right-6 cursor-pointer"
+                    onClick={toggleModal}
+                  >
+                    MORE_INFO
+                  </button>
+                </>
+              ) : <ChartLoader size={1000} />
             }
-            <button
-              className="absolute right-6 cursor-pointer"
-              onClick={toggleModal}
-            >
-              MORE_INFO
-            </button>
           </div>
 
           <Modal
@@ -94,8 +111,3 @@ export const getStaticProps = async () => {
    },
  }
 }
-
-// export async function getStaticProps(context){
-//   const sample = await import('./api/sample');
-//   return {props: {sample}}
-// }

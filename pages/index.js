@@ -7,10 +7,10 @@ import ChartLoader from "../components/ChartLoader";
 import Chart from "../components/Chart";
 
 export default function Home() {
-  const { data: session } = useSession();
-  const [topPlaylistList, setTopPlaylistList] = useState([]);
-  const [data, setData] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const { data: session } = useSession()
+  const [topPlaylistList, setTopPlaylistList] = useState([])
+  const [year, setYear] = useState(0)
+  const [isOpen, setIsOpen] = useState(false)
 
   const didMount = useRef(false);
 
@@ -21,20 +21,15 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (didMount.current) {
-      console.log(topPlaylistList);
-      if (topPlaylistList.length > 0) {
-        setData(topPlaylistList[0]);
-      }
-    } else if (session) {
-      console.log("request");
+   if (session) {
+      console.log("request")
       getMyTopPlaylists();
       didMount.current = true;
     } else {
       didMount.current = false;
     }
-  }, [topPlaylistList, session]);
-
+  }, [session])
+  
   function toggleModal() {
     if (data) {
       setIsOpen(!isOpen);
@@ -112,23 +107,42 @@ export default function Home() {
           </div>
 
           <div className="absolute flex h-full w-full items-center justify-center p-6 pb-10">
-            {data ? (
-              <Chart size={1000} data={data} />
+            {topPlaylistList.length > 0 ? (
+              <>
+                <Chart size={1000} data={topPlaylistList[year]} />
+                <div className="absolute top-6 flex gap-4 w-24">
+                  <button
+                    style={{visibility: (year !== 0) ? 'visible' : 'hidden' }}
+                    onClick={()=>setYear(prevState=> prevState - 1)}
+                  > 
+                    &#60; 
+                  </button> 
+                  <div>
+                    {topPlaylistList[year].year}
+                  </div>
+                  <button
+                    style={{visibility: (year !== topPlaylistList.length - 1) ? 'visible' : 'hidden' }}
+                    onClick={()=>setYear(prevState=> prevState + 1)}
+                  >
+                    &#62;
+                  </button>
+                </div>
+                <button
+                  className="absolute right-6 cursor-pointer"
+                  onClick={toggleModal}
+                >
+                  MORE_INFO
+                </button>
+                <button
+                  className="absolute left-6 cursor-pointer"
+                  onClick={svgExport}
+                >
+                  EXPORT
+                </button>
+              </>
             ) : (
               <ChartLoader size={1000} />
             )}
-            <button
-              className="absolute right-6 cursor-pointer text-base tracking-wide"
-              onClick={toggleModal}
-            >
-              MORE_INFO
-            </button>
-            <button
-              className="absolute left-6 cursor-pointer text-base tracking-wide"
-              onClick={svgExport}
-            >
-              EXPORT
-            </button>
           </div>
 
           <Modal
