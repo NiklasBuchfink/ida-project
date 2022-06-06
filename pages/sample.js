@@ -43,7 +43,7 @@ export default function Creators({ localData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="relative w-full h-screen ">
-          <div className="absolute w-full p-4 z-[199]">         
+          <div className="absolute w-full z-[199]">         
             <div className="absolute right-0 mt-4 mr-6">
               <Link href="/"><a className="helvetica uppercase font-bold text-base">BACK</a></Link>
             </div>

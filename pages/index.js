@@ -21,18 +21,19 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if (session) {
-      if (didMount.current) {
-        console.log(topPlaylistList)
-        if (topPlaylistList.length > 0) {
-          setData(topPlaylistList[0]);
-        }
-      } else {
-        getMyTopPlaylists();
-        didMount.current = true;
+    if (didMount.current) {
+      console.log(topPlaylistList)
+      if (topPlaylistList.length > 0) {
+        setData(topPlaylistList[0]);
       }
+    } else if (session) {
+      console.log("request")
+      getMyTopPlaylists();
+      didMount.current = true;
+    } else {
+      didMount.current = false;
     }
-  }, [topPlaylistList])
+  }, [topPlaylistList, session])
   
   function toggleModal() {
     if (data) {
