@@ -97,12 +97,12 @@ export default function Home() {
         <div className="relative h-screen w-full ">
           {/* <p>Signed in as {session?.token?.email}</p> */}
           <button
-            className=" helvetica absolute left-0 z-[199] mt-4 ml-3 cursor-pointer text-base font-bold uppercase"
+            className=" helvetica absolute left-0 z-[199] mt-4 ml-6 cursor-pointer text-base font-bold uppercase"
             onClick={() => signOut()}
           >
             Recap_My_Music
           </button>
-          <div className="absolute right-0 z-[199] mt-4 mr-3">
+          <div className="absolute right-0 z-[199] mt-4 mr-6">
             <Link href="/about">
               <a className="helvetica text-base font-bold uppercase">about</a>
             </Link>
@@ -165,7 +165,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="absolute helvetica uppercase right-0 font-bold text-base mt-4 mr-3">
+      <div className="absolute helvetica uppercase right-0 font-bold text-base mt-4 mr-6">
         <Link href="/about">about</Link>
       </div>
 

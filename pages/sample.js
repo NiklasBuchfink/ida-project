@@ -44,7 +44,7 @@ export default function Creators({ localData }) {
       </Head>
       <div className="relative w-full h-screen ">
           <div className="absolute w-full p-4 z-[199]">         
-            <div className="absolute right-0 mt-4 mr-3">
+            <div className="absolute right-0 mt-4 mr-6">
               <Link href="/"><a className="helvetica uppercase font-bold text-base">BACK</a></Link>
             </div>
           </div>
@@ -54,10 +54,10 @@ export default function Creators({ localData }) {
               : <ChartLoader size={1000} />
             }
             <button
-              className="absolute bottom-6 cursor-pointer"
+              className="absolute right-6 cursor-pointer"
               onClick={toggleModal}
             >
-              ???_LEGEND
+              MORE_INFO
             </button>
           </div>
 

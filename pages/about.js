@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function about() {
   return (
     <>
-      <div className="absolute right-0 mt-4 mr-3">
+      <div className="absolute right-0 mt-4 mr-6">
         <Link href="/">
           <a className="helvetica text-base font-bold uppercase">BACK</a>
         </Link>
