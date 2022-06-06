@@ -112,20 +112,20 @@ export default function Home() {
                 <Chart size={1000} data={topPlaylistList[year]} />
                 <div className="absolute top-6 flex gap-4 w-24">
                   <button
-                    style={{visibility: (year !== 0) ? 'visible' : 'hidden' }}
+                    style={{visibility: (year !== topPlaylistList.length - 1) ? 'visible' : 'hidden' }}
                     onClick={()=>setYear(prevState=> prevState - 1)}
-                  > 
-                    &#60; 
-                  </button> 
+                  >
+                    &#60;
+                  </button>
                   <div>
                     {topPlaylistList[year].year}
                   </div>
                   <button
-                    style={{visibility: (year !== topPlaylistList.length - 1) ? 'visible' : 'hidden' }}
+                    style={{visibility: (year !== 0) ? 'visible' : 'hidden' }}
                     onClick={()=>setYear(prevState=> prevState + 1)}
-                  >
-                    &#62;
-                  </button>
+                  > 
+                    &#62; 
+                  </button> 
                 </div>
                 <button
                   className="absolute right-6 cursor-pointer"

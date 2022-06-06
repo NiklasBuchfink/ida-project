@@ -52,20 +52,20 @@ export default function Creators({ localData }) {
                   <Chart size={1000} data={localData[year]} />
                   <div className="absolute top-6 flex gap-4 w-24">
                     <button
-                      style={{visibility: (year !== 0) ? 'visible' : 'hidden' }}
-                      onClick={()=>setYear(prevState=> prevState - 1)}
-                    > 
-                      &#60; 
-                    </button> 
+                      style={{visibility: (year !== localData.length - 1) ? 'visible' : 'hidden' }}
+                      onClick={()=>setYear(prevState=> prevState + 1)}
+                    >
+                      &#60;
+                    </button>
                     <div>
                       {localData[year].year}
                     </div>
                     <button
-                      style={{visibility: (year !== localData.length - 1) ? 'visible' : 'hidden' }}
-                      onClick={()=>setYear(prevState=> prevState + 1)}
-                    >
-                      &#62;
-                    </button>
+                      style={{visibility: (year !== 0) ? 'visible' : 'hidden' }}
+                      onClick={()=>setYear(prevState=> prevState - 1)}
+                    > 
+                      &#62; 
+                    </button> 
                   </div>
                   <button
                     className="absolute right-6 cursor-pointer"
