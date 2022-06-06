@@ -149,18 +149,26 @@ export default function Chart({ size, data }) {
               eventHandlers: {
                 onMouseOver: () => {
                   return [{
+                    target: "data",
                     mutation: (props) => {
                       return {
                         style: Object.assign({}, props.style, {fill: "white"})
                       };
                     }
+                  }, {
+                    target: "labels",
+                    mutation: () => ({ active: true })
                   }];
                 },
                 onMouseOut: () => {
                   return [{
+                    target: "data",
                     mutation: () => {
                       return null;
                     }
+                  }, {
+                    target: "labels",
+                    mutation: () => ({ active: false })
                   }];
                 }
               }
