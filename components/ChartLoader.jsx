@@ -55,7 +55,7 @@ export default function ChartLoader({ size }) {
             padAngle={1}
             labelPlacement={"perpendicular"}
             style={{
-              data: { fill: "url(#auraGradient)" },
+              data: { fill: "white" },
               labels: { fill: "#000", padding: 20, fontSize: 16 },
             }}
             data={mainGenreData}

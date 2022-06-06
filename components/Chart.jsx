@@ -32,12 +32,6 @@ export default function Chart({ size, data }) {
   }
 
   for (let i = 0; i < data.tracks.length; i++) {
-    let artistArr = [];
-    data.tracks[i].track.artists.map( (artist) => {
-      artistArr.push(artist.name)
-    })
-    let artistStr = artistArr.join(', ')
-
     trackData.push({
       genre: data.tracks[i].track.genre.main,
       ranking: data.tracks[i].track.ranking,
@@ -56,7 +50,7 @@ export default function Chart({ size, data }) {
         sortedTrackData.push({
           x: 360 - (index * 360) / trackData.length,
           y: trackData.length - data.tracks[j].track.ranking,
-          ranking: data.tracks[j].track.ranking,
+          ranking: data.tracks[j].track.ranking + 1,
           name: data.tracks[j].track.name,
           artist: artistArr.join(', '),
         });
@@ -65,7 +59,7 @@ export default function Chart({ size, data }) {
     }
   }
 
-  console.log(sortedTrackData)
+  CustomLabel.defaultEvents = VictoryTooltip.defaultEvents;
 
   // Features list
   // valence
@@ -96,46 +90,6 @@ export default function Chart({ size, data }) {
           fill="url(#auraGradient)"
         />
 
-        <VictoryChart
-          standalone={false}
-          polar
-          width={size}
-          height={size}
-          startAngle={90}
-          endAngle={450}
-          innerRadius={90}
-          maxDomain={{ y: sortedTrackData.length + 10 }}
-        >
-          <VictoryBar
-            className="RankingRadial"
-            animate={{ duration: 2000, easing: "cubicInOut" }}
-            data={sortedTrackData}
-            labelRadius={120}
-            labels={({ datum }) => `Track: ${datum.name}, Artist: ${datum.artist} Ranking: ${datum.ranking}`}
-            labelComponent={<CustomLabel/>}
-            style={{
-              data: {
-                fill: ({ index }) =>
-                  `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`,
-                width: (360 / sortedTrackData.length) * 4 - 2,
-              },
-            }}
-            events={[{
-              target: "data",
-              eventHandlers: {
-
-              }
-            }]}
-          />
-          <VictoryPolarAxis
-            style={{
-              axis: { stroke: "none", strokeWidth: 1 },
-              grid: { stroke: "none" },
-              tickLabels: { fontSize: 15, padding: 30, fill: "none" },
-            }}
-          />
-        </VictoryChart>
-
         <VictoryPie
           className="GenrePie"
           data={mainGenreData}
@@ -155,6 +109,51 @@ export default function Chart({ size, data }) {
             labels: { fill: "grey", padding: 20, fontSize: 16 },
           }}
         />
+
+        <VictoryChart
+          standalone={false}
+          polar
+          width={size}
+          height={size}
+          startAngle={90}
+          endAngle={450}
+          innerRadius={90}
+          maxDomain={{ y: sortedTrackData.length + 10 }}
+        >
+          <VictoryPolarAxis
+            style={{
+              axis: { stroke: "none", strokeWidth: 1 },
+              grid: { stroke: "none" },
+              tickLabels: { fontSize: 15, padding: 30, fill: "none" },
+            }}
+          />
+          <VictoryBar
+            className="RankingRadial"
+            animate={{ duration: 2000, easing: "cubicInOut" }}
+            data={sortedTrackData}
+            labelPlacement={"vertical"}
+            labelRadius={100}
+            labels={({ datum }) => [`${datum.name}`, `${datum.artist}`, `# ${datum.ranking}`] }
+            labelComponent={<CustomLabel  />}
+            style={{
+              labels: { 
+                fill: "white", 
+                lineHeight: 1.4
+              },
+              data: {
+                fill: ({ index }) =>
+                `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`,
+                width: (360 / sortedTrackData.length) * 4 - 2,
+              },
+            }}
+            events={[{
+              target: "data",
+              eventHandlers: {
+
+              }
+            }]}
+          />
+        </VictoryChart>
       </VictoryContainer>
     </div>
   );

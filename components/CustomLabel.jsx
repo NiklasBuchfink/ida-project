@@ -3,16 +3,16 @@ import { VictoryLabel, VictoryTooltip } from "victory";
 export default function CustomLabel (props) {
   return (
     <g>
-      <VictoryLabel {...props}/>
+      {/* <VictoryLabel {...props}/> */}
       <VictoryTooltip
         {...props}
-        x={200} y={250}
-        orientation="top"
+        x={500} y={500}
+        center={{ x: 500, y: 500 }}
         pointerLength={0}
-        cornerRadius={50}
-        flyoutWidth={100}
-        flyoutHeight={100}
-        flyoutStyle={{ fill: "black" }}
+        cornerRadius={90}
+        flyoutWidth={180}
+        flyoutHeight={180}
+        flyoutStyle={{ fill: "none", stroke: "none" }}
       />
     </g>
   );
