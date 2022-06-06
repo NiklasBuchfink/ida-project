@@ -27,13 +27,17 @@ export default function Chart({ size, data }) {
   for (let i = 0; i < data.genre.main.length; i++) {
     mainGenreData.push({
       x: data.genre.main[i].genre,
-      y: data.genre.main[i].value,
-      track: data,
-      artist: data
+      y: data.genre.main[i].value
     });
   }
 
   for (let i = 0; i < data.tracks.length; i++) {
+    let artistArr = [];
+    data.tracks[i].track.artists.map( (artist) => {
+      artistArr.push(artist.name)
+    })
+    let artistStr = artistArr.join(', ')
+
     trackData.push({
       genre: data.tracks[i].track.genre.main,
       ranking: data.tracks[i].track.ranking,
@@ -43,16 +47,25 @@ export default function Chart({ size, data }) {
   let index = 0;
   for (let i = 0; i < mainGenreData.length; i++) {
     for (let j = 0; j < trackData.length; j++) {
+      let artistArr = [];
+      data.tracks[j].track.artists.map( (artist) => {
+        artistArr.push(artist.name)
+      })
       let found = trackData[j].genre.includes(mainGenreData[i].x);
       if (found) {
         sortedTrackData.push({
           x: 360 - (index * 360) / trackData.length,
           y: trackData.length - data.tracks[j].track.ranking,
+          ranking: data.tracks[j].track.ranking,
+          name: data.tracks[j].track.name,
+          artist: artistArr.join(', '),
         });
         index++;
       }
     }
   }
+
+  console.log(sortedTrackData)
 
   // Features list
   // valence
@@ -98,7 +111,7 @@ export default function Chart({ size, data }) {
             animate={{ duration: 2000, easing: "cubicInOut" }}
             data={sortedTrackData}
             labelRadius={120}
-            labels={({ datum }) => `Track: ${datum.x}, Artist: ${datum.y} Ranking: ${101-datum.y}`}
+            labels={({ datum }) => `Track: ${datum.name}, Artist: ${datum.artist} Ranking: ${datum.ranking}`}
             labelComponent={<CustomLabel/>}
             style={{
               data: {
