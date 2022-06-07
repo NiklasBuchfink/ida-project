@@ -51,7 +51,7 @@ export default function about() {
             for specific patterns (e.g. music genres, popularity index,
             characteristics of the tracks, etc.). After that it builds the
             charts using this analyzed and sorted data. Be aware that the genre
-            classification of the tracks is not 100% accurate because it's only
+            classification of the tracks is not 100% accurate because it&#39;s only
             possible to base them on genres that are assigned to the
             participating artists.
           </p>

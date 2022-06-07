@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import ChartLoader from "../components/ChartLoader";
 import Chart from "../components/Chart";
@@ -13,8 +13,6 @@ export default function Home() {
   const [year, setYear] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
-  const didMount = useRef(false);
-
   const getMyTopPlaylists = async () => {
     const res = await fetch("/api/search");
     const { items } = await res.json();
@@ -24,9 +22,6 @@ export default function Home() {
   useEffect(() => {
     if (session) {
       getMyTopPlaylists();
-      didMount.current = true;
-    } else {
-      didMount.current = false;
     }
   }, [session]);
 
@@ -205,13 +200,13 @@ export default function Home() {
                       <div className="m-auto mt-2 max-w-[500px] space-y-4 text-justify leading-[1.4]">
                         <p>
                           The aura is the colorful circle that surrounds your
-                          most listened tracks of the year. It's generated based
+                          most listened tracks of the year. It&#39;s generated based
                           on your the positivity and energy values of these
                           tracks.
                         </p>
                         <p>
                           The center color represents your average positivity.
-                          If you've listened mostly to sad songs it will be
+                          If you&#39;ve listened mostly to sad songs it will be
                           blueish instead of green or yellow.
                         </p>
                         <p>

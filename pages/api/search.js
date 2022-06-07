@@ -161,6 +161,11 @@ const handler = async (req, res) => {
 
       let mainArr = sortObject(mainObj)
       if (mainArr.length > 1) {
+        if (track.track.name.includes('Purple Disco Machine Remix') 
+            || track.track.name.includes('Disco Mix')
+            || track.track.name.includes('Disco Remix')
+        ) {
+          mainGenre = 'dance/electronic'
         // same value -> popularity
         // if (mainArr[0].value === mainArr[1].value) {
         //   let genreArr = []
@@ -168,14 +173,14 @@ const handler = async (req, res) => {
         //     genreArr.push(trackGenre.genre)
         //   })
         //   mainGenre = mostPopularGenre(genreArr)
-        // } else {
+        } else {
           mainArr.map( (trackGenre) => {
             if (trackGenre.genre !== 'unclassified genre') {
               mainGenre = trackGenre.genre
             }
           })
           mainGenre = mainArr[0].genre
-        // }
+        }
       } else {
         mainGenre = mainArr[0].genre
       }
