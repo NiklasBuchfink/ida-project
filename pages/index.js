@@ -22,7 +22,6 @@ export default function Home() {
 
   useEffect(() => {
    if (session) {
-      console.log("request")
       getMyTopPlaylists();
       didMount.current = true;
     } else {
@@ -52,15 +51,6 @@ export default function Home() {
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
-  }
-
-  function download(url) {
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = url.split("/").pop();
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
   }
 
   const customStyles = {
@@ -113,7 +103,7 @@ export default function Home() {
                 <div className="absolute top-6 flex gap-4 w-24">
                   <button
                     style={{visibility: (year !== topPlaylistList.length - 1) ? 'visible' : 'hidden' }}
-                    onClick={()=>setYear(prevState=> prevState - 1)}
+                    onClick={()=>setYear(prevState=> prevState + 1)}
                   >
                     &#60;
                   </button>
@@ -122,7 +112,7 @@ export default function Home() {
                   </div>
                   <button
                     style={{visibility: (year !== 0) ? 'visible' : 'hidden' }}
-                    onClick={()=>setYear(prevState=> prevState + 1)}
+                    onClick={()=>setYear(prevState=> prevState - 1)}
                   > 
                     &#62; 
                   </button> 

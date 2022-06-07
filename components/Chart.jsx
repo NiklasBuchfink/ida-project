@@ -1,6 +1,5 @@
 import { rgb } from "d3";
 import { getSortedRoutes } from "next/dist/shared/lib/router/utils";
-import React from "react";
 import * as V from "victory";
 import {
   VictoryContainer,
@@ -10,9 +9,18 @@ import {
   VictoryBar,
   VictoryTooltip,
 } from "victory";
+import PreviewPlayer from '../components/PreviewPlayer'
+import { usePlayer } from "../components/PlayerContext"
 import CustomLabel from "./CustomLabel";
 
 export default function Chart({ size, data }) {
+  const { setCurrentTrack } = usePlayer();
+  const playTrack = (track) => {
+    if (track.preview_url) {
+      setCurrentTrack(track);
+    }
+  };
+
   let valence = data.features.valence;
   let energy = data.features.energy;
 
@@ -53,6 +61,7 @@ export default function Chart({ size, data }) {
           ranking: data.tracks[j].track.ranking + 1,
           name: data.tracks[j].track.name,
           artist: artistArr.join(", "),
+          preview_url: data.tracks[j].track.preview_url,
         });
         index++;
       }
@@ -68,135 +77,147 @@ export default function Chart({ size, data }) {
   // tempo
 
   return (
-    <div className={`m-4 h-full w-auto max-w-[${size}px] max-h-[${size}px]`}>
-      <VictoryContainer width={size} height={size}>
-        <rect width="100%" height="100%" fill="black" />
-        <radialGradient id="auraGradient">
-          <stop
-            offset={`${energy * 20}%`}
-            stopColor={`hsla(${80 + energy * 410}, 100%, 60%, 1)`}
-          />
-          <stop
-            offset={`${100 - valence * 20}%`}
-            stopColor={`hsla(${400 - valence * 500}, 100%, 60%, 1)`}
-          />
-        </radialGradient>
+    <>
+      <div className={`m-4 h-full w-auto max-w-[${size}px] max-h-[${size}px]`}>
+        <VictoryContainer width={size} height={size}>
+          <rect width="100%" height="100%" fill="black" />
+          <radialGradient id="auraGradient">
+            <stop
+              offset={`${energy * 20}%`}
+              stopColor={`hsla(${80 + energy * 410}, 100%, 60%, 1)`} />
+            <stop
+              offset={`${100 - valence * 20}%`}
+              stopColor={`hsla(${400 - valence * 500}, 100%, 60%, 1)`} />
+          </radialGradient>
 
-        <circle
-          r={size / 2 - 70}
-          cx={size / 2}
-          cy={size / 2}
-          fillOpacity={0.5}
-          fill="url(#auraGradient)"
-        />
+          <circle
+            r={size / 2 - 70}
+            cx={size / 2}
+            cy={size / 2}
+            fillOpacity={0.5}
+            fill="url(#auraGradient)" />
 
-        <VictoryPie
-          className="GenrePie"
-          data={mainGenreData}
-          animate={{ duration: 2000, easing: "cubicInOut" }}
-          standalone={false}
-          sortOrder={"descending"}
-          innerRadius={size / 2 - 54}
-          width={size}
-          height={size}
-          startAngle={360 / sortedTrackData.length / 2}
-          endAngle={360 + 360 / sortedTrackData.length / 2}
-          padAngle={1}
-          labelPlacement={"perpendicular"}
-          //labelRadius={size/2}
-          style={{
-            data: { fill: "white" },
-            labels: {
-              fontFamily: "monospace",
-              letterSpacing: 0.1,
-              fill: "white",
-              padding: 6,
-              fontSize: 16,
-              textTransform: "uppercase",
-            },
-          }}
-        />
-
-        <VictoryChart
-          standalone={false}
-          polar
-          width={size}
-          height={size}
-          startAngle={90}
-          endAngle={450}
-          innerRadius={90}
-          minDomain={{ y: 0 }}
-          maxDomain={{ y: sortedTrackData.length + 15 }}
-        >
-          <VictoryPolarAxis
-            style={{
-              axis: { stroke: "none", strokeWidth: 1 },
-              grid: { stroke: "none" },
-              tickLabels: { fontSize: 0, fill: "none" },
-            }}
-          />
-          <VictoryBar
-            className="RankingRadial"
+          <VictoryPie
+            className="GenrePie"
+            data={mainGenreData}
             animate={{ duration: 2000, easing: "cubicInOut" }}
-            data={sortedTrackData}
-            labelPlacement={"vertical"}
-            labelRadius={100}
-            labels={({ datum }) => [
-              `${datum.name}`,
-              `${datum.artist}`,
-              `Your Top ${datum.ranking}`,
-            ]}
-            lineHeight={[2, 2, 2]}
-            labelComponent={<CustomLabel />}
+            standalone={false}
+            sortOrder={"descending"}
+            innerRadius={size / 2 - 54}
+            width={size}
+            height={size}
+            startAngle={360 / sortedTrackData.length / 2}
+            endAngle={360 + 360 / sortedTrackData.length / 2}
+            padAngle={1}
+            labelPlacement={"perpendicular"}
+            //labelRadius={size/2}
             style={{
-              data: {
-                fill: ({ index }) =>
-                  `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`,
-                width: (360 / sortedTrackData.length) * 4 - 2, // alt. without spacing: 0.3
+              data: { fill: "white" },
+              labels: {
+                fontFamily: "monospace",
+                letterSpacing: 0.1,
+                fill: "white",
+                padding: 6,
+                fontSize: 16,
+                textTransform: "uppercase",
               },
-            }}
-            events={[
-              {
-                target: "data",
-                eventHandlers: {
-                  onMouseOver: () => {
-                    return [
-                      {
-                        target: "data",
-                        mutation: (props) => {
-                          return {
-                            style: Object.assign({}, props.style, {
-                              fill: "white",
-                            }),
-                          };
+            }} />
+
+          <VictoryChart
+            standalone={false}
+            polar
+            width={size}
+            height={size}
+            startAngle={90}
+            endAngle={450}
+            innerRadius={90}
+            minDomain={{ y: 0 }}
+            maxDomain={{ y: sortedTrackData.length + 15 }}
+          >
+            <VictoryPolarAxis
+              style={{
+                axis: { stroke: "none", strokeWidth: 1 },
+                grid: { stroke: "none" },
+                tickLabels: { fontSize: 0, fill: "none" },
+              }} />
+            <VictoryBar
+              className="RankingRadial"
+              animate={{ duration: 2000, easing: "cubicInOut" }}
+              data={sortedTrackData}
+              labelPlacement={"vertical"}
+              labelRadius={100}
+              labels={({ datum }) => [
+                `${datum.name}`,
+                `${datum.artist}`,
+                `Your Top ${datum.ranking}`,
+              ]}
+              lineHeight={[2, 2, 2]}
+              labelComponent={<CustomLabel />}
+              style={{
+                data: {
+                  fill: ({ index }) => `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`,
+                  width: (360 / sortedTrackData.length) * 4 - 2, // alt. without spacing: 0.3
+                },
+              }}
+              events={[
+                {
+                  target: "data",
+                  eventHandlers: {
+                    onClick: (event, props) => {
+                      playTrack(props.data[props.index])
+                      return [
+                        {
+                          target: "data",
+                          mutation: (props) => {
+                            return {
+                              style: Object.assign({}, props.style, {
+                                fill: "white",
+                              }),
+                            };
+                          },
                         },
-                      },
-                      {
-                        target: "labels",
-                        mutation: () => ({ active: true }),
-                      },
-                    ];
-                  },
-                  onMouseOut: () => {
-                    return [
-                      {
-                        target: "data",
-                        mutation: () => {
-                          return null;
+                      ]
+                    },
+                    onMouseOver: () => {
+                      return [
+                        {
+                          target: "data",
+                          mutation: (props) => {
+                            return {
+                              style: Object.assign({}, props.style, {
+                                fill: "white",
+                              }),
+                            };
+                          },
                         },
-                      },
-                      {
-                        target: "labels",
-                        mutation: () => ({ active: false }),
-                      },
-                    ];
+                        {
+                          target: "labels",
+                          mutation: () => ({ active: true }),
+                        },
+                      ];
+                    },
+                    onMouseOut: () => {
+                      return [
+                        {
+                          target: "data",
+                          mutation: () => {
+                            return null;
+                          },
+                        },
+                        {
+                          target: "labels",
+                          mutation: () => ({ active: false }),
+                        },
+                      ];
+                    },
                   },
                 },
-              },
-            ]}
-          />
-        </VictoryChart>
-      </VictoryContainer>
-    </div>
+              ]} />
+          </VictoryChart>
+        </VictoryContainer>
+      </div>
+      
+      <PreviewPlayer />
+    </>
   );
 }
