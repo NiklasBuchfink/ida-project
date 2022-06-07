@@ -210,7 +210,7 @@ export default function Home() {
                         <div className="flex justify-center">
                           <span>Less</span>
                           <div className="mt-[1px] px-4">
-                            <Image src="/valence.svg" width="200" height="10" />
+                            <Image src="/valence.svg" width="200" height="10" preload="true" />
                           </div>
                           <span>More</span>
                         </div>
@@ -220,7 +220,7 @@ export default function Home() {
                         <div className="mb-4 flex justify-center">
                           <span>Less</span>
                           <div className="mt-[1px] px-4">
-                            <Image src="/energy.svg" width="200" height="10" />
+                            <Image src="/energy.svg" width="200" height="10" preload="true" />
                           </div>
                           <span>More</span>
                         </div>
