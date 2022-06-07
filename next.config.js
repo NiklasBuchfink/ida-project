@@ -10,6 +10,7 @@ module.exports = {
     domains: [
       't.scdn.co',
       'i.scdn.co',
+      'p.scdn.co',
       'mosaic.scdn.co',
       'seeded-session-images.scdn.co',
       'seed-mix-image.spotifycdn.com',
