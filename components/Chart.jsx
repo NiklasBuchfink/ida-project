@@ -58,7 +58,7 @@ export default function Chart({ size, data }) {
         sortedTrackData.push({
           x: 360 - (index * 360) / trackData.length,
           y: trackData.length - data.tracks[j].track.ranking + 5,
-          ranking: data.tracks[j].track.ranking + 1,
+          ranking: Math.round(data.tracks[j].track.ranking + 1),
           name: data.tracks[j].track.name,
           artist: artistArr.join(", "),
           preview_url: data.tracks[j].track.preview_url,
