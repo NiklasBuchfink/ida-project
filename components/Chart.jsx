@@ -78,24 +78,27 @@ export default function Chart({ size, data }) {
 
   return (
     <>
-      <div className={`m-4 h-full w-auto max-w-[${size}px] max-h-[${size}px]`}>
-        <VictoryContainer width={size} height={size}>
-          <rect width="100%" height="100%" fill="black" />
-          <radialGradient id="auraGradient">
-            <stop
-              offset={`${energy * 20}%`}
-              stopColor={`hsla(${80 + energy * 410}, 100%, 60%, 1)`} />
-            <stop
-              offset={`${100 - valence * 20}%`}
-              stopColor={`hsla(${400 - valence * 500}, 100%, 60%, 1)`} />
-          </radialGradient>
+    <div className={`m-4 h-full w-auto max-w-[${size}px] max-h-[${size}px]`}>
+      <VictoryContainer width={size} height={size}>
+        <rect width="100%" height="100%" fill="black" />
+        <radialGradient id="auraGradient">
+          <stop
+            offset={`${energy * 20}%`}
+            stopColor={`hsla(${80 + energy * 410}, 100%, 60%, 1)`}
+          />
+          <stop
+            offset={`${100 - valence * 20}%`}
+            stopColor={`hsla(${400 - valence * 500}, 100%, 60%, 1)`}
+          />
+        </radialGradient>
 
-          <circle
-            r={size / 2 - 70}
-            cx={size / 2}
-            cy={size / 2}
-            fillOpacity={0.5}
-            fill="url(#auraGradient)" />
+        <circle
+          r={size / 2 - 70}
+          cx={size / 2}
+          cy={size / 2}
+          fillOpacity={1}
+          fill="url(#auraGradient)"
+        />
 
           <VictoryPie
             className="GenrePie"
@@ -110,7 +113,6 @@ export default function Chart({ size, data }) {
             endAngle={360 + 360 / sortedTrackData.length / 2}
             padAngle={1}
             labelPlacement={"perpendicular"}
-            //labelRadius={size/2}
             style={{
               data: { fill: "white" },
               labels: {
@@ -149,13 +151,13 @@ export default function Chart({ size, data }) {
               labels={({ datum }) => [
                 `${datum.name}`,
                 `${datum.artist}`,
-                `Your Top ${datum.ranking}`,
+                `My Top ${datum.ranking}`,
               ]}
               lineHeight={[2, 2, 2]}
               labelComponent={<CustomLabel />}
               style={{
                 data: {
-                  fill: ({ index }) => `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`,
+                  fill: ({ index }) => `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`, // bug here? "sortedTrackData[index] is undefined"
                   width: (360 / sortedTrackData.length) * 4 - 2, // alt. without spacing: 0.3
                 },
               }}
