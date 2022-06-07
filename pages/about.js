@@ -5,14 +5,14 @@ import Link from "next/link";
 export default function about() {
   return (
     <>
-    <Head>
-          <title>ABOUT</title>
-          <meta
-            name="description"
-            content="About how RECAP_MY_MUSIC works and who we are."
-          />
-          <link rel="icon" href="../public/favicon.ico" />
-        </Head>
+      <Head>
+        <title>ABOUT</title>
+        <meta
+          name="description"
+          content="About how RECAP_MY_MUSIC works and who we are."
+        />
+        <link rel="icon" href="../public/favicon.ico" />
+      </Head>
       <div className="absolute right-0 mt-4 mr-6">
         <Link href="/">
           <a className="helvetica text-base font-bold uppercase">BACK</a>
@@ -50,7 +50,10 @@ export default function about() {
             playlist that is linked to your account and analyzes their content
             for specific patterns (e.g. music genres, popularity index,
             characteristics of the tracks, etc.). After that it builds the
-            charts using this analyzed and sorted data.
+            charts using this analyzed and sorted data. Be aware that the genre
+            classification of the tracks is not 100% accurate because it's only
+            possible to base them on genres that are assigned to the
+            participating artists.
           </p>
         </div>
         <div className="w-full">
@@ -113,15 +116,17 @@ export default function about() {
               rel="noreferrer"
             >
               source
-            </a>) and {" "}<a
+            </a>
+            ) and{" "}
+            <a
               className=" underline "
               href="https://www.netlify.com/"
               target="_blank"
               rel="noreferrer"
             >
               Netlify
-            </a>{" "} for deployment
-            
+            </a>{" "}
+            for deployment
           </p>
         </div>
         <div className="w-full">
@@ -133,7 +138,15 @@ export default function about() {
             <br />
             Max Werner
             <br />
-            as part of the IDA program at HSLU in Lucerne :)
+            as part of the IDA program at {" "}
+            <a
+              className="underline "
+              href="https://www.hslu.ch/en/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              HSLU
+            </a>{" "} in Lucerne :)
           </p>
         </div>
       </div>

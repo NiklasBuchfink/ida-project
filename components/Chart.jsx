@@ -78,8 +78,8 @@ export default function Chart({ size, data }) {
 
   return (
     <>
-    <div className={`m-4 h-full w-auto max-w-[${size}px] max-h-[${size}px]`}>
-      <VictoryContainer width={size} height={size}>
+    <div className={`m-10 h-full w-auto max-w-[${size}px] max-h-[${size}px]`}>
+      <VictoryContainer width={size} height={size} portalZIndex={0}>
         <rect width="100%" height="100%" fill="black" />
         <radialGradient id="auraGradient">
           <stop

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useState, useEffect, useRef } from "react";
 import Modal from "react-modal";
@@ -55,25 +56,28 @@ export default function Home() {
 
   const customStyles = {
     content: {
-      top: '50%',
-      left: '50%',
-      inset: "50% 40px 40px 50%",
-      transform: "translate(-50%, -50%)",
+      //top: '50%',
+      //left: '50%',
+      inset: "0px 0px 0px 0px",
+      //transform: "translate(-50%, -50%)",
 
       //right: "auto",
       //bottom: "auto",
       //marginRight: "-50%",
       //filter: "blur(6px)",
+      zIndex: "199",
       backgroundColor: "hsla(0 ,0% , 0%, 0.85)",
-      border: "dotted 2px white",
+      border: "none",
+      //border: "dotted 2px white",
     },
     overlay: {
-      
+      zIndex: "199",
       backgroundColor: "hsla(0, 0%, 0%, 0.4)",
     },
   };
 
   if (session) {
+    console.log(topPlaylistList);
     return (
       <>
         <Head>
@@ -88,12 +92,12 @@ export default function Home() {
         <div className="relative h-screen w-full ">
           {/* <p>Signed in as {session?.token?.email}</p> */}
           <button
-            className="helvetica absolute left-0 z-[199] mt-4 ml-6 cursor-pointer text-base font-bold tracking-wider"
+            className="helvetica absolute left-0 z-[100] mt-4 ml-6 cursor-pointer text-base font-bold tracking-wider"
             onClick={() => signOut()}
           >
             RECAP_MY_MUSIC
           </button>
-          <div className="absolute right-0 z-[199] mt-4 mr-6">
+          <div className="absolute right-0 z-[100] mt-4 mr-6">
             <Link href="/about">
               <a className="helvetica text-base font-bold uppercase tracking-wider">
                 about
@@ -105,8 +109,9 @@ export default function Home() {
             {topPlaylistList.length > 0 ? (
               <>
                 <Chart size={1000} data={topPlaylistList[year]} />
-                <div className="absolute top-6 flex w-24 gap-4">
+                <div className="absolute top-10 flex w-24 items-center gap-2 text-base sm:top-2">
                   <button
+                    className="p-2"
                     style={{
                       visibility:
                         year !== topPlaylistList.length - 1
@@ -119,24 +124,29 @@ export default function Home() {
                   </button>
                   <div>{topPlaylistList[year].year}</div>
                   <button
-                    style={{ visibility: year !== 0 ? "visible" : "hidden" }}
+                    className="p-2"
+                    style={{
+                      visibility: year !== 0 ? "visible" : "hidden",
+                    }}
                     onClick={() => setYear((prevState) => prevState - 1)}
                   >
                     &#62;
                   </button>
                 </div>
-                <button
-                  className="absolute right-6 cursor-pointer"
-                  onClick={toggleModal}
-                >
-                  MORE_INFO
-                </button>
-                <button
-                  className="absolute left-6 cursor-pointer"
-                  onClick={svgExport}
-                >
-                  EXPORT
-                </button>
+                <div className="absolute bottom-6 w-full -translate-y-[calc(-50%+1rem-0.6px)] md:bottom-1/2">
+                  <button
+                    className="absolute right-6 cursor-pointer text-base"
+                    onClick={toggleModal}
+                  >
+                    MORE_INFO
+                  </button>
+                  <button
+                    className="absolute left-6 cursor-pointer text-base"
+                    onClick={svgExport}
+                  >
+                    EXPORT
+                  </button>
+                </div>
 
                 <Modal
                   isOpen={isOpen}
@@ -146,71 +156,97 @@ export default function Home() {
                   style={customStyles}
                   closeTimeoutMS={200}
                 >
-                  <div className="p-4 text-center text-white">
-                    <div className="helvetica text-2xl font-bold tracking-wide">
-                      MY_MUSIC_STATS (AVG)
+                  <div className="flex h-full flex-col items-center justify-center space-y-16 p-4 text-center text-white">
+                    <div className="">
+                      <p className="helvetica text-2xl font-bold tracking-wide">
+                        MY_MUSIC_STATS
+                      </p>
+                      <div className="mt-2 space-y-2">
+                        <p>
+                          Danceability:{" "}
+                          <span className="underline">
+                            {Math.round(
+                              topPlaylistList[year].features.danceability * 100
+                            )}
+                            %
+                          </span>
+                        </p>
+                        <p>
+                          Energy:{" "}
+                          <span className="underline">
+                            {Math.round(
+                              topPlaylistList[year].features.energy * 100
+                            )}
+                            %
+                          </span>
+                        </p>
+                        <p>
+                          Positivity:{" "}
+                          <span className="underline">
+                            {Math.round(
+                              topPlaylistList[year].features.valence * 100
+                            )}
+                            %
+                          </span>
+                        </p>
+                        <p>
+                          Tempo:{" "}
+                          <span className="underline">
+                            {Math.round(topPlaylistList[year].features.tempo)}{" "}
+                            bpm
+                          </span>
+                        </p>
+                      </div>
                     </div>
-                    <div className="mt-2 mb-8 space-y-2">
-                      <p>
-                        Danceability:{" "}
-                        <span className="underline">
-                          {Math.round(
-                            topPlaylistList[year].features.danceability * 100
-                          )}
-                          %
-                        </span>
+                    <div>
+                      <p className="helvetica text-2xl font-bold tracking-wide">
+                        ABOUT_THE_AURA
                       </p>
-                      <p>
-                        Energy:{" "}
-                        <span className="underline">
-                          {Math.round(
-                            topPlaylistList[year].features.energy * 100
-                          )}
-                          %
-                        </span>
-                      </p>
-                      <p>
-                        Valence:{" "}
-                        <span className="underline">
-                          {Math.round(
-                            topPlaylistList[year].features.valence * 100
-                          )}
-                          %
-                        </span>
-                      </p>
-                      <p>
-                        Tempo:{" "}
-                        <span className="underline">
-                          {Math.round(topPlaylistList[year].features.tempo)} bpm
-                        </span>
-                      </p>
-                    </div>
-                    <div className="helvetica text-2xl font-bold tracking-wide">
-                      ABOUT_THE_AURA
-                    </div>
-                    <div className="m-auto max-w-[500px] text-justify leading-[1.4] space-y-4">
-                      <p>
-                        The aura is the colorful circle that surrounds your most
-                        listened tracks of the year. It’s generated based on
-                        your the positivity and energy values of these tracks.
-                      </p>
-                      <p>
-                        The center color represents your average positivity. If
-                        you’ve listened mostly to sad songs it will be blueish
-                        instead of green or yellow.
-                      </p>
-                      <p>
-                        Meanwhile the outer color represents the average energy
-                        value of your songs. If, for example, you have listened
-                        only to fast hardcore songs your outer aura probably
-                        will be some hue of red.
-                      </p>
+                      <div className="m-auto mt-2 max-w-[500px] space-y-4 text-justify leading-[1.4]">
+                        <p>
+                          The aura is the colorful circle that surrounds your
+                          most listened tracks of the year. It’s generated based
+                          on your the positivity and energy values of these
+                          tracks.
+                        </p>
+                        <p>
+                          The center color represents your average positivity.
+                          If you’ve listened mostly to sad songs it will be
+                          blueish instead of green or yellow.
+                        </p>
+                        <p>
+                          Meanwhile the outer color represents the average
+                          energy value of your songs. If, for example, you have
+                          listened only to fast hardcore songs your outer aura
+                          probably will be some hue of red.
+                        </p>
+                      </div>
+                      <div className="mt-6">
+                        <p>Positivity</p>
+                        <div className="flex justify-center">
+                          <span>Less</span>
+                          <div className="mt-[1px] px-4">
+                            <Image src="/valence.svg" width="200" height="10" />
+                          </div>
+                          <span>More</span>
+                        </div>
+                      </div>
+                      <div className="mt-6">
+                        <p>Energy</p>
+                        <div className="mb-4 flex justify-center">
+                          <span>Less</span>
+                          <div className="mt-[1px] px-4">
+                            <Image src="/energy.svg" width="200" height="10" />
+                          </div>
+                          <span>More</span>
+                        </div>
+                      </div>
                     </div>
                     <button
-                      className="absolute bottom-6 cursor-pointer font-bold"
+                      className="absolute bottom-6 -translate-y-1/2 cursor-pointer text-base leading-[0.2] sm:bottom-1/2 sm:right-6"
                       onClick={toggleModal}
                     >
-                      Close
+                      CLOSE
                     </button>
                   </div>
                 </Modal>
