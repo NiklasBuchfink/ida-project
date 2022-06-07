@@ -11,7 +11,7 @@ export default function about() {
             name="description"
             content="About how RECAP_MY_MUSIC works and who we are."
           />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="../public/favicon.ico" />
         </Head>
       <div className="absolute right-0 mt-4 mr-6">
         <Link href="/">
@@ -19,7 +19,7 @@ export default function about() {
         </Link>
       </div>
 
-      <div className="m-auto flex h-screen max-w-[550px] flex-col items-center space-y-6 px-4 text-left leading-[1.4] sm:justify-center sm:text-center">
+      <div className="m-auto flex h-screen max-w-[550px] flex-col items-center space-y-6 px-6 text-left leading-[1.4] sm:justify-center sm:text-center">
         <div className="mt-24 sm:mt-0">
           <p className="helvetica text-base font-bold uppercase">ABOUT</p>
           <p className="text-justify">
@@ -126,7 +126,7 @@ export default function about() {
         </div>
         <div className="w-full">
           <p className="helvetica text-base font-bold uppercase">MADE BY</p>
-          <p className="">
+          <p className="mb-12">
             Niklas Buchfink
             <br />
             Lea Münger

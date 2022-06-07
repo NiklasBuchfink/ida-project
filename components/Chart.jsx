@@ -121,7 +121,6 @@ export default function Chart({ size, data }) {
                 fill: "white",
                 padding: 6,
                 fontSize: 16,
-                textTransform: "uppercase",
               },
             }} />
 
