@@ -32,10 +32,10 @@ export default function Home() {
   }
 
   function svgExport() {
-    // //get svg element.
+    // get svg element.
     let svg = document.getElementsByTagName("svg")[0];
 
-    // //get svg source.
+    // get svg source.
     let serializer = new XMLSerializer();
     let source = serializer.serializeToString(svg);
 
@@ -48,19 +48,6 @@ export default function Home() {
     downloadLink.click();
     document.body.removeChild(downloadLink);
   }
-
-  const customStyles = {
-    content: {
-      inset: "0px 0px 0px 0px",
-      zIndex: "199",
-      backgroundColor: "hsla(0 ,0% , 0%, 0.85)",
-      border: "none",
-    },
-    overlay: {
-      zIndex: "199",
-      backgroundColor: "hsla(0, 0%, 0%, 0.4)",
-    },
-  };
 
   if (session) {
     return (
@@ -83,19 +70,22 @@ export default function Home() {
           </button>
           <div className="absolute right-0 z-[100] mt-4 mr-6">
             <Link href="/about">
-              <a className="helvetica text-base font-bold uppercase tracking-wider">
-                about
+              <a className="helvetica text-base font-bold tracking-wider">
+                ABOUT
               </a>
             </Link>
           </div>
 
-          <div className="absolute flex h-full w-full items-center justify-center p-6 pb-10">
+          <div className="absolute flex h-full w-full items-center justify-center py-16 px-0 md:px-16">
             {topPlaylistList.length > 0 ? (
               <>
+                {/* -----DATA CHART----- */}
                 <Chart size={1000} data={topPlaylistList[year]} />
-                <div className="absolute top-10 flex w-24 items-center gap-2 text-base sm:top-2">
+
+                {/* -----UI----- */}
+                <div className=" helvetica absolute top-10 flex w-24 items-center gap-2 text-base font-bold sm:top-2">
                   <button
-                    className="p-2"
+                    className="p-2 font-bold"
                     style={{
                       visibility:
                         year !== topPlaylistList.length - 1
@@ -106,9 +96,9 @@ export default function Home() {
                   >
                     &#60;
                   </button>
-                  <div>{topPlaylistList[year].year}</div>
+                  <div className="">{topPlaylistList[year].year}</div>
                   <button
-                    className="p-2"
+                    className="p-2 font-bold"
                     style={{
                       visibility: year !== 0 ? "visible" : "hidden",
                     }}
@@ -119,30 +109,42 @@ export default function Home() {
                 </div>
                 <div className="absolute bottom-6 w-full -translate-y-[calc(-50%+1rem-0.6px)] md:bottom-1/2">
                   <button
-                    className="absolute right-6 cursor-pointer text-base"
+                    className="helvetica absolute right-6 cursor-pointer text-base font-bold tracking-wider"
                     onClick={toggleModal}
                   >
                     MORE_INFO
                   </button>
                   <button
-                    className="absolute left-6 cursor-pointer text-base"
+                    className="helvetica absolute left-6 cursor-pointer text-base font-bold tracking-wider"
                     onClick={svgExport}
                   >
                     EXPORT
                   </button>
                 </div>
 
+                {/* ----MODAL----- */}
                 <Modal
                   isOpen={isOpen}
                   onRequestClose={toggleModal}
                   ariaHideApp={false}
                   contentLabel="Legend dialog"
-                  style={customStyles}
+                  style={{
+                    content: {
+                      inset: "0px 0px 0px 0px",
+                      zIndex: "199",
+                      backgroundColor: "hsla(0 ,0% , 0%, 0)",
+                      border: "none",
+                    },
+                    overlay: {
+                      zIndex: "199",
+                      backgroundColor: "hsla(0, 0%, 0%, 0.9)",
+                    },
+                  }}
                   closeTimeoutMS={200}
                 >
                   <div className="flex h-full flex-col items-center justify-center space-y-16 p-4 text-center text-white">
                     <div className="">
-                      <p className="helvetica text-2xl font-bold tracking-wide">
+                      <p className="helvetica text-2xl font-bold tracking-wider">
                         MY_MUSIC_STATS
                       </p>
                       <div className="mt-2 space-y-2">
@@ -183,15 +185,15 @@ export default function Home() {
                       </div>
                     </div>
                     <div>
-                      <p className="helvetica text-2xl font-bold tracking-wide">
+                      <p className="helvetica text-2xl font-bold tracking-wider">
                         ABOUT_THE_AURA
                       </p>
                       <div className="m-auto mt-2 max-w-[500px] space-y-4 text-justify leading-[1.4]">
                         <p>
                           The aura is the colorful circle that surrounds your
-                          most listened tracks of the year. It&#39;s generated based
-                          on your the positivity and energy values of these
-                          tracks.
+                          most listened tracks of the year. It&#39;s generated
+                          based on your the positivity and energy values of
+                          these tracks.
                         </p>
                         <p>
                           The center color represents your average positivity.
@@ -200,7 +202,7 @@ export default function Home() {
                         </p>
                         <p>
                           Meanwhile the outer color represents the average
-                          energy value of your songs. If, for example, you have
+                          energy value of your songs. If for example you have
                           listened only to fast hardcore songs your outer aura
                           probably will be some hue of red.
                         </p>
@@ -210,7 +212,12 @@ export default function Home() {
                         <div className="flex justify-center">
                           <span>Less</span>
                           <div className="mt-[1px] px-4">
-                            <Image src="/valence.svg" width="200" height="10" preload="true" />
+                            <Image
+                              src="/valence.svg"
+                              width="200"
+                              height="10"
+                              preload="true"
+                            />
                           </div>
                           <span>More</span>
                         </div>
@@ -220,14 +227,19 @@ export default function Home() {
                         <div className="mb-4 flex justify-center">
                           <span>Less</span>
                           <div className="mt-[1px] px-4">
-                            <Image src="/energy.svg" width="200" height="10" preload="true" />
+                            <Image
+                              src="/energy.svg"
+                              width="200"
+                              height="10"
+                              preload="true"
+                            />
                           </div>
                           <span>More</span>
                         </div>
                       </div>
                     </div>
                     <button
-                      className="absolute bottom-6 -translate-y-1/2 cursor-pointer text-base leading-[0.2] sm:bottom-1/2 sm:right-6"
+                      className="helvetica absolute bottom-6 -translate-y-1/2 cursor-pointer text-base font-bold leading-[0.2] tracking-wider sm:bottom-1/2 sm:right-6"
                       onClick={toggleModal}
                     >
                       CLOSE
@@ -236,7 +248,10 @@ export default function Home() {
                 </Modal>
               </>
             ) : (
-              <ChartLoader size={1000} />
+              <>
+                {/* ----LOADING SPINNER----- */}
+                <ChartLoader size={1000} />
+              </>
             )}
           </div>
         </div>
@@ -253,6 +268,8 @@ export default function Home() {
         />
         <link rel="icon" href="favicon.ico" />
       </Head>
+
+      {/* ----LANDING PAGE----- */}
       <div className="helvetica absolute right-0 mt-4 mr-6 text-base font-bold uppercase tracking-wider ">
         <Link href="/about">about</Link>
       </div>
@@ -271,11 +288,24 @@ export default function Home() {
         </button>
 
         <p className="max-w-[500px] p-3 text-center">
-          or use a data sample{" "}
+          Currently still in development mode and access needs to be added
+          manually. Limited early-access can be requested {" "}
+            <a
+              className=" underline "
+              href="https://forms.gle/AVHXE8axjkLiw85j6"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>. <br />
+          Meanwhile you can use a data sample{" "}
           <span className="underline">
             <Link href="/sample">from the creators</Link>
           </span>
           .
+        </p>
+        <p className="max-w-[500px] p-3 text-center">
+          
         </p>
       </div>
     </>

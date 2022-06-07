@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect } from "react";
 import {
   MdPause,
   MdPlayArrow,
@@ -8,25 +8,23 @@ import {
 import { usePlayer } from "./PlayerContext";
 
 export default function PreviewPlayer() {
-  const {
-    isPlaying,
-    togglePlay,
-    duration,
-  } = usePlayer();
+  const { isPlaying, togglePlay, duration } = usePlayer();
 
   return (
-    <div className=" absolute flex flex-col items-center justify-center col-span-7 gap-3">
+    <div className=" absolute col-span-7 flex flex-col items-center justify-center gap-3">
       <div className="flex items-center gap-5">
-{/*         <MdSkipPrevious className="text-xl text-gray" />
- */}        <button
+        {/*         <MdSkipPrevious className="text-xl text-gray" />
+         */}{" "}
+        <button
           onClick={togglePlay}
-          className=" hidden flex items-center justify-center w-8 h-8 text-2xl text-black bg-white rounded-full focus:outline-none"
+          className="flex hidden h-8 w-8 items-center justify-center rounded-full bg-white text-2xl text-black focus:outline-none"
         >
           {/* KMDK */}
           {isPlaying ? <MdPause /> : <MdPlayArrow />}
         </button>
-{/*         <MdSkipNext className="text-xl text-gray" />
- */}      </div>
+        {/*         <MdSkipNext className="text-xl text-gray" />
+         */}{" "}
+      </div>
     </div>
   );
 }

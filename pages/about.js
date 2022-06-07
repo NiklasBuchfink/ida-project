@@ -15,18 +15,18 @@ export default function about() {
       </Head>
       <div className="absolute right-0 mt-4 mr-6">
         <Link href="/">
-          <a className="helvetica text-base font-bold uppercase">BACK</a>
+          <a className="helvetica text-base font-bold uppercase tracking-wider">BACK</a>
         </Link>
       </div>
 
       <div className="m-auto flex h-screen max-w-[550px] flex-col items-center space-y-6 px-6 text-left leading-[1.4] sm:justify-center sm:text-center">
         <div className="mt-24 sm:mt-0">
-          <p className="helvetica text-base font-bold uppercase">ABOUT</p>
+          <p className="helvetica text-base font-bold uppercase tracking-wider">ABOUT</p>
           <p className="text-justify">
             Music is an essential part of our lives. It shapes our culture and
             our identity. The everyday playlists and every concert tracklist is
             associated with special memories. RECAP_MY_MUSIC visualizes your
-            individual musical taste based using your Spotify, making it
+            individual musical taste by using your Spotify data, making it
             visually accessible, comparable and shareable with others.
             RECAP_MY_MUSIC helps you to answer the question what kind of musical
             preferences you have by showing you your most listened genres and
@@ -34,7 +34,7 @@ export default function about() {
           </p>
         </div>
         <div className="">
-          <p className="helvetica text-base font-bold uppercase">SPOTIFY API</p>
+          <p className="helvetica text-base font-bold uppercase tracking-wider">SPOTIFY API</p>
           <p className="text-justify">
             Spotify allows developers to create web applications that make use
             of their gigantic music library and can load data from registered
@@ -57,7 +57,7 @@ export default function about() {
           </p>
         </div>
         <div className="w-full">
-          <p className="helvetica text-base font-bold uppercase">TOOLS</p>
+          <p className="helvetica text-base font-bold uppercase tracking-wider">TOOLS</p>
 
           <p className="max-w-[500px]">
             <a
@@ -130,7 +130,7 @@ export default function about() {
           </p>
         </div>
         <div className="w-full">
-          <p className="helvetica text-base font-bold uppercase">MADE BY</p>
+          <p className="helvetica text-base font-bold uppercase tracking-wider">MADE BY</p>
           <p className="mb-12">
             Niklas Buchfink
             <br />

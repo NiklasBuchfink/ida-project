@@ -18,6 +18,13 @@
   }
 }
 
+.helvetica {
+  font-family: "helvetica", sans-serif;
+}
+
+.monospace-text {
+  font-family: "monospace";
+}
 
 .title {
   font-family: "helvetica", sans-serif;
@@ -38,9 +45,7 @@
 .title.hover {
   color: rgb(192, 255, 3);
 }
-.helvetica {
-  font-family: "helvetica", sans-serif;
-}
+
 
 @media screen and (max-width: 650px) {
   .title {
@@ -71,6 +76,21 @@ ReactModal__Overlay {
 
 .ReactModal__Overlay--before-close{
   opacity: 0;
+}
+
+
+.aura-circle {
+  opacity: 1;
+  animation: blend-in 1s ease-in-out forwards;
+}
+
+@keyframes blend-in {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
 }
 
 .victory-container {

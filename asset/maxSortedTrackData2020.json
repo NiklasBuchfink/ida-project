@@ -1,0 +1,802 @@
+[
+    {
+      "x": 360,
+      "y": 103,
+      "ranking": 3,
+      "name": "Sweet Disposition",
+      "artist": "The Temper Trap",
+      "preview_url": "https://p.scdn.co/mp3-preview/977f4369cb4ec5ecf0608ddc4039558168ac1a00?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 356.4,
+      "y": 100,
+      "ranking": 6,
+      "name": "Buttercup",
+      "artist": "Jack Stauber",
+      "preview_url": "https://p.scdn.co/mp3-preview/5992e1a5916f5dd0b5ff5c27bf8bd93aca3deae5?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 352.8,
+      "y": 90,
+      "ranking": 16,
+      "name": "Kemur Þér Ekki Við",
+      "artist": "Daði Freyr, Króli",
+      "preview_url": null
+    },
+    {
+      "x": 349.2,
+      "y": 86,
+      "ranking": 20,
+      "name": "Forspil",
+      "artist": "Daði Freyr",
+      "preview_url": null
+    },
+    {
+      "x": 345.6,
+      "y": 84,
+      "ranking": 22,
+      "name": "Oh Klahoma",
+      "artist": "Jack Stauber",
+      "preview_url": "https://p.scdn.co/mp3-preview/8f73554f3b961dc37e34ea2f62367c812b70813b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 342,
+      "y": 82,
+      "ranking": 24,
+      "name": "Innan Frá",
+      "artist": "Daði Freyr",
+      "preview_url": null
+    },
+    {
+      "x": 338.4,
+      "y": 78,
+      "ranking": 28,
+      "name": "Endurtaka Mig",
+      "artist": "Daði Freyr, Blær",
+      "preview_url": null
+    },
+    {
+      "x": 334.8,
+      "y": 77,
+      "ranking": 29,
+      "name": "Do I Wanna Know?",
+      "artist": "Arctic Monkeys",
+      "preview_url": "https://p.scdn.co/mp3-preview/18d8be17343d3ef580e93a5fff47c9b58870a31a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 331.2,
+      "y": 74,
+      "ranking": 32,
+      "name": "Is This Love?",
+      "artist": "Daði Freyr",
+      "preview_url": null
+    },
+    {
+      "x": 327.6,
+      "y": 71,
+      "ranking": 35,
+      "name": "We Are Your Friends - Justice Vs Simian",
+      "artist": "Justice, Simian",
+      "preview_url": "https://p.scdn.co/mp3-preview/0a60c6bca88aed6b690973b1ffd5f841e7a0cada?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 324,
+      "y": 70,
+      "ranking": 36,
+      "name": "Where We Wanna Be",
+      "artist": "Daði Freyr",
+      "preview_url": "https://p.scdn.co/mp3-preview/c3ee20fb1d0dd3f0106aede83f7d15d2c450b115?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 320.4,
+      "y": 69,
+      "ranking": 37,
+      "name": "Loud Pipes",
+      "artist": "Ratatat",
+      "preview_url": null
+    },
+    {
+      "x": 316.8,
+      "y": 68,
+      "ranking": 38,
+      "name": "High School Lover",
+      "artist": "Cayucas",
+      "preview_url": null
+    },
+    {
+      "x": 313.2,
+      "y": 67,
+      "ranking": 39,
+      "name": "Sunburn",
+      "artist": "Muse",
+      "preview_url": "https://p.scdn.co/mp3-preview/e93525320d58b3940f0c5ebbab19f12b56317acb?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 309.6,
+      "y": 65,
+      "ranking": 41,
+      "name": "Radioactive",
+      "artist": "Kings of Leon",
+      "preview_url": "https://p.scdn.co/mp3-preview/3ad033b5062fcb86d5fa6e6f4e99d7f2d85582c4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 306,
+      "y": 64,
+      "ranking": 42,
+      "name": "The Sun",
+      "artist": "Portugal. The Man",
+      "preview_url": null
+    },
+    {
+      "x": 302.4,
+      "y": 58,
+      "ranking": 48,
+      "name": "Tilheyra",
+      "artist": "Daði Freyr, Árný Fjóla",
+      "preview_url": null
+    },
+    {
+      "x": 298.8,
+      "y": 56,
+      "ranking": 50,
+      "name": "Did It To Myself",
+      "artist": "Orla Gartland",
+      "preview_url": "https://p.scdn.co/mp3-preview/b1448a6b350fcdcc71ecbbd9aa1588b21922040a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 295.2,
+      "y": 52,
+      "ranking": 54,
+      "name": "Hvernig Væri Það?",
+      "artist": "Daði Freyr",
+      "preview_url": "https://p.scdn.co/mp3-preview/2e33dcd1549f2cf92e306c3bd31634b1b139077e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 291.6,
+      "y": 50,
+      "ranking": 56,
+      "name": "Dead Weight",
+      "artist": "Jack Stauber",
+      "preview_url": "https://p.scdn.co/mp3-preview/b62a75abd8d3c1f97d04ad1e48b5cabcd69be168?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 288,
+      "y": 46,
+      "ranking": 60,
+      "name": "Ég Er Að Fíla Mig (Langar Ekki Að Hvíla Mig)",
+      "artist": "Daði Freyr",
+      "preview_url": null
+    },
+    {
+      "x": 284.4,
+      "y": 39,
+      "ranking": 67,
+      "name": "Skiptir Ekki Máli",
+      "artist": "Daði Freyr",
+      "preview_url": null
+    },
+    {
+      "x": 280.8,
+      "y": 35,
+      "ranking": 71,
+      "name": "Seinni Tíma Vandamál (Áramótaskaupið 2017)",
+      "artist": "Daði Freyr",
+      "preview_url": null
+    },
+    {
+      "x": 277.2,
+      "y": 31,
+      "ranking": 75,
+      "name": "Gagnamagnið",
+      "artist": "Daði Freyr",
+      "preview_url": null
+    },
+    {
+      "x": 273.6,
+      "y": 29,
+      "ranking": 77,
+      "name": "Rock 'n' Roll Star - Remastered",
+      "artist": "Oasis",
+      "preview_url": "https://p.scdn.co/mp3-preview/4eaf8982c7a617df09d9312aaf3190e0908eba76?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 270,
+      "y": 27,
+      "ranking": 79,
+      "name": "No. 1 Party Anthem",
+      "artist": "Arctic Monkeys",
+      "preview_url": "https://p.scdn.co/mp3-preview/9ab60cdf56e81f5ecdd310a41183753ac1e333fc?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 266.4,
+      "y": 26,
+      "ranking": 80,
+      "name": "Simple Song",
+      "artist": "The Shins",
+      "preview_url": "https://p.scdn.co/mp3-preview/f2918687c2806b90ece558794ab0bce41d399e9b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 262.8,
+      "y": 25,
+      "ranking": 81,
+      "name": "Affection",
+      "artist": "Crystal Castles",
+      "preview_url": "https://p.scdn.co/mp3-preview/0bc1892d29330939a30d13ce3bbbd4759c37033a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 259.2,
+      "y": 24,
+      "ranking": 82,
+      "name": "Pressed Flowers",
+      "artist": "Jack Stauber",
+      "preview_url": "https://p.scdn.co/mp3-preview/aab5093be6b6d1c4230cfec4c0250246cae541ca?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 255.6,
+      "y": 17,
+      "ranking": 89,
+      "name": "Vorið",
+      "artist": "GDRN",
+      "preview_url": "https://p.scdn.co/mp3-preview/3540992e3326514377da93055f0189cd30df5d30?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 252,
+      "y": 15,
+      "ranking": 91,
+      "name": "5AM",
+      "artist": "Amber Run",
+      "preview_url": "https://p.scdn.co/mp3-preview/f390a031d4b1ca6a82a0a4cff4f9c2d5a05d5a0b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 248.4,
+      "y": 14,
+      "ranking": 92,
+      "name": "Esjan",
+      "artist": "BRÍET",
+      "preview_url": null
+    },
+    {
+      "x": 244.8,
+      "y": 10,
+      "ranking": 96,
+      "name": "Heavy",
+      "artist": "Orla Gartland",
+      "preview_url": "https://p.scdn.co/mp3-preview/99e09e8b2ced72749f1f73fc640273d563c37d9c?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 241.2,
+      "y": 8,
+      "ranking": 98,
+      "name": "Pay No Mind (feat. Passion Pit)",
+      "artist": "Madeon, Passion Pit",
+      "preview_url": "https://p.scdn.co/mp3-preview/b54cdc2928aa806f56f50cef6e92543e644a6424?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 237.6,
+      "y": 7,
+      "ranking": 99,
+      "name": "Áður en dagur rís (feat. Birnir)",
+      "artist": "GDRN, Birnir",
+      "preview_url": "https://p.scdn.co/mp3-preview/51f14fd32348d6f49ed7bda0fbbb0e3b44ce72f8?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 234,
+      "y": 98,
+      "ranking": 8,
+      "name": "To Be Loved",
+      "artist": "Askjell, AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/2c31184e408fda24b9d8bc6c03f6c7ccdbe3c39d?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 230.4,
+      "y": 95,
+      "ranking": 11,
+      "name": "Goodbye To A World",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/3707aa9fa5ff35e8c94527d6a4325d39910c6314?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 226.8,
+      "y": 91,
+      "ranking": 15,
+      "name": "Fresh Static Snow",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/a92b2b9ff6a1e8f492bec8c6f72f06751efbd7b1?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 223.2,
+      "y": 87,
+      "ranking": 19,
+      "name": "Flicker",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/84876c96401601c6615f27cfcc718a9c873b6a84?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 219.6,
+      "y": 83,
+      "ranking": 23,
+      "name": "Years Of War",
+      "artist": "Porter Robinson, Breanne Düren, Sean Caskey",
+      "preview_url": "https://p.scdn.co/mp3-preview/2c263c330e6aa637dc1964fddbf43cdb04d2e151?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 216,
+      "y": 73,
+      "ranking": 33,
+      "name": "Made To Stray",
+      "artist": "Mount Kimbie",
+      "preview_url": "https://p.scdn.co/mp3-preview/26b8128cd18a2031bcea7f98924d23061cb2a11c?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 212.4,
+      "y": 61,
+      "ranking": 45,
+      "name": "Sad Machine",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/c36ddf92f0caf72853f9e7e24cd523ff750985b6?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 208.8,
+      "y": 59,
+      "ranking": 47,
+      "name": "Dream Dream Dream",
+      "artist": "Madeon",
+      "preview_url": "https://p.scdn.co/mp3-preview/786c9a8cf293b096e47307b0c227fa579205c8d0?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 205.2,
+      "y": 57,
+      "ranking": 49,
+      "name": "Fellow Feeling",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/9e0382005cbdb2df20ebf141aeca669df85c9e5a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 201.6,
+      "y": 55,
+      "ranking": 51,
+      "name": "The Prince",
+      "artist": "Madeon",
+      "preview_url": "https://p.scdn.co/mp3-preview/cee0ad8f38e0f16702321b9a7658c5d70314b177?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 198,
+      "y": 53,
+      "ranking": 53,
+      "name": "Sea Of Voices",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/8453cf41ef8b3d94e93a65b7a7fb041f09312c2b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 194.4,
+      "y": 51,
+      "ranking": 55,
+      "name": "La Lune (feat. Dan Smith)",
+      "artist": "Madeon, Dan Smith",
+      "preview_url": "https://p.scdn.co/mp3-preview/260e534cedc6b4e85a8ba9c071b40eefbd1479fd?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 190.8,
+      "y": 49,
+      "ranking": 57,
+      "name": "Hear The Bells",
+      "artist": "Porter Robinson, Imaginary Cities",
+      "preview_url": "https://p.scdn.co/mp3-preview/a726c838d7c6a1c1ec88cfb02067f9406e5d64b6?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 187.2,
+      "y": 47,
+      "ranking": 59,
+      "name": "Be Fine",
+      "artist": "Madeon",
+      "preview_url": "https://p.scdn.co/mp3-preview/e48e591069ba29d44db3cd00bd1002df2e35f76e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 183.6,
+      "y": 45,
+      "ranking": 61,
+      "name": "Lionhearted",
+      "artist": "Porter Robinson, Urban Cone",
+      "preview_url": "https://p.scdn.co/mp3-preview/8e0300c44b92e652c946e46f174e173d17228d55?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 180,
+      "y": 43,
+      "ranking": 63,
+      "name": "Hold Me Just Because",
+      "artist": "Madeon",
+      "preview_url": "https://p.scdn.co/mp3-preview/e91074de8936c0cf1574a83fdb2d06384c6db43e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 176.4,
+      "y": 41,
+      "ranking": 65,
+      "name": "Divinity",
+      "artist": "Porter Robinson, Amy Millan",
+      "preview_url": "https://p.scdn.co/mp3-preview/5a67c30a249b26dcd8136a7527ef7d66098bc81b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 172.8,
+      "y": 37,
+      "ranking": 69,
+      "name": "Polygon Dust",
+      "artist": "Porter Robinson, Lemaitre",
+      "preview_url": "https://p.scdn.co/mp3-preview/ae6e642c1caf3048263787f9558ce2207271dfbb?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 169.2,
+      "y": 34,
+      "ranking": 72,
+      "name": "Touch (feat. Paul Williams)",
+      "artist": "Daft Punk, Paul Williams",
+      "preview_url": "https://p.scdn.co/mp3-preview/e79c842b711869ecbfaa732b96cec774baa60644?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 165.6,
+      "y": 33,
+      "ranking": 73,
+      "name": "Natural Light",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/548b1735a4745528b0a22ddd27fbae80a81ada88?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 162,
+      "y": 30,
+      "ranking": 76,
+      "name": "One More Time / Aerodynamic",
+      "artist": "Daft Punk",
+      "preview_url": null
+    },
+    {
+      "x": 158.4,
+      "y": 12,
+      "ranking": 94,
+      "name": "Miracle",
+      "artist": "Madeon",
+      "preview_url": "https://p.scdn.co/mp3-preview/d7eebe95eab0ffb6b2d5d9c82d7387db2bfe1dbd?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 154.8,
+      "y": 104,
+      "ranking": 2,
+      "name": "hidden springs",
+      "artist": "iris",
+      "preview_url": "https://p.scdn.co/mp3-preview/99a976ae49f40e2b021ede662a3d338e06599eb1?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 151.2,
+      "y": 102,
+      "ranking": 4,
+      "name": "Helvegen",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/869d9ad2d0c6af14969bd3b446aa2349b8d2544e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 147.6,
+      "y": 101,
+      "ranking": 5,
+      "name": "Virkelighetens Etterklang",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/49c0595105f01deb29fd29f37c5fb8810d3ff9e7?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 144,
+      "y": 99,
+      "ranking": 7,
+      "name": "Love Me Wrong",
+      "artist": "Allie X, Troye Sivan",
+      "preview_url": "https://p.scdn.co/mp3-preview/1a7aceaa0d82babacebbd935c2611234fbcf8303?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 140.4,
+      "y": 97,
+      "ranking": 9,
+      "name": "Concrete Landscapes",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/93ea649a7e2f2b977632cb6308716b1c81ccced4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 136.8,
+      "y": 93,
+      "ranking": 13,
+      "name": "Break My Broken Heart",
+      "artist": "Winona Oak",
+      "preview_url": "https://p.scdn.co/mp3-preview/dd4d86419de5b72692cb14e744b46a347ca36b3c?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 133.2,
+      "y": 92,
+      "ranking": 14,
+      "name": "Line Of Sight (feat. WYNNE & Mansionair)",
+      "artist": "ODESZA, WYNNE, Mansionair",
+      "preview_url": "https://p.scdn.co/mp3-preview/362738dab67ac9569a6731e7172f28bd83618104?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 129.6,
+      "y": 89,
+      "ranking": 17,
+      "name": "Not Some Fairytale",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/2dfb8b7a178276b0f4bcb4c43dae449ad9851285?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 126,
+      "y": 85,
+      "ranking": 21,
+      "name": "Lullaby",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/7e8a7ff891384ca5a725120c4d967a1a1a6efcbb?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 122.4,
+      "y": 81,
+      "ranking": 25,
+      "name": "The Waiting Game",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/807c9da057a58526d7983403ce5de7918071ac2a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 118.80000000000001,
+      "y": 79,
+      "ranking": 27,
+      "name": "Susie Save Your Love",
+      "artist": "Allie X, Mitski",
+      "preview_url": "https://p.scdn.co/mp3-preview/f1c47831b75216e865c9b2c545fd9d38236e5493?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 115.19999999999999,
+      "y": 63,
+      "ranking": 43,
+      "name": "Oblivion",
+      "artist": "Grimes",
+      "preview_url": null
+    },
+    {
+      "x": 111.6,
+      "y": 60,
+      "ranking": 46,
+      "name": "To Be Human",
+      "artist": "MARINA",
+      "preview_url": "https://p.scdn.co/mp3-preview/8d3e1726b86be1941a95c519fb55cdd8af4a0fd6?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 108,
+      "y": 42,
+      "ranking": 64,
+      "name": "Across the Sea",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/9855b7fe637c2c752f9838bdad58d07d3d976817?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 104.4,
+      "y": 38,
+      "ranking": 68,
+      "name": "Sell Your Voice",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/a4f2664c64c88dbcd7267d25e89152a331f9eefc?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 100.80000000000001,
+      "y": 21,
+      "ranking": 85,
+      "name": "Across The Room (feat. Leon Bridges)",
+      "artist": "ODESZA, Leon Bridges",
+      "preview_url": "https://p.scdn.co/mp3-preview/5a275c22e96bff82928e5ce189486cb2bcaf452a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 97.19999999999999,
+      "y": 20,
+      "ranking": 86,
+      "name": "Lonely Star",
+      "artist": "Oh Wonder",
+      "preview_url": "https://p.scdn.co/mp3-preview/05e96d5af61e26264925afafe497a55dd29012a4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 93.60000000000002,
+      "y": 9,
+      "ranking": 97,
+      "name": "I Get You",
+      "artist": "Kasbo, Lizzy Land",
+      "preview_url": "https://p.scdn.co/mp3-preview/d020d2317c2a4b4d1c8e521afe818735ed2afe63?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 90,
+      "y": 6,
+      "ranking": 100,
+      "name": "Dynamite",
+      "artist": "Sigrid",
+      "preview_url": "https://p.scdn.co/mp3-preview/73fab55a1c6badc8608aa8c77a7ffc5189ddd8a0?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 86.39999999999998,
+      "y": 105,
+      "ranking": 1,
+      "name": "Exist For Love",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/78be70961cc1829d6d8508f1d1fac0702c7cf7ec?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 82.80000000000001,
+      "y": 94,
+      "ranking": 12,
+      "name": "The Secret Garden",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/8422ba7ed51126f9cfd7edfac46672f575e273b3?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 79.19999999999999,
+      "y": 88,
+      "ranking": 18,
+      "name": "The River",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/54d2c103c68f961f865695967ba03fb86264198e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 75.60000000000002,
+      "y": 80,
+      "ranking": 26,
+      "name": "Churchyard",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/160511ba820c0774e5ea3471165a35616d09c8c5?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 72,
+      "y": 76,
+      "ranking": 30,
+      "name": "It Happened Quiet",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/fd0b441afad0c7c18c896277510b158c9cf24379?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 68.39999999999998,
+      "y": 75,
+      "ranking": 31,
+      "name": "Take Me To Church",
+      "artist": "Hozier",
+      "preview_url": "https://p.scdn.co/mp3-preview/88f4fc892ac1521eff9fc297a4d3e47c02b1d28e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 64.80000000000001,
+      "y": 72,
+      "ranking": 34,
+      "name": "Runaway",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/d18ccbd68d47fbcf551e2c1d6510d0b664a90697?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 61.19999999999999,
+      "y": 66,
+      "ranking": 40,
+      "name": "Things That Stop You Dreaming",
+      "artist": "Passenger",
+      "preview_url": "https://p.scdn.co/mp3-preview/a18f7e2dc3af9696bb76be1411b4ea04a147109f?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 57.60000000000002,
+      "y": 54,
+      "ranking": 52,
+      "name": "One with the Mountain",
+      "artist": "Firewoodisland",
+      "preview_url": "https://p.scdn.co/mp3-preview/1b83b42d386aff2cf3f499e4cb7fe9e147b39ee7?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 54,
+      "y": 48,
+      "ranking": 58,
+      "name": "Hello Friend",
+      "artist": "Firewoodisland",
+      "preview_url": "https://p.scdn.co/mp3-preview/561b1fa85b2ebd43313980223fb43620cabcdd71?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 50.39999999999998,
+      "y": 44,
+      "ranking": 62,
+      "name": "Soulless Creatures",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/ffa04b6e60f0f8715f0920fde72ede86cdd66bf2?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 46.80000000000001,
+      "y": 40,
+      "ranking": 66,
+      "name": "Walking In The Air",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/2969b6fead429bd198b33871335de8ab2aaee7e6?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 43.19999999999999,
+      "y": 36,
+      "ranking": 70,
+      "name": "Animal",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/77e3dba095ac26b93a772a4e8e9c55e525047435?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 39.60000000000002,
+      "y": 32,
+      "ranking": 74,
+      "name": "Hunger",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/8574690e75a4f46d0119d9b21abf0c05d0353a7b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 36,
+      "y": 22,
+      "ranking": 84,
+      "name": "Broken Sleep",
+      "artist": "Agnes Obel",
+      "preview_url": "https://p.scdn.co/mp3-preview/a9a5dab256927e46f23aa86d816377f8f6d7a07b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 32.39999999999998,
+      "y": 18,
+      "ranking": 88,
+      "name": "Camera's Rolling",
+      "artist": "Agnes Obel",
+      "preview_url": "https://p.scdn.co/mp3-preview/9087c72e0c702c70fb1c17460c785b106f92d96a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 28.80000000000001,
+      "y": 16,
+      "ranking": 90,
+      "name": "Lyftutónlist",
+      "artist": "Moses Hightower",
+      "preview_url": "https://p.scdn.co/mp3-preview/a216c69c46865adab65c333eeb4e6bc7d5ac4d0b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 25.19999999999999,
+      "y": 13,
+      "ranking": 93,
+      "name": "Time Reveals It All",
+      "artist": "Firewoodisland",
+      "preview_url": "https://p.scdn.co/mp3-preview/60eeae3c264cb42125e464cfebf3c2cef0f54027?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 21.600000000000023,
+      "y": 96,
+      "ranking": 10,
+      "name": "Farrah Fawcett Hair",
+      "artist": "Capital Cities, André 3000",
+      "preview_url": "https://p.scdn.co/mp3-preview/43696a2a56dc5560aea5a90ac091ccf02d6aa320?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 18,
+      "y": 62,
+      "ranking": 44,
+      "name": "On Melancholy Hill",
+      "artist": "Gorillaz",
+      "preview_url": "https://p.scdn.co/mp3-preview/6d11cacb2bdbeca675faec6a20977b1daf638eaa?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 14.399999999999977,
+      "y": 23,
+      "ranking": 83,
+      "name": "The Knight Who Was Taught to Save Dragons",
+      "artist": "Sonya Belousova, Giona Ostinelli, Rodion Belousov",
+      "preview_url": "https://p.scdn.co/mp3-preview/ed13b2691aa0f2def41b5ed22c642bf37cd1dcf0?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 10.800000000000011,
+      "y": 19,
+      "ranking": 87,
+      "name": "The Time of Axe and Sword Is Now",
+      "artist": "Sonya Belousova, Giona Ostinelli, Declan de Barra, Lindsay Deutsch",
+      "preview_url": "https://p.scdn.co/mp3-preview/8f696b77e3ea4885cb9fbef8d13d18d114852a8c?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 7.199999999999989,
+      "y": 28,
+      "ranking": 78,
+      "name": "I Appear Missing",
+      "artist": "Queens of the Stone Age",
+      "preview_url": null
+    },
+    {
+      "x": 3.6000000000000227,
+      "y": 11,
+      "ranking": 95,
+      "name": "Segðu já - Radio Edit",
+      "artist": "Hjálmar",
+      "preview_url": "https://p.scdn.co/mp3-preview/0bed0f755432e0d616a84cb99684d008eb387a77?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    }
+  ]

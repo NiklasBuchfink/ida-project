@@ -1,0 +1,778 @@
+[
+    {
+      "x": 360,
+      "y": 102,
+      "ranking": 1,
+      "name": "Slow Motion",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/63b539517e3baedf9e68e2cbe3d04a1039e3bbd4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 356.2886597938144,
+      "y": 101,
+      "ranking": 2,
+      "name": "Borders",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/f3423bdd592f2cbf9965999528899ca079e8ab07?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 352.5773195876289,
+      "y": 100,
+      "ranking": 3,
+      "name": "With You",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/13da8f5f7e3a54f13bcb4b996990131f4e487bb6?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 348.8659793814433,
+      "y": 99,
+      "ranking": 4,
+      "name": "Wonderland",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/9890f10220599cded6de26cc936c87ed912cdcb8?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 345.1546391752577,
+      "y": 98,
+      "ranking": 5,
+      "name": "Naive",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/f16e9394b558138f66eac12e1d43bcfe46243332?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 341.44329896907215,
+      "y": 94,
+      "ranking": 9,
+      "name": "On the Run",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/b4f8832bfaadb65a12a6e55674b849b256faf1a9?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 337.7319587628866,
+      "y": 90,
+      "ranking": 13,
+      "name": "Virkelighetens Etterklang",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/f95d7b89ed0abe25cbadf3a7e5e6bdbb3b20e19f?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 334.02061855670104,
+      "y": 88,
+      "ranking": 15,
+      "name": "Roller Mobster",
+      "artist": "Carpenter Brut",
+      "preview_url": "https://p.scdn.co/mp3-preview/84c8eff1ac4090f867c180d3f89897897f09a505?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 330.30927835051546,
+      "y": 86,
+      "ranking": 17,
+      "name": "It Gets Easier",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/ecad1b999949dfb604a9adc2642ce2cf45776c82?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 326.5979381443299,
+      "y": 82,
+      "ranking": 21,
+      "name": "Ensom",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/df5adf40bd805fd5967d7170346f0c380c3e948a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 322.88659793814435,
+      "y": 79,
+      "ranking": 24,
+      "name": "Breathe - Legends of Runeterra Version",
+      "artist": "Fleurie, Legends of Runeterra",
+      "preview_url": "https://p.scdn.co/mp3-preview/d3128e53c2a3d952a3cc07e90c31c69c97d41183?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 319.17525773195877,
+      "y": 78,
+      "ranking": 25,
+      "name": "Helvegen",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/869d9ad2d0c6af14969bd3b446aa2349b8d2544e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 315.4639175257732,
+      "y": 74,
+      "ranking": 29,
+      "name": "The Waiting Game",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/dc9d64b806b0f6a594c851550a01f3b7c060e352?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 311.75257731958766,
+      "y": 70,
+      "ranking": 33,
+      "name": "Brave New World",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/5c382739c35a7bc85616352bc5bdfb335021e98e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 308.0412371134021,
+      "y": 66,
+      "ranking": 37,
+      "name": "Ensom - Unplugged",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/ddc1dee4fe7c38dd8fcf8941fb8f2a23b85db20d?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 304.3298969072165,
+      "y": 64,
+      "ranking": 39,
+      "name": "Le perv",
+      "artist": "Carpenter Brut",
+      "preview_url": "https://p.scdn.co/mp3-preview/f6e5b17f0af5e9cc6f568c21edf57ce85ed911f1?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 300.6185567010309,
+      "y": 59,
+      "ranking": 44,
+      "name": "Piano in the Sky",
+      "artist": "Winona Oak",
+      "preview_url": "https://p.scdn.co/mp3-preview/a1f97434e64db0589cc0f1b125878939f266ae5e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 296.90721649484533,
+      "y": 58,
+      "ranking": 45,
+      "name": "Sofia",
+      "artist": "Askjell, iris, AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/80f598102ee2f1681225bf0da100e4c832ff1f75?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 293.1958762886598,
+      "y": 56,
+      "ranking": 47,
+      "name": "Tieduprightnow",
+      "artist": "Parcels",
+      "preview_url": "https://p.scdn.co/mp3-preview/79af76344003a899a91d4ccbd52150b10031af86?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 289.4845360824742,
+      "y": 51,
+      "ranking": 52,
+      "name": "Gamesofluck",
+      "artist": "Parcels",
+      "preview_url": "https://p.scdn.co/mp3-preview/16ad2122d81e179e184e4ccbd1d1738c1109e3ee?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 285.77319587628864,
+      "y": 47,
+      "ranking": 56,
+      "name": "IknowhowIfeel",
+      "artist": "Parcels",
+      "preview_url": "https://p.scdn.co/mp3-preview/4cc9167ca1b9b1849caeae458c40b972965efb89?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 282.0618556701031,
+      "y": 32,
+      "ranking": 71,
+      "name": "Heal My Soul",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/ec37603cb79c96fe6f445eb72368adf3d457f4a7?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 278.35051546391753,
+      "y": 28,
+      "ranking": 75,
+      "name": "Iron Pyrite",
+      "artist": "Lemaitre",
+      "preview_url": "https://p.scdn.co/mp3-preview/5f9138b2335e277681923aefe3e339227a3bbfbf?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 274.63917525773195,
+      "y": 27,
+      "ranking": 76,
+      "name": "Summer Fade (feat. Anna of the North)",
+      "artist": "Snakehips, Anna of the North",
+      "preview_url": "https://p.scdn.co/mp3-preview/2a9ff77cd36518492dc2ca467de3479d8554e58b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 270.92783505154637,
+      "y": 23,
+      "ranking": 80,
+      "name": "The Waiting Game (Oak Ay Remix)",
+      "artist": "Kalandra, Oak Ay",
+      "preview_url": "https://p.scdn.co/mp3-preview/9489ae1eacbab219552a24abe1142ea53e7a8cd5?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 267.21649484536084,
+      "y": 19,
+      "ranking": 84,
+      "name": "Concrete Landscapes",
+      "artist": "Kalandra",
+      "preview_url": "https://p.scdn.co/mp3-preview/93ea649a7e2f2b977632cb6308716b1c81ccced4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 263.50515463917526,
+      "y": 16,
+      "ranking": 87,
+      "name": "Turbo Killer",
+      "artist": "Carpenter Brut",
+      "preview_url": "https://p.scdn.co/mp3-preview/c595f129f8a4c5bfdd1dce749c8806d77d3cea4d?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 259.7938144329897,
+      "y": 15,
+      "ranking": 88,
+      "name": "One Minute More",
+      "artist": "Capital Cities, Sebu Simonian",
+      "preview_url": "https://p.scdn.co/mp3-preview/1f79d0782ae04d54051fcbcc02d0a3f4c2a908be?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 256.08247422680415,
+      "y": 13,
+      "ranking": 90,
+      "name": "Machine",
+      "artist": "Lemaitre",
+      "preview_url": "https://p.scdn.co/mp3-preview/127c37b45504402b507528cb35393ce043504558?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 252.37113402061857,
+      "y": 9,
+      "ranking": 94,
+      "name": "Playing To Lose",
+      "artist": "Lemaitre, Stanaj",
+      "preview_url": "https://p.scdn.co/mp3-preview/70797ffee56f1628e767f571c3e38f23ce5ddfa9?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 248.659793814433,
+      "y": 7,
+      "ranking": 96,
+      "name": "Safe And Sound",
+      "artist": "Capital Cities",
+      "preview_url": "https://p.scdn.co/mp3-preview/c330194066c833eaa9e3bd7d7ae9597327a6cef2?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 244.9484536082474,
+      "y": 97,
+      "ranking": 6,
+      "name": "Get Your Wish",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/e158f10e4c18fa1c5508afad19cfc9705a6ced81?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 241.23711340206185,
+      "y": 93,
+      "ranking": 10,
+      "name": "Wind Tempos",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/a748bf8b85affcbeea9f4a0f30a0de74a9fc550c?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 237.5257731958763,
+      "y": 89,
+      "ranking": 14,
+      "name": "Mirror",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/7267c0baf380bb5e1e78385440e985ffbcb892e8?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 233.81443298969072,
+      "y": 85,
+      "ranking": 18,
+      "name": "Something Comforting",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/1de1dff1a49fc5c13e14b122c722a12e5bdf6c57?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 230.10309278350516,
+      "y": 81,
+      "ranking": 22,
+      "name": "Sweet Time",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/9fa2529f6936466ebc89547a4fe5ee9ba455727a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 226.39175257731958,
+      "y": 77,
+      "ranking": 26,
+      "name": "dullscythe",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/54cc633b344dfa9ba97fda46b32e98e51a81a058?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 222.68041237113403,
+      "y": 73,
+      "ranking": 30,
+      "name": "do-re-mi-fa-so-la-ti-do",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/ac946f5f98ccadc22456b8e814267d5f8f8a2cff?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 218.96907216494844,
+      "y": 69,
+      "ranking": 34,
+      "name": "Look at the Sky",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/261ef7de8881a30ec97f55bf4d33baeef62f7f4e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 215.2577319587629,
+      "y": 65,
+      "ranking": 38,
+      "name": "Unfold",
+      "artist": "Porter Robinson, Totally Enormous Extinct Dinosaurs",
+      "preview_url": "https://p.scdn.co/mp3-preview/ae133796a9b224305c83f31611dbe08413619fe4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 211.5463917525773,
+      "y": 61,
+      "ranking": 42,
+      "name": "Musician",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/9b53ab760f044ecca9f59c86801586c7fd645c5b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 207.83505154639175,
+      "y": 57,
+      "ranking": 46,
+      "name": "Lifelike",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/6197cd31c8fa22a2a1d28ea71577df6187798a25?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 204.1237113402062,
+      "y": 49,
+      "ranking": 54,
+      "name": "Give Life Back to Music",
+      "artist": "Daft Punk",
+      "preview_url": "https://p.scdn.co/mp3-preview/f78c2ceca622895b6123f9972f800bd458d96c0e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 200.41237113402062,
+      "y": 45,
+      "ranking": 58,
+      "name": "Mother",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/35b574b1032febbace4c805d674e9f23a5ff8f3c?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 196.70103092783506,
+      "y": 43,
+      "ranking": 60,
+      "name": "Finale (feat. Nicholas Petricca)",
+      "artist": "Madeon, Nicholas Petricca",
+      "preview_url": "https://p.scdn.co/mp3-preview/b5b2f2ed582c6949d534e89f65cc44fc8201a0a4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 192.98969072164948,
+      "y": 41,
+      "ranking": 62,
+      "name": "Blossom",
+      "artist": "Porter Robinson",
+      "preview_url": "https://p.scdn.co/mp3-preview/bfaeb2a146decfcb403cb8419c38ec4a8cbaaf61?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 189.27835051546393,
+      "y": 37,
+      "ranking": 66,
+      "name": "Polygon Dust",
+      "artist": "Porter Robinson, Lemaitre",
+      "preview_url": "https://p.scdn.co/mp3-preview/ae6e642c1caf3048263787f9558ce2207271dfbb?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 185.56701030927834,
+      "y": 33,
+      "ranking": 70,
+      "name": "Simulation",
+      "artist": "Virtual Riot",
+      "preview_url": "https://p.scdn.co/mp3-preview/210dd46a4e05f12870cfe4ecd7fdbd453bec2be8?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 181.8556701030928,
+      "y": 25,
+      "ranking": 78,
+      "name": "All My Friends",
+      "artist": "Madeon",
+      "preview_url": "https://p.scdn.co/mp3-preview/3c7d1dd5ca9f076176c084fc090913221425c954?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 178.1443298969072,
+      "y": 24,
+      "ranking": 79,
+      "name": "The Game of Love",
+      "artist": "Daft Punk",
+      "preview_url": "https://p.scdn.co/mp3-preview/e814c6771636a92f82edd4e4e921dd04402cab13?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 174.43298969072166,
+      "y": 21,
+      "ranking": 82,
+      "name": "Dream Dream Dream",
+      "artist": "Madeon",
+      "preview_url": "https://p.scdn.co/mp3-preview/786c9a8cf293b096e47307b0c227fa579205c8d0?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 170.72164948453607,
+      "y": 20,
+      "ranking": 83,
+      "name": "Beyond",
+      "artist": "Daft Punk",
+      "preview_url": "https://p.scdn.co/mp3-preview/0c83d4cb8cf83b966322c42f7881c5a19c232872?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 167.01030927835052,
+      "y": 17,
+      "ranking": 86,
+      "name": "Shelter",
+      "artist": "Porter Robinson, Madeon",
+      "preview_url": "https://p.scdn.co/mp3-preview/fbe56383919cff9a224166d9fa9fa11357338c6b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 163.29896907216494,
+      "y": 12,
+      "ranking": 91,
+      "name": "To Be Loved",
+      "artist": "Askjell, AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/2c31184e408fda24b9d8bc6c03f6c7ccdbe3c39d?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 159.58762886597938,
+      "y": 8,
+      "ranking": 95,
+      "name": "Lost It - VIP",
+      "artist": "Virtual Riot, Pearl Andersson",
+      "preview_url": "https://p.scdn.co/mp3-preview/edb1aec7d76cf028b6556fd34db7b1bbccde35e0?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 155.8762886597938,
+      "y": 96,
+      "ranking": 7,
+      "name": "Running With The Wolves",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/f7d5fecebe7a2fb8885b2cb641c32a3176352a21?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 152.16494845360825,
+      "y": 92,
+      "ranking": 11,
+      "name": "Cure For Me",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/cee7e3899818a4749b3eb669d47d709224e0caef?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 148.4536082474227,
+      "y": 84,
+      "ranking": 19,
+      "name": "The Secret Garden",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/8422ba7ed51126f9cfd7edfac46672f575e273b3?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 144.7422680412371,
+      "y": 80,
+      "ranking": 23,
+      "name": "Churchyard",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/160511ba820c0774e5ea3471165a35616d09c8c5?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 141.03092783505156,
+      "y": 76,
+      "ranking": 27,
+      "name": "Thank U",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/e4b9cf3fd8b7f09fa932dcc476873084d63ec296?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 137.31958762886597,
+      "y": 62,
+      "ranking": 41,
+      "name": "Half The World Away",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/971c2c6c6ad3e4432b6d7969f032934a46ff782b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 133.60824742268042,
+      "y": 54,
+      "ranking": 49,
+      "name": "All Is Soft Inside",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/92b5c5d0e712740235467edceb32d8d58da73a83?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 129.89690721649484,
+      "y": 50,
+      "ranking": 53,
+      "name": "Daydreamer",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/668d05c2d0aa5fb317a1d42f54ac0e83437991f9?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 126.18556701030928,
+      "y": 46,
+      "ranking": 57,
+      "name": "Conqueror",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/0af49053c8aa8a34d34a1209747603df1503b703?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 122.4742268041237,
+      "y": 42,
+      "ranking": 61,
+      "name": "The River",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/54d2c103c68f961f865695967ba03fb86264198e?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 118.76288659793815,
+      "y": 40,
+      "ranking": 63,
+      "name": "Sober",
+      "artist": "Aquilo",
+      "preview_url": "https://p.scdn.co/mp3-preview/327ba7e175d781430a4ed2bd2bbe992b5ab77e34?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 115.05154639175257,
+      "y": 38,
+      "ranking": 65,
+      "name": "Stjernestøv",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/bd06384d905dafdf08fe9ee445fec325ca8a6a79?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 111.34020618556701,
+      "y": 35,
+      "ranking": 68,
+      "name": "Haven (from Life Is Strange)",
+      "artist": "Novo Amor",
+      "preview_url": "https://p.scdn.co/mp3-preview/58d498afe1b84810a8bf605a9d56a2ed72fa1bb4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 107.62886597938143,
+      "y": 34,
+      "ranking": 69,
+      "name": "The Seed",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/e034b04d797115cf4b3420f22cb27416a1fba87f?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 103.91752577319585,
+      "y": 30,
+      "ranking": 73,
+      "name": "In Boxes",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/5df29f489e0226774c5f709abe0c262aebcdce2d?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 100.20618556701032,
+      "y": 29,
+      "ranking": 74,
+      "name": "The Curse",
+      "artist": "Agnes Obel",
+      "preview_url": "https://p.scdn.co/mp3-preview/6562059ea4e7e3805aa0b4678226b3ddc425683f?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 96.49484536082474,
+      "y": 26,
+      "ranking": 77,
+      "name": "Life On Mars",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/e9ec6a4a499ede48f4e5733cb44e667b875654d9?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 92.78350515463916,
+      "y": 22,
+      "ranking": 81,
+      "name": "Lucky",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/db38286e0ead8081b322782dc984b5e9dfd721b6?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 89.07216494845363,
+      "y": 18,
+      "ranking": 85,
+      "name": "Runaway",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/d18ccbd68d47fbcf551e2c1d6510d0b664a90697?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 85.36082474226805,
+      "y": 14,
+      "ranking": 89,
+      "name": "Into the Unknown",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/41356b4fd512e3f0e15bb77376343fab7c56203f?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 81.64948453608247,
+      "y": 10,
+      "ranking": 93,
+      "name": "Under Stars",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/76b2723a51e90a6e7aee4ac330217796503e9fa8?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 77.93814432989689,
+      "y": 6,
+      "ranking": 97,
+      "name": "Forgotten Love",
+      "artist": "AURORA",
+      "preview_url": "https://p.scdn.co/mp3-preview/c352bf341d264671545c52de0db5c762bb9b1c8c?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 74.22680412371136,
+      "y": 95,
+      "ranking": 8,
+      "name": "Keep Moving",
+      "artist": "Jungle",
+      "preview_url": "https://p.scdn.co/mp3-preview/87ea1772314baba234a4b9e214d4919814310ef1?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 70.51546391752578,
+      "y": 83,
+      "ranking": 20,
+      "name": "Happy Man",
+      "artist": "Jungle",
+      "preview_url": "https://p.scdn.co/mp3-preview/cf09925e7e09abd8166d9700a065096dfd334f34?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 66.8041237113402,
+      "y": 67,
+      "ranking": 36,
+      "name": "Casio",
+      "artist": "Jungle",
+      "preview_url": "https://p.scdn.co/mp3-preview/c18a5c5cdbfe8e781d05a68a833fc85d75495139?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 63.092783505154614,
+      "y": 60,
+      "ranking": 43,
+      "name": "Busy Earnin'",
+      "artist": "Jungle",
+      "preview_url": "https://p.scdn.co/mp3-preview/0fb241991953ea37f4fec6a322ac78953f90e937?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 59.38144329896909,
+      "y": 55,
+      "ranking": 48,
+      "name": "Talk About It",
+      "artist": "Jungle",
+      "preview_url": "https://p.scdn.co/mp3-preview/f5aaf970799c4cb2dbf3312a59de589d73086a34?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 55.670103092783506,
+      "y": 36,
+      "ranking": 67,
+      "name": "Time",
+      "artist": "Jungle",
+      "preview_url": "https://p.scdn.co/mp3-preview/c728f0468558ca53c377917dd581d8bc404b57bb?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 51.958762886597924,
+      "y": 31,
+      "ranking": 72,
+      "name": "Dry Your Tears",
+      "artist": "Jungle",
+      "preview_url": "https://p.scdn.co/mp3-preview/b522f85ac0d70575fa439920f01c03cf59cb04b4?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 48.2474226804124,
+      "y": 75,
+      "ranking": 28,
+      "name": "Mouth Money",
+      "artist": "Professor Kliq",
+      "preview_url": "https://p.scdn.co/mp3-preview/77ceb59a1c366f3ed978e86f2d7d191ab86d18ca?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 44.536082474226816,
+      "y": 71,
+      "ranking": 32,
+      "name": "Bust That Bust This",
+      "artist": "Professor Kliq",
+      "preview_url": "https://p.scdn.co/mp3-preview/3f0276f57901c33296faf1c35d7c9c32e70a4ed2?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 40.824742268041234,
+      "y": 52,
+      "ranking": 51,
+      "name": "The Most Beautiful Day (2013 Version)",
+      "artist": "Professor Kliq",
+      "preview_url": "https://p.scdn.co/mp3-preview/c97f758b2bcdf093d9d776ce522f3dd61bdd617a?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 37.11340206185565,
+      "y": 48,
+      "ranking": 55,
+      "name": "BLUE ROOMS",
+      "artist": "KUNZITE",
+      "preview_url": "https://p.scdn.co/mp3-preview/963e7da4fb38a80d190f53d126bfc7a7cd9830b2?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 33.40206185567013,
+      "y": 44,
+      "ranking": 59,
+      "name": "MONKS",
+      "artist": "KUNZITE",
+      "preview_url": "https://p.scdn.co/mp3-preview/5997e9454e275f50edd3e027d034b7f471228463?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 29.690721649484544,
+      "y": 39,
+      "ranking": 64,
+      "name": "MINERALS",
+      "artist": "KUNZITE",
+      "preview_url": "https://p.scdn.co/mp3-preview/b20860295d92212d279f9e1b9a44281bfdb55665?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 25.979381443298962,
+      "y": 11,
+      "ranking": 92,
+      "name": "Magic",
+      "artist": "Kupla",
+      "preview_url": "https://p.scdn.co/mp3-preview/8dbafc74a49d2080da0aeaefca79cc92dbbb2fa2?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 22.26804123711338,
+      "y": 91,
+      "ranking": 12,
+      "name": "FROSTY",
+      "artist": "KUNZITE, Ratatat",
+      "preview_url": "https://p.scdn.co/mp3-preview/8798b055e8b0e930bae439de3fcc84a077b4a242?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 18.556701030927854,
+      "y": 68,
+      "ranking": 35,
+      "name": "JUPITER",
+      "artist": "KUNZITE, Ratatat",
+      "preview_url": "https://p.scdn.co/mp3-preview/60a523e335477aa0554de76c32db57a77695613b?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 14.845360824742272,
+      "y": 63,
+      "ranking": 40,
+      "name": "SATURN",
+      "artist": "KUNZITE, Ratatat",
+      "preview_url": "https://p.scdn.co/mp3-preview/6421787cee38a742fb9125d4a503f34170f3c1a1?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 11.13402061855669,
+      "y": 87,
+      "ranking": 16,
+      "name": "Romeo (feat. Bas)",
+      "artist": "Jungle, Bas",
+      "preview_url": "https://p.scdn.co/mp3-preview/a9907efeb3f1e7cd203ffbf8f0abf1dd9c58e7f3?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 7.422680412371108,
+      "y": 72,
+      "ranking": 31,
+      "name": "Let Me Follow",
+      "artist": "Son Lux",
+      "preview_url": "https://p.scdn.co/mp3-preview/190917b645aaae2475d4cbe94ffa03e44d9eb3b0?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    },
+    {
+      "x": 3.7113402061855822,
+      "y": 53,
+      "ranking": 50,
+      "name": "Farrah Fawcett Hair",
+      "artist": "Capital Cities, André 3000",
+      "preview_url": "https://p.scdn.co/mp3-preview/43696a2a56dc5560aea5a90ac091ccf02d6aa320?cid=d2dfd2b5e7704801882e7340c8b8cb61"
+    }
+  ]

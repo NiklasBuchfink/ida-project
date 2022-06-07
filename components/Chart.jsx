@@ -24,10 +24,6 @@ export default function Chart({ size, data }) {
   let valence = data.features.valence;
   let energy = data.features.energy;
 
-  //let valence = 0.7;
-  //let energy = 0.4;
-  //console.log(valence, energy)
-  //console.log(sadness, happiness, anger, serene);
   let mainGenreData = [];
   let trackData = [];
   let sortedTrackData = [];
@@ -87,6 +83,7 @@ export default function Chart({ size, data }) {
         </radialGradient>
 
         <circle
+        className="aura-circle"
           r={size / 2 - 70}
           cx={size / 2}
           cy={size / 2}
@@ -110,11 +107,12 @@ export default function Chart({ size, data }) {
             style={{
               data: { fill: "white" },
               labels: {
-                fontFamily: "monospace",
+                fontFamily: "helvetica",
                 letterSpacing: 0.1,
                 fill: "white",
                 padding: 6,
                 fontSize: 16,
+                userSelect: "none"
               },
             }} />
 
@@ -142,9 +140,9 @@ export default function Chart({ size, data }) {
               labelPlacement={"vertical"}
               labelRadius={100}
               labels={({ datum }) => [
-                `${datum.name}`,
-                `${datum.artist}`,
-                `My Top ${datum.ranking}`,
+                `#${datum.ranking} - ${datum.name}`,
+                `${datum.artist}`
+                
               ]}
               lineHeight={[2, 2, 2]}
               labelComponent={<CustomLabel />}
@@ -152,6 +150,7 @@ export default function Chart({ size, data }) {
                 data: {
                   fill: ({ index }) => `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`, // bug here? "sortedTrackData[index] is undefined"
                   width: (360 / sortedTrackData.length) * 4 - 2, // alt. without spacing: 0.3
+                  cursor: "pointer",
                 },
               }}
               events={[
