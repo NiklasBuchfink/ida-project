@@ -51,19 +51,10 @@ export default function Home() {
 
   const customStyles = {
     content: {
-      //top: '50%',
-      //left: '50%',
       inset: "0px 0px 0px 0px",
-      //transform: "translate(-50%, -50%)",
-
-      //right: "auto",
-      //bottom: "auto",
-      //marginRight: "-50%",
-      //filter: "blur(6px)",
       zIndex: "199",
       backgroundColor: "hsla(0 ,0% , 0%, 0.85)",
       border: "none",
-      //border: "dotted 2px white",
     },
     overlay: {
       zIndex: "199",
@@ -84,7 +75,6 @@ export default function Home() {
         </Head>
 
         <div className="relative h-screen w-full ">
-          {/* <p>Signed in as {session?.token?.email}</p> */}
           <button
             className="helvetica absolute left-0 z-[100] mt-4 ml-6 cursor-pointer text-base font-bold tracking-wider"
             onClick={() => signOut()}
