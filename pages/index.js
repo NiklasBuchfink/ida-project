@@ -72,7 +72,6 @@ export default function Home() {
   };
 
   if (session) {
-    console.log(topPlaylistList);
     return (
       <>
         <Head>
@@ -81,7 +80,7 @@ export default function Home() {
             name="description"
             content="Recap your music taste by logging in to your Spotify Account."
           />
-          <link rel="icon" href="../public/favicon.ico" />
+          <link rel="icon" href="favicon.ico" />
         </Head>
 
         <div className="relative h-screen w-full ">
@@ -262,7 +261,7 @@ export default function Home() {
           name="description"
           content="Recap your music taste by logging in to your Spotify Account."
         />
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <div className="helvetica absolute right-0 mt-4 mr-6 text-base font-bold uppercase tracking-wider ">
         <Link href="/about">about</Link>

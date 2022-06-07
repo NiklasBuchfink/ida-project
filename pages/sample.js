@@ -38,7 +38,7 @@ export default function Creators({ localData }) {
         <meta
           name="description"
           content="This page visualize a data sample of the creators." />
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <div className="relative w-full h-screen ">
           <div className="absolute w-full z-[199]">         
