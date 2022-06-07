@@ -11,7 +11,7 @@ export default function about() {
           name="description"
           content="About how RECAP_MY_MUSIC works and who we are."
         />
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <div className="absolute right-0 mt-4 mr-6">
         <Link href="/">

@@ -34,9 +34,8 @@ export default function Creators({ localData }) {
         <title>SAMPLE</title>
         <meta
           name="description"
-          content="This page visualize a data sample of the creators."
-        />
-        <link rel="icon" href="../public/favicon.ico" />
+          content="This page visualize a data sample of the creators." />
+        <link rel="icon" href="favicon.ico" />
       </Head>
 
       <div className="relative h-screen w-full ">
