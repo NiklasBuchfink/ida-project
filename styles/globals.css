@@ -72,3 +72,7 @@ ReactModal__Overlay {
 .ReactModal__Overlay--before-close{
   opacity: 0;
 }
+
+.victory-container {
+  touch-action: auto !important;
+}

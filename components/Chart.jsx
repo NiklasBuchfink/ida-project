@@ -70,16 +70,10 @@ export default function Chart({ size, data }) {
 
   CustomLabel.defaultEvents = VictoryTooltip.defaultEvents;
 
-  // Features list
-  // valence
-  // energy
-  // dance
-  // tempo
-
   return (
     <>
     <div className={`m-10 h-full w-auto max-w-[${size}px] max-h-[${size}px]`}>
-      <VictoryContainer width={size} height={size} portalZIndex={0}>
+      <VictoryContainer width={size} height={size} portalZIndex={0} className="victory-container">
         <rect width="100%" height="100%" fill="black" />
         <radialGradient id="auraGradient">
           <stop
