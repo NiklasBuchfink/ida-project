@@ -29,9 +29,9 @@ npm run dev
 yarn dev
 ```
 
-Finally open [http://localhost:3000](http://localhost:3000) with your browser.
+Finally open [localhost:3000](http://localhost:3000) with your browser.
 
 ## Online Version
 
-Online version is available on [Netlify](https://628b58a45804600008ff54f6--ida-project.netlify.app/).
+Online version is available on [Netlify](https://recapmymusic.netlify.app/).
 
