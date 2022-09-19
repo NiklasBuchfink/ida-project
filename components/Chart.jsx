@@ -54,7 +54,7 @@ export default function Chart({ size, data }) {
         sortedTrackData.push({
           x: 360 - (index * 360) / trackData.length,
           y: trackData.length - data.tracks[j].track.ranking + 5,
-          ranking: Math.round(data.tracks[j].track.ranking + 1),
+          ranking: data.tracks[j].track.ranking + 1,
           name: data.tracks[j].track.name,
           artist: artistArr.join(", "),
           preview_url: data.tracks[j].track.preview_url,
@@ -140,7 +140,7 @@ export default function Chart({ size, data }) {
               labelPlacement={"vertical"}
               labelRadius={100}
               labels={({ datum }) => [
-                `#${datum.ranking} - ${datum.name}`,
+                `#${Math.round(datum.ranking)} - ${datum.name}`,
                 `${datum.artist}`
                 
               ]}
@@ -148,7 +148,7 @@ export default function Chart({ size, data }) {
               labelComponent={<CustomLabel />}
               style={{
                 data: {
-                  fill: ({ index }) => `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`, // bug here? "sortedTrackData[index] is undefined"
+                  fill: ({ index }) => `hsla(0,0%,100%,${(sortedTrackData[index].y + 21) / 200})`, // bug here? "sortedTrackData[index] is undefined" evtl. weil beim ladej die Anzahl der TrackData wächst (von 97 auf 100) und der Index geht nicht mehr weiter???
                   width: (360 / sortedTrackData.length) * 4 - 2, // alt. without spacing: 0.3
                   cursor: "pointer",
                 },
@@ -157,7 +157,7 @@ export default function Chart({ size, data }) {
                 {
                   target: "data",
                   eventHandlers: {
-                    onClick: (event, props) => {
+                    onClick: (event, props) => {  // Hier Code notwendig um Hervorhebung beizubehalten wenn angeclickt
                       playTrack(props.data[props.index])
                       return [
                         {
