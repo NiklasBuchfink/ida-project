@@ -135,7 +135,7 @@ export default function Creators({ localData }) {
                       <p>
                         The aura is the colorful circle that surrounds your most
                         listened tracks of the year. It&#39;s generated based on
-                        your the positivity and energy values of these tracks.
+                        the positivity and energy values of these tracks.
                       </p>
                       <p>
                         The center color represents your average positivity. If
