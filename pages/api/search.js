@@ -9,7 +9,7 @@ const handler = async (req, res) => {
 
   let playlistArray = []
   // 2009
-  for (let i = new Date().getFullYear()-1; i > 2009 ; i--) {
+  for (let i = 2023; i > 2009 ; i--) {
     let { data } = await getSpotify(accessToken, "https://api.spotify.com/v1/search", {
         q: 'Top Songs ' + i,
         type: "playlist",
