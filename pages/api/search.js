@@ -9,23 +9,34 @@ const handler = async (req, res) => {
 
   let playlistArray = []
   // 2009
-  for (let i = new Date().getFullYear()-1; i > 2009 ; i--) {
-    let { data } = await getSpotify(accessToken, "https://api.spotify.com/v1/search", {
-        q: 'Top Songs ' + i,
+  let year;
+  if (new Date().getMonth() === 11) {
+    year = new Date().getFullYear();
+  } else {
+    year = new Date().getFullYear() - 1;
+  }
+
+  for (let i = year; i > 2009; i--) {
+    let { data } = await getSpotify(
+      accessToken,
+      "https://api.spotify.com/v1/search",
+      {
+        q: "Top Songs " + i,
         type: "playlist",
-        limit: 5
-    });
+        limit: 5,
+      }
+    );
     for (let j = 0; j < data.playlists.items.length; j++) {
       if (
-          data.playlists.items[j].owner.uri === "spotify:user:spotify"
-          && data.playlists.items[j].name.search('Your Top Songs ' + i) !== -1  
-        ) {
+        data.playlists.items[j].owner.uri === "spotify:user:spotify" &&
+        data.playlists.items[j].name.search("Your Top Songs " + i) !== -1
+      ) {
         playlistArray.push({
-          year: i, 
+          year: i,
           name: data.playlists.items[j].name,
-          id: data.playlists.items[j].id
-        })
-        break
+          id: data.playlists.items[j].id,
+        });
+        break;
       }
     }
   }
